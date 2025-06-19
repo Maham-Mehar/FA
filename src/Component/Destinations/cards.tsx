@@ -1,3 +1,4 @@
+"use client";
 import  CardData  from "@/Data/destinationCards";
 import Image from "next/image";
 
