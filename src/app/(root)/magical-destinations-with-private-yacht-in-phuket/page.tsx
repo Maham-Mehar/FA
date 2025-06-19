@@ -1,6 +1,6 @@
-import Cards from "@/app/Component/Destinations/cards"
-import HeroSection from "@/app/Component/Destinations/hero"
-import JoinUs from "@/app/Component/Destinations/joinus"
+import Cards from "@/Component/Destinations/cards"
+import HeroSection from "@/Component/Destinations/hero"
+import JoinUs from "@/Component/Destinations/joinus"
 import { Fragment } from "react"
 
 const Destinations= () => {
