@@ -37,12 +37,12 @@ export interface cardsData {
         id: 6,
         title: "Koh Muk",
         image: PngIcons.image6,
-        description: "Koh Muk is quite a hidden gem for any adventurer. This beautiful island offers an unforgettable experience to every visitor with its appealing ...",
+        description: "Koh Mukis quite a hidden gem for any adventurer. This beautiful island offers an unforgettable experience to every visitor with its appealing...",
     },   {
         id: 7,
         title: "Koh Kradan",
         image: PngIcons.image7,
-        description: "Koh Kradan, a hidden gem in Thailand’s Trang Province, is a dream destination for nature enthusiasts and marine lovers...",
+        description: "Koh Kradana hidden gem in Thailands Trang Province, is a dream destination for nature enthusiasts and marine lovers...",
     },   {
         id: 1,
         title: "Koh Lanta",
