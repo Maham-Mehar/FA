@@ -2,8 +2,6 @@ import { SubscribeData } from "@/data/Home";
 import Image from "next/image";
 
 const Subscribe = () => {
-
-
     return (
         <div className="bg-white">
             <div className="max-w-6xl mx-auto px-6 py-4 sm:py-[85px]">
