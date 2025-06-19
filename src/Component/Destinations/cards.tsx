@@ -1,4 +1,4 @@
-import { CardData } from "@/Data/destinationCards";
+import  CardData  from "@/Data/destinationCards";
 import Image from "next/image";
 
 const Cards = () => {

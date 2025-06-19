@@ -5,7 +5,7 @@ export interface cardsData {
     title: string;
     description: string;
 }
-export const CardData: cardsData[] = [
+ const CardData: cardsData[] = [
     {
         id: 1,
         title: "Phi Phi Islands",
@@ -55,3 +55,4 @@ export const CardData: cardsData[] = [
         description: "Koh Rok, composed of two islands—Koh Rok Nok and Koh Rok Nai—is situated in the Andaman Sea, just south of Koh Lanta. This twin isl...",
     },
 ]
+export default CardData;
