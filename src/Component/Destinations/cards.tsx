@@ -1,5 +1,5 @@
 "use client";
-import CardData from "../../Data/destinationCards";
+import CardData from "../../data/destinationCards";
 import Image from "next/image";
 
 const Cards = () => {
