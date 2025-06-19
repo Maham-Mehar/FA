@@ -21,7 +21,7 @@ const Cards = () => {
                   className="object-cover rounded-tl-4xl rounded-br-4xl"
                 />
                 <div className="absolute bottom-0 bg-opacity-50 w-full text-white px-4 py-2">
-                  <p className="text-[40px] font-extrabold transition-all duration-300 group-hover:text-[44px]">
+                  <p className="text-[40px] font-extrabold transition-all duration-300">
                     {item.title}
                   </p>
                 </div>
@@ -33,7 +33,7 @@ const Cards = () => {
                   <p className="text-[#2073A9] text-[21px] font-extrabold underline cursor-pointer">
                 Read More
                   </p>
-                  <button className="border text-[19px] border-[#C3974C] text-[#C3974C] px-6 py-1 rounded-full hover:bg-[#C3974C] hover:text-white transition">
+                  <button className="border text-[19px] border-[#C3974C] text-[#C3974C] px-6 py-1 rounded-lg hover:bg-[#C3974C] hover:text-white transition">
                     Contact Us
                   </button>
                 </div>
