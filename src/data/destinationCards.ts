@@ -1,4 +1,4 @@
-import PngIcons from "@/Icons/pngIcon";
+import PngIcons from "@/icons/pngIcon";
 export interface cardsData {
     id: number;
     image: any;
