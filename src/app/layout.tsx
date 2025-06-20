@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
+import {Source_Sans_3} from "next/font/google";
+import {Inter} from "next/font/google";
+import {Poppins} from "next/font/google";
+
 import "./globals.css";
 import Navbar from "@/Component/Navbar";
 import Header from "@/Component/Header";
@@ -15,6 +20,23 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+const playfairDisplay = Playfair_Display ({
+  variable: "--font-playfair-display",
+  subsets: ["latin"],
+});
+const source_Sans_Pro = Source_Sans_3({
+  variable: "--font-source_Sans_Pro",
+  subsets: ["latin"],
+});
+const inter= Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
+const poppins = Poppins({
+  subsets: ["latin"],
+  variable: "--font-poppins",
+  weight: ["400", "700"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -29,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} ${source_Sans_Pro.variable}  ${inter.variable}  ${poppins.variable}  antialiased`}
       >
         <div className="fixed top-0 z-40 w-full">
           <Header />
@@ -38,8 +60,8 @@ export default function RootLayout({
         <main className="flex-1 relative pt-[8rem]">
           {children}
         </main>
-<Licence />
-<Footer /> 
+        <Licence />
+        <Footer />
       </body>
     </html>
   );

@@ -4,36 +4,38 @@ import Image from "next/image";
 
 const Cards = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-white xl:py-12 px-4 sm:px-4 xl:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 md:gap-5 lg:gx-6 xl:gx-10">
           {CardData.map((item, index) => (
             <div
               key={index}
-              className="group overflow-hidden rounded-lg transition-transform duration-300 hover:shadow-2xl hover:scale-[1.03] mt-10 bg-white hover-px-2"
+              className="group overflow-hidden rounded-lg transition-transform duration-300 hover:shadow-2xl hover:scale-[1.03] mt-10 bg-white"
             >
+              {/* IMAGE */}
               <div className="relative">
                 <Image
                   src={item.image}
                   alt="card"
                   width={400}
                   height={300}
-                  className="object-cover rounded-tl-4xl rounded-br-4xl"
+                  className="object-cover w-full h-[250px] sm:h-[300px] md:h-[340px] lg:[300px] xl:h-[380px] rounded-tl-3xl rounded-br-3xl"
                 />
-                <div className="absolute bottom-0 bg-opacity-50 w-full text-white px-4 py-2">
-                  <p className="text-[40px] font-extrabold transition-all duration-300">
+                <div className="absolute bottom-0 bg-opacity-40 w-full text-white px-4 py-2">
+                  <p className="text-foreground font-playfair text-xl sm:text-2xl lg:text-[32px] xl:text-[36px] font-extrabold transition-all duration-300">
                     {item.title}
                   </p>
                 </div>
               </div>
 
-              <div className="p-4 flex flex-col justify-between h-[180px]"> {/* adjust height as needed */}
-                <p className="text-[18px] text-gray-700">{item.description}</p>
-                <div className="flex justify-between items-center mt-2">
-                  <p className="text-[#2073A9] text-[21px] font-extrabold underline cursor-pointer">
-                Read More
+              {/* TEXT & BUTTON */}
+              <div className="px-0 xl:px-4 py-4 flex flex-col justify-between min-h-[150px] md:min-h-[180px] lg:min-h-[200px]">
+                <p className=" text-[17px] font-sourceSansPro lg:text-[17px] xl:text-[20px] text-black">{item.description}</p>
+                <div className="flex justify-between items-start sm:items-center mt-4 gap-4">
+                  <p className="text-zink font-poppins text-[18px] sm:text-[21px] font-extrabold underline cursor-pointer hover:text-[#D6AB61]">
+                    Read More
                   </p>
-                  <button className="border text-[19px] border-[#C3974C] text-[#C3974C] px-6 py-1 rounded-lg hover:bg-[#C3974C] hover:text-white transition">
+                  <button className="border font-poppins bg-white text-[17px] sm:text-[19px] border-mustard text-zink px-5 lg:px-4 xl:px-5 py-2 rounded-lg hover:bg-[#034250] hover:text-white transition">
                     Contact Us
                   </button>
                 </div>

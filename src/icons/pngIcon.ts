@@ -26,6 +26,9 @@ Certificate5: "/images/certificate5.png",
 Certificate6: "/images/certificate6.png",
 Certificate7: "/images/certificate7.gif",
 
+privateyact:"/images/yacht.png",
+bareboat:"/images/bareboart.png",
 
+banner2 :"/images/Banner2.png",
 }
     export default PngIcons
