@@ -5,6 +5,9 @@
   --foreground: #171717;
   --zink: #034250;
   --mustard: #D6AB61;
+  --blue: #012A50;
+ --seagreen: #81A1A8;
+  --Green: #03425080;
 
 }
 
@@ -15,21 +18,36 @@
 
   }
 }
+
 @layer utilities {
   .text-zink {
     color: var(--zink);
   }
+
   .text-mustard {
     color: var(--mustard);
   }
+
+  .text-blue {
+    color: var(--blue);
+  }
+
   .bg-zink {
     background-color: var(--zink);
   }
+
   .bg-mustard {
     background-color: var(--mustard);
   }
+
   .border-zink {
     border-color: var(--zink);
+  }
+  .border-seagreen {
+    border-color: var(--seagreen);
+  }
+  .border-Green {
+    border-color: var(--Green);
   }
   .border-mustard {
     border-color: var(--mustard);
@@ -46,15 +64,19 @@ body {
 .font-quattrocento {
   font-family: var(--font-quattrocento);
 }
+
 .font-playfair {
   font-family: var(--font-playfair-display), serif;
 }
+
 .font-sourceSansPro {
   font-family: var(--font-source_Sans_Pro), serif;
 }
+
 .font-inter {
   font-family: var(--font-inter), serif;
 }
+
 .font-poppins {
   font-family: var(--font-poppins), serif;
 }
@@ -79,4 +101,3 @@ body {
   font-size: var(--text-base);
   color: var(--color-gray-700);
 }
-

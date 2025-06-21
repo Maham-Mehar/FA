@@ -15,7 +15,7 @@ const Destinations= () => {
         <HeroSection />
         <Cards />
         <JoinUs />
-        {/* <DayTripSlider /> */}
+        <DayTripSlider />
         <Banner />
         <ItinerarySection />
         <PrivateYacht />

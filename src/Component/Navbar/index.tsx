@@ -8,7 +8,7 @@ const navItems = [
     { label: "Bareboat Charter", href: "/bareboat-charter-thailand/" },
     { label: "Cabin Charter", href: "/best-of-phukets-islands-cabincharter/" },
     { label: "Destinations", href: "/magical-destinations-with-private-yacht-in-phuket/" },
-    { label: "Contact", href: "/contact/" },
+    { label: "Contact", href: "/contact" },
 ];
 const Drawer = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
     const pathname = usePathname();

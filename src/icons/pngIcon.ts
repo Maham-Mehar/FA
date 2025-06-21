@@ -26,9 +26,15 @@ Certificate5: "/images/certificate5.png",
 Certificate6: "/images/certificate6.png",
 Certificate7: "/images/certificate7.gif",
 
+// slider Categories
+category1: "/images/category1.png",
+category2: "/images/category2.png",
+category3: "/images/category3.png",
+category4: "/images/category4.png",
+// trip Type
 privateyact:"/images/yacht.png",
 bareboat:"/images/bareboart.png",
-
 banner2 :"/images/Banner2.png",
+
 }
     export default PngIcons
