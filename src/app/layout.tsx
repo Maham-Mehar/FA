@@ -4,7 +4,8 @@ import { Playfair_Display } from "next/font/google";
 import {Source_Sans_3} from "next/font/google";
 import {Inter} from "next/font/google";
 import {Poppins} from "next/font/google";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./globals.css";
 import Navbar from "@/Component/Navbar";
 import Header from "@/Component/Header";

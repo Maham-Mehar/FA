@@ -9,36 +9,49 @@ const ItinerarySection = () => {
     setActiveId(prev => (prev === id ? null : id));
   };
 
-  const renderItem = (item: ItineraryItem) => (
-    <div
-      key={item.id}
-      className="bg-[#F9FAFB] border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition duration-200"
-    >
-      <button
-        type="button"
-        onClick={() => toggleItem(item.id)}
-        className="flex justify-between items-center w-full p-4 cursor-pointer text-left"
+  const renderItem = (item: ItineraryItem) => {
+    return (
+      <div
+        key={item.id}
+        className="bg-[#F9FAFB] border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition duration-200"
       >
-        <div className="flex items-center gap-4">
-          <span className="bg-[#034250] text-white font-poppins text-[12px] xl:text-[13px] font-medium px-3 py-1 rounded-lg">
-            {item.days}
+        <button
+          type="button"
+          onClick={() => toggleItem(item.id)}
+          className="flex justify-between items-center w-full p-4 cursor-pointer text-left"
+        >
+          <div className="flex items-center gap-4">
+            <span className="bg-[#034250] text-white font-poppins text-[12px] xl:text-[13px] font-medium px-3 py-1 rounded-lg">
+              {item.days}
+            </span>
+            <h4 className="font-semibold text-sm xl:text-base text-zink">
+              {item.place}
+            </h4>
+          </div>
+          <span className="text-2xl font-bold text-gray-400">
+            {activeId === item.id ? "−" : "+"}
           </span>
-          <h4 className="font-semibold text-sm xl:text-base text-zink">
-            {item.place}
-          </h4>
-        </div>
-        <span className="text-2xl font-bold text-gray-400">
-          {activeId === item.id ? "−" : "+"}
-        </span>
-      </button>
+        </button>
 
-      {activeId === item.id && (
-        <div className="px-4 pb-4 text-sm sm:text-base text-gray-600">
-          {item.description}
-        </div>
-      )}
-    </div>
-  );
+        {activeId === item.id && (
+          <div className="px-4 pb-4 space-y-6 text-sm sm:text-base text-gray-600">
+            {item.itinerary.map((day, idx) => (
+              <div key={idx}>
+                <h5 className="font-semibold text-zink text-base sm:text-lg mb-2">
+                  {day.title}
+                </h5>
+                <ul className="space-y-2 list-disc list-inside text-gray-700">
+                  {day.description.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    );
+  };
 
   return (
     <section className="bg-white py-12 px-4 lg:px-5 xl:px-8">

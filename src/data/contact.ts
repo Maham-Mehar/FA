@@ -60,7 +60,7 @@ export const contactDetails: ContactDetail[] = [
     },
     {
         icon: TbLocation,
-    text: "45, 25 Chaofa Road Chalong, Phuket, 83130, Thailand",
-    title: "Our Location",
+        text: "45, 25 Chaofa Road Chalong, Phuket, 83130, Thailand",
+        title: "Our Location",
     },
 ];

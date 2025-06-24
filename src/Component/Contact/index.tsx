@@ -81,7 +81,7 @@ const ContactSection = () => {
     };
 
     return (
-        <div className="mt-7 lg:mt-14 ">
+        <div className="">
             <div className="bg-[url('/images/Cimage1.png')] bg-cover bg-center bg-no-repeat min-h-[24vh] md:min-h-[30vh] lg:min-h-[40vh] w-full flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 text-center">
                 <p className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] font-playfair font-bold text-white drop-shadow-md">
                     Contact Us
@@ -172,7 +172,7 @@ const ContactSection = () => {
                     </div>
 
                     {/* Right Side - Contact Info */}
-                    <div className="col-span-12 lg:col-span-5 bg-[url('/images/contactbg.png')] bg-cover bg-center bg-no-repeat bg-opacity-90 backdrop-blur-md p-6 rounded-xl shadow-sm">
+                    <div className="col-span-12 lg:col-span-5 bg-[url('/images/contactbg.png')] bg-cover bg-center bg-no-repeat bg-opacity-90 backdrop-blur-md p-6 shadow-sm rounded-tl-3xl rounded-br-3xl">
                         <h3 className=" text-[23px] md:text-[25px] lg:text-[27px] xl:text-[30px] font-bold font-inter text-zink mb-2 font-semibold">
                             Got Questions? <span className="text-mustard">Let's Chat!</span>
                         </h3>
