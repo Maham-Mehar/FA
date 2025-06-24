@@ -8,11 +8,11 @@ import { IoWarningOutline } from "react-icons/io5";
 const Attractions = () => {
     return (
         <section className="py-16 px-4 md:px-6 lg:px-8 bg-white text-zink">
-            <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-zinc-800 mb-16 uppercase tracking-wide">
+            <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-zinc-800 mb-6 md:mb-11 lg:mb-13 xl:mb-16 uppercase tracking-wide">
                 Main Attractions on Phi Phi Islands
             </h2>
 
-            <div className="space-y-8 md:space-y-12 lg:space-y-16 xl:space-y-20 max-w-7xl mx-auto">
+            <div className="space-y-5 md:space-y-12 lg:space-y-16 xl:space-y-20 max-w-7xl mx-auto">
                 {attractions.map((item: Attraction, index: number) => (
                     <div
                         key={item.id}
@@ -73,7 +73,7 @@ const Attractions = () => {
                             <>
                                 {/* Text Left */}
                                 <div className="space-y-5">
-                                    <div className="relative mt-10 md:mt-0 ">
+                                    <div className="relative mt-8 md:mt-0 ">
                                         <span className="text-[65px] md:text-[70px] lg:text-[95px] xl:text-[128px] pt-12 md:pt-12 lg:pt-8 xl:pt-0 font-semibold font-inter text-gray-100 absolute -top-23 left-0">
                                             {item.id}
                                         </span>
@@ -110,7 +110,7 @@ const Attractions = () => {
                                 </div>
 
                                 {/* Image Right */}
-                                <div className="flex justify-center md:justify-end mt-5 md:mt-0">
+                                <div className="flex justify-center md:justify-end mt-8 md:mt-0">
                                     <Image
                                         src={item.image}
                                         alt={item.title}
