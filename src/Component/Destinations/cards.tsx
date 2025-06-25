@@ -1,8 +1,7 @@
 "use client";
-import Link from "next/link";
 import CardData from "../../data/destinationCards";
 import Image from "next/image";
-
+import Link from "next/link";
 const Cards = () => {
   return (
     <div className="bg-white xl:py-12 px-4 sm:px-4 xl:px-8">
@@ -32,11 +31,11 @@ const Cards = () => {
               {/* TEXT & BUTTON */}
               <div className="px-0 xl:px-4 py-4 flex flex-col justify-between min-h-[150px] md:min-h-[180px] lg:min-h-[200px]">
                 <p className=" text-[17px] font-sourceSansPro lg:text-[17px] xl:text-[20px] text-black">{item.description}</p>
-                <div className="flex justify-between items-start sm:items-center mt-4 gap-4">
-                  <Link href="/cardDetail">
-                    <p className="text-zink font-poppins text-[18px] sm:text-[21px] font-extrabold underline cursor-pointer hover:text-[#D6AB61]">
-                      Read More
-                    </p>
+                <div className="flex justify-between items-center sm:items-center mt-4 gap-4">
+                  <Link href={`/cardDetail/${item.id}`}>
+                  <p className="text-zink font-poppins text-[18px] sm:text-[21px] font-extrabold underline cursor-pointer hover:text-[#D6AB61]">
+                    Read More
+                  </p>
                   </Link>
                   <button className="border font-poppins bg-white text-[17px] sm:text-[19px] border-mustard text-zink px-5 lg:px-4 xl:px-5 py-2 rounded-lg hover:bg-[#034250] hover:text-white transition">
                     Contact Us

@@ -1,14 +1,23 @@
-import JoinUs from "@/common/joinUs"
-import { Fragment } from "react"
+// src/Component/readMore/adventure.tsx
+"use client";
 
-const StartAdventure=()=>{
-    return(
-        <Fragment>
-<JoinUs 
-bgImage="/images/bg-3.png"
-/>
-</Fragment>
+import JoinUs from "@/common/joinUs";
 
-    )
+interface StartAdventureProps {
+  id: string;
 }
-export default StartAdventure
+
+const StartAdventure: React.FC<StartAdventureProps> = ({ id }) => {
+  // pick your background based on id
+  let bgImage = "/images/default-bg.png";
+  if (id === "phiPhi") {
+    bgImage = "/images/bg-3.png";
+  } else if (id === "krabi") {
+    bgImage = "/images/bg-krabi.png";
+  }
+  // add more elseif blocks for other ids
+
+  return <JoinUs bgImage={bgImage} />;
+};
+
+export default StartAdventure;
