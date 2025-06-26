@@ -1,5 +1,6 @@
 import { FiPhone } from "react-icons/fi";
 interface SetSailProps {
+    id?:string;
     bgImage: string;
 }
 const SetSail: React.FC<SetSailProps> = ({ bgImage }) => {

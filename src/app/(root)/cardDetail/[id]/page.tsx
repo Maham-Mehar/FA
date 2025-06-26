@@ -9,12 +9,14 @@ import YachtSlider from "@/Component/readMore/slider";
 import ChartersAdventure from "@/Component/readMore/yarchtAdventure";
 import HeroSection from "@/Component/readMore/hero";
 
+// ✅ Correct type for dynamic route params in App Router
 interface PageProps {
   params: {
     id: string;
   };
 }
 
+// ✅ Default exported function must be named anything (commonly `Page`) and accept { params }
 export default function Page({ params }: PageProps) {
   const { id } = params;
 
