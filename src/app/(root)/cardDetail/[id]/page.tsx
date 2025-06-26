@@ -13,8 +13,8 @@ import { NewsDetailPageProps } from "./types";
 
 
 // ✅ Default exported function must be named anything (commonly `Page`) and accept { params }
-export default function Page({ params }: NewsDetailPageProps) {
-  const { id } = params; // ✅ no await needed
+export default async function Page({ params }: NewsDetailPageProps) {
+  const { id } = await params; // ✅ await needed for Next.js 15
   
   return (
     <Fragment>
