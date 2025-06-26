@@ -8,18 +8,14 @@ import BestLands from "@/Component/readMore/bestLands";
 import YachtSlider from "@/Component/readMore/slider";
 import ChartersAdventure from "@/Component/readMore/yarchtAdventure";
 import HeroSection from "@/Component/readMore/hero";
+import { NewsDetailPageProps } from "./types";
 
-// ✅ Correct type for dynamic route params in App Router
-interface PageProps {
-  params: {
-    id: string;
-  };
-}
+
 
 // ✅ Default exported function must be named anything (commonly `Page`) and accept { params }
-export default function Page({ params }: PageProps) {
-  const { id } = params;
-
+export default function Page({ params }: NewsDetailPageProps) {
+  const { id } = params; // ✅ no await needed
+  
   return (
     <Fragment>
       <HeroSection id={id} />
@@ -32,3 +28,5 @@ export default function Page({ params }: PageProps) {
     </Fragment>
   );
 }
+
+
