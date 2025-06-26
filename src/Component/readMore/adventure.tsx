@@ -1,23 +1,27 @@
-// src/Component/readMore/adventure.tsx
 "use client";
 
 import JoinUs from "@/common/joinUs";
+import PngIcons from "@/icons/pngIcon";
 
 interface StartAdventureProps {
   id: string;
 }
 
-const StartAdventure: React.FC<StartAdventureProps> = ({ id }) => {
-  // pick your background based on id
-  let bgImage = "/images/default-bg.png";
-  if (id === "phiPhi") {
-    bgImage = "/images/bg-3.png";
-  } else if (id === "krabi") {
-    bgImage = "/images/bg-krabi.png";
-  }
-  // add more elseif blocks for other ids
+const backgroundMap: Record<string, string> = {
+  "phi-phi-island": PngIcons.bgf_1,
+  "phang-nga-bay": PngIcons.bgf_2,
+  "racha-islands": PngIcons.bgf_3,
+  // Add more mappings here
+};
 
-  return <JoinUs bgImage={bgImage} />;
+const StartAdventure: React.FC<StartAdventureProps> = ({ id }) => {
+  // ✅ Only show component if id is one of the first 3 pages
+  const allowedIds = ["phi-phi-island", "phang-nga-bay", "racha-islands"];
+  if (!allowedIds.includes(id)) return null;
+
+  const bg = backgroundMap[id] || "/images/bg-4.png";
+
+  return <JoinUs id={id} bgImage={bg} />;
 };
 
 export default StartAdventure;

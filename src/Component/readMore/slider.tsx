@@ -56,7 +56,18 @@ const YachtCard = ({ boat }: { boat: Yacht }) => (
   </div>
 );
 
-const YachtSlider = () => {
+interface YachtSliderProps {
+  id: string;
+}
+
+const YachtSlider = ({ id }: YachtSliderProps) => {
+  // Only show slider for first three pages (ids: 1, 2, 3)
+  const shouldShowSlider = ['phi-phi-island', 'phang-nga-bay', 'racha-islands'].includes(id);
+
+  if (!shouldShowSlider) {
+    return null;
+  }
+
   const settings = {
     infinite: true,
     speed: 500,

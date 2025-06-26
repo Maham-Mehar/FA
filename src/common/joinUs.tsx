@@ -2,6 +2,7 @@
 import React from "react";
 
 interface JoinUsProps {
+  id?:string;
   bgImage: string;
 }
 

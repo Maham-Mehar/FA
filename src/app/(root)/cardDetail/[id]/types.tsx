@@ -3,5 +3,5 @@ export interface NewsDetailPageParams {
 }
 
 export interface NewsDetailPageProps {
-  params: Promise<NewsDetailPageParams>; // ✅ Next.js 15 requires params to be a Promise
+  params: Promise<NewsDetailPageParams>; 
 }

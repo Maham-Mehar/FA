@@ -9,12 +9,8 @@ import YachtSlider from "@/Component/readMore/slider";
 import ChartersAdventure from "@/Component/readMore/yarchtAdventure";
 import HeroSection from "@/Component/readMore/hero";
 import { NewsDetailPageProps } from "./types";
-
-
-
-// ✅ Default exported function must be named anything (commonly `Page`) and accept { params }
 export default async function Page({ params }: NewsDetailPageProps) {
-  const { id } = await params; // ✅ await needed for Next.js 15
+  const { id } = await params;
   
   return (
     <Fragment>
@@ -23,7 +19,7 @@ export default async function Page({ params }: NewsDetailPageProps) {
       <Attractions id={id} />
       <BestLands id={id} />
       <StartAdventure id={id} />
-      <YachtSlider />
+      <YachtSlider id={id} />
       <ChartersAdventure id={id} />
     </Fragment>
   );

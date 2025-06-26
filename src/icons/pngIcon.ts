@@ -105,6 +105,11 @@ krCard1:"/images/krCard1.png",
 krCard2:"/images/krCard2.png",
 krCard3:"/images/krCard3.png",
 
+// Start Adventure 
+bgf_1: "/images/bgf_1.png",
+bgf_2: "/images/bgf_2.png",
+bgf_3: "/images/bgf_3.png",
+
 // Yacht Adventure 
 bg_5:"/images/bg_5.png",
 bg_6:"/images/bg_6.png",
@@ -115,5 +120,29 @@ bg_10:"/images/bg_10.png",
 bg_11:"/images/bg_11.png",
 bg_12:"/images/bg_12.png",
 
+// Best Lands
+land1:"/images/land1.png",
+land2:"/images/land2.png",
+land3:"/images/land3.png",
+land4:"/images/land4.png",
+land5:"/images/land5.png",
+land6:"/images/land6.png",
+land7:"/images/land7.png",
+land8:"/images/land8.png",
+land9:"/images/land9.png",
+land10:"/images/land10.png",
+land11:"/images/land11.png",
+land12:"/images/land12.png",
+land13:"/images/land13.png",
+land14:"/images/land14.png",
+land15:"/images/land15.png",
+land16:"/images/land16.png",
+land17:"/images/land17.png",
+land18:"/images/land18.png",
+land19:"/images/land19.png",
+land20:"/images/land20.png",
+land21:"/images/land21.png",
+
+cAbout_1: "/images/cabout_1.png",
 }
 export default PngIcons
