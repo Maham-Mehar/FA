@@ -40,7 +40,6 @@ const SeaEscape = () => {
                 <h2 className="text-3xl md:text-[40px] font-playfair text-zink font-semibold mb-3 mt-14">
                     What’s Included – Your All-Inclusive Sea Escape
                 </h2>
-                <img src="/images/frame3.png" alt="Decorative divider" className="mx-auto mb-4" />
                 <p className="text-base md:text-lg font-inter text-zink">
                     Step aboard Amadeus for 6 days of island-hopping bliss—gourmet meals, snorkeling, kayaking, and epic views, all expertly handled by Far Away Charters
                 </p>

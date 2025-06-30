@@ -154,5 +154,15 @@ var PngIcons = {
     thPlace_4: "/images/thPlace_4.png",
 
     MapImage: "/images/map2.png",
+    sailImage:"/images/sailimage.png",
+    sailImage1:"/images/sailimage1.png",
+    sailImage2:"/images/sailimage2.png",
+    sailImage3:"/images/sailimage3.png",
+    sailImage4:"/images/sailimage4.png",
+
+    icon4: "/images/icon5.png",
+    icon5: "/images/icon6.png", 
+    icon6:"/images/icons7.png",
+    icon7:"/images/icon4.png",
 }
 export default PngIcons
