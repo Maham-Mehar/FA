@@ -10,7 +10,7 @@ const Cards = () => {
           {CardData.map((item, index) => (
             <div
               key={index}
-              className="group overflow-hidden rounded-lg transition-transform duration-300 hover:shadow-2xl hover:scale-[1.03] mt-10 bg-white"
+              className="group overflow-hidden transition-transform duration-300 hover:shadow-2xl hover:scale-[1.03] mt-10 bg-white"
             >
               {/* IMAGE */}
               <div className="relative">

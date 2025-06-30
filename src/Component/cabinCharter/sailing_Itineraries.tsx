@@ -1,0 +1,131 @@
+"use client";
+import { useState } from "react";
+import { highSeason, ItineraryItem } from "@/data/sailingData";
+
+const Sailing_Itinerary = () => {
+    const [activeId, setActiveId] = useState<string | null>(null);
+
+    const toggleItem = (id: string) => {
+        setActiveId(prev => (prev === id ? null : id));
+    };
+
+    const renderItem = (item: ItineraryItem) => {
+        const isActive = activeId === item.id;
+        const hasItinerary = item.itinerary && item.itinerary.length > 0;
+
+        return (
+            <div
+                key={item.id}
+                className={`border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition duration-200`}
+            >
+                {/* Accordion Header */}
+                <button
+                    type="button"
+                    onClick={() => toggleItem(item.id)}
+                    className="flex justify-between items-center w-full p-4 cursor-pointer text-left"
+                >
+                    <div className="flex items-center gap-4 justify-center">
+                        <div className="bg-[#034250] text-white font-poppins text-[16px] xl:text-[16px] font-semibold px-3 py-1 rounded-lg">
+                            <p>
+                                {item.days}
+                            </p>
+                            <p className="text-center">{item.id}</p>
+                            {/* ID below day */}
+
+                        </div>
+                        <p className="font-bold text-[18px] xl:[18px] text-zink font-sourceSanspro">{item.place}</p>
+                    </div>
+                    <span className="text-2xl font-bold text-gray-400">
+                        {isActive ? "−" : "+"}
+                    </span>
+                </button>
+
+                {/* Table Body */}
+                {isActive && hasItinerary && item.itinerary && (
+                    <div className="px-4 pb-6">
+                        <div className="overflow-x-auto">
+                            <table className="w-full border border-gray-300 text-left text-zink table-auto">
+
+                                <tbody>
+                                    {item.itinerary.map((entry, idx) => {
+                                        const titles = entry.title ?? [];
+                                        const descriptions = entry.description ?? [];
+                                        return titles.map((title, i) => (
+                                            <tr
+                                                key={`${idx}-${i}`}
+                                                className="text-sm md:text-base odd:bg-white even:bg-[#F5F5F5] odd:hover:bg-[#F5F5F5]"
+                                            >
+                                                <td className="border border-gray-300 font-sourceSansPro text-[18px] px-4 py-3 font-bold text-black align-top">
+                                                    {title}
+                                                </td>
+                                                <td className="border border-gray-300 font-sourceSansPro font-normal text-[18px] px-4 py-3 text-black">
+                                                    {descriptions[i] || "-"}
+                                                </td>
+                                            </tr>
+                                        ));
+                                    })}
+                                </tbody>
+
+
+                            </table>
+                        </div>
+                    </div>
+                )}
+
+                {/* Optional Image Box */}
+                {isActive && !hasItinerary && item.image && (
+                    <div className="px-4 pb-6">
+                        <img
+                            src={item.image}
+                            alt={item.place}
+                            className="w-full h-auto rounded-lg object-cover"
+                        />
+                    </div>
+                )}
+            </div>
+        );
+    };
+
+    // Divide items manually
+    const leftColumn = highSeason.filter(item => item.id === "1" || item.id === "2" || item.id === "3");
+    const rightColumn = highSeason.filter(item => item.id === "4" || item.id === "5" || item.id === "6");
+    const fullWidthItem = highSeason.find(item => item.id === "7");
+
+    return (
+        <section className="bg-white py-12 px-4 lg:px-5 xl:px-8">
+            <div className="max-w-7xl mx-auto">
+                {/* Heading */}
+                <div className="mb-12 flex justify-center flex-col items-center">
+                    <h2 className="text-[24px] sm:text-[40px] font-playfair text-zink font-semibold mb-1">
+                        Sailing Itinerary   </h2>
+                    <img src="/images/rframe.png" alt="" className="w-[500px] flex justify-center text-center my-3 mx-auto" />
+
+                    <p className="text-zink text-[16px] sm:text-[24px] font-normal font-sourceSanspro">
+                        A seamless route through the Andaman’s most iconic and secret escapes</p>
+                </div>
+
+                {/* Two Columns */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    {/* Left Column */}
+                    <div className="space-y-4">
+                        {leftColumn.map(item => renderItem(item))}
+                    </div>
+
+                    {/* Right Column */}
+                    <div className="space-y-4">
+                        {rightColumn.map(item => renderItem(item))}
+                    </div>
+                </div>
+
+                {/* Full-width Last Item (Image) */}
+                {fullWidthItem && (
+                    <div className="mt-6">
+                        {renderItem(fullWidthItem)}
+                    </div>
+                )}
+            </div>
+        </section>
+    );
+};
+
+export default Sailing_Itinerary;

@@ -18,7 +18,7 @@ const BestLands: React.FC<BestLandsProps> = ({ id }) => {
         <p className="text-3xl md:text-[40px] font-playfair text-zink font-extrabold mb-8 text-center">
           Best Islands Around Phi Phi
         </p>
-          {/* <img src="/images/Frame.png" alt="" /> */}
+        {/* <img src="/images/Frame.png" alt="" /> */}
       </div>
       <div className="absolute left-10 top-0 z-0 ">
         <img src="/images/seashell.png" alt="" />
@@ -29,40 +29,42 @@ const BestLands: React.FC<BestLandsProps> = ({ id }) => {
       <div className="absolute bottom-0 left-0 z-0">
         <img src={PngIcons.line2} alt="" />
       </div>
-      <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-10 z-10 mt-14">
-        {islands.map((isle, idx) => (
-          <div
-            key={isle.id}
-            className={` overflow-hidden p-6 ${idx === 1 ? "mt-40" : ""
-              }`}
-          >
-            <div className="relative">
-              <img
-                src={isle.image}
-                alt={isle.title}
-                className="w-[430] h-[350px] object-cover rounded-lg"
-              />
-              <div className="absolute bottom-2 left-2 text-[40px] font-extrabold font-playfair text-white bg-opacity-50 px-3 py-1 rounded-lg">
-                {isle.title}
+      <div className="relative flex justify-center items-center z-10 mt-14">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-4xl">
+          {islands.map((isle, idx) => (
+            <div
+              key={isle.id}
+              className={` overflow-hidden p-6 ${idx === 1 ? "mt-40" : ""
+                }`}
+            >
+              <div className="relative">
+                <img
+                  src={isle.image}
+                  alt={isle.title}
+                  className="w-[530] h-[350px] object-cover rounded-lg"
+                />
+                <div className="absolute bottom-2 left-2 text-[40px] font-extrabold font-playfair text-white bg-opacity-50 px-3 py-1 rounded-lg">
+                  {isle.title}
+                </div>
               </div>
-            </div>
-            <div className="min-h-[170px] shadow-lg">
-              <div className="p-4 space-y-2 max-w-[30rem]">
-                <p className="font-sourceSanspro text-mustard text-[24px] font-bold ">
-                  {isle.subtitle}
-                </p>
-                {isle.description.map((line, i) => (
-                  <p
-                    key={i}
-                    className="text-zink font-normal font-inter text-[18px] leading-relaxed"
-                  >
-                    {line}
+              <div className="min-h-[170px] shadow-lg">
+                <div className="p-4 space-y-2 max-w-[30rem]">
+                  <p className="font-sourceSanspro text-mustard text-[24px] font-bold ">
+                    {isle.subtitle}
                   </p>
-                ))}
+                  {isle.description.map((line, i) => (
+                    <p
+                      key={i}
+                      className="text-zink font-normal font-inter text-[18px] leading-relaxed"
+                    >
+                      {line}
+                    </p>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

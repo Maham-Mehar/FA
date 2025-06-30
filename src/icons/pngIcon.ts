@@ -49,6 +49,7 @@ var PngIcons = {
     card11: "/images/card11.png",
 
     line2: "/images/line2.png",
+    line3: "/images/Line_3.png",
     frame1: "/images/Frame.png",
 
     // Detail Card Hero
@@ -74,75 +75,84 @@ var PngIcons = {
     about9: "/images/about9.png",
 
 
-// Detail Cards Options
-pnbCard1:"/images/pnbCard1.png",
-pnbCard2:"/images/pnbCard2.png",
-pnbCard3:"/images/pnbCard3.png",
-pnbCard4:"/images/pnbCard4.png",
+    // Detail Cards Options
+    pnbCard1: "/images/pnbCard1.png",
+    pnbCard2: "/images/pnbCard2.png",
+    pnbCard3: "/images/pnbCard3.png",
+    pnbCard4: "/images/pnbCard4.png",
 
-riCard1: "/images/riCard1.png",
-riCard2: "/images/riCard2.png",
-riCard3: "/images/riCard3.png",
+    riCard1: "/images/riCard1.png",
+    riCard2: "/images/riCard2.png",
+    riCard3: "/images/riCard3.png",
 
-miCard1: "/images/miCard1.png",
-miCard2: "/images/miCard2.png",
+    miCard1: "/images/miCard1.png",
+    miCard2: "/images/miCard2.png",
 
-khCard1:"/images/khCard1.png",
-khCard2:"/images/khCard2.png",
-khCard3:"/images/khCard3.png",
+    khCard1: "/images/khCard1.png",
+    khCard2: "/images/khCard2.png",
+    khCard3: "/images/khCard3.png",
 
-kmCard1:"/images/kmCard1.png",
+    kmCard1: "/images/kmCard1.png",
 
-kkCard1:"/images/kkCard1.png",
+    kkCard1: "/images/kkCard1.png",
 
-klCard1:"/images/klCard1.png",
-klCard2:"/images/klCard2.png",
-klCard3:"/images/klCard3.png",
-klCard4:"/images/klCard4.png",
-klCard5:"/images/klCard5.png",
+    klCard1: "/images/klCard1.png",
+    klCard2: "/images/klCard2.png",
+    klCard3: "/images/klCard3.png",
+    klCard4: "/images/klCard4.png",
+    klCard5: "/images/klCard5.png",
 
-krCard1:"/images/krCard1.png",
-krCard2:"/images/krCard2.png",
-krCard3:"/images/krCard3.png",
+    krCard1: "/images/krCard1.png",
+    krCard2: "/images/krCard2.png",
+    krCard3: "/images/krCard3.png",
 
-// Start Adventure 
-bgf_1: "/images/bgf_1.png",
-bgf_2: "/images/bgf_2.png",
-bgf_3: "/images/bgf_3.png",
+    // Start Adventure 
+    bgf_1: "/images/bgf_1.png",
+    bgf_2: "/images/bgf_2.png",
+    bgf_3: "/images/bgf_3.png",
 
-// Yacht Adventure 
-bg_5:"/images/bg_5.png",
-bg_6:"/images/bg_6.png",
-bg_7:"/images/bg_7.png",
-bg_8:"/images/bg_8.png",
-bg_9:"/images/bg_9.png",
-bg_10:"/images/bg_10.png",
-bg_11:"/images/bg_11.png",
-bg_12:"/images/bg_12.png",
+    // Yacht Adventure 
+    bg_5: "/images/bg_5.png",
+    bg_6: "/images/bg_6.png",
+    bg_7: "/images/bg_7.png",
+    bg_8: "/images/bg_8.png",
+    bg_9: "/images/bg_9.png",
+    bg_10: "/images/bg_10.png",
+    bg_11: "/images/bg_11.png",
+    bg_12: "/images/bg_12.png",
 
-// Best Lands
-land1:"/images/land1.png",
-land2:"/images/land2.png",
-land3:"/images/land3.png",
-land4:"/images/land4.png",
-land5:"/images/land5.png",
-land6:"/images/land6.png",
-land7:"/images/land7.png",
-land8:"/images/land8.png",
-land9:"/images/land9.png",
-land10:"/images/land10.png",
-land11:"/images/land11.png",
-land12:"/images/land12.png",
-land13:"/images/land13.png",
-land14:"/images/land14.png",
-land15:"/images/land15.png",
-land16:"/images/land16.png",
-land17:"/images/land17.png",
-land18:"/images/land18.png",
-land19:"/images/land19.png",
-land20:"/images/land20.png",
-land21:"/images/land21.png",
+    // Best Lands
+    land1: "/images/land1.png",
+    land2: "/images/land2.png",
+    land3: "/images/land3.png",
+    land4: "/images/land4.png",
+    land5: "/images/land5.png",
+    land6: "/images/land6.png",
+    land7: "/images/land7.png",
+    land8: "/images/land8.png",
+    land9: "/images/land9.png",
+    land10: "/images/land10.png",
+    land11: "/images/land11.png",
+    land12: "/images/land12.png",
+    land13: "/images/land13.png",
+    land14: "/images/land14.png",
+    land15: "/images/land15.png",
+    land16: "/images/land16.png",
+    land17: "/images/land17.png",
+    land18: "/images/land18.png",
+    land19: "/images/land19.png",
+    land20: "/images/land20.png",
+    land21: "/images/land21.png",
+    //  Cabin Charter 
+    cAbout_1: "/images/cabout_1.png",
+    sixPlaces: "/images/sixPlaces.png",
 
-cAbout_1: "/images/cabout_1.png",
+    // slider pics
+    thPlace_1: "/images/thPlace_1.png",
+    thPlace_2: "/images/thPlace_2.png",
+    thPlace_3: "/images/thPlace_3.png",
+    thPlace_4: "/images/thPlace_4.png",
+
+    MapImage: "/images/map2.png",
 }
 export default PngIcons
