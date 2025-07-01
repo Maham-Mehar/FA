@@ -17,7 +17,7 @@ const Price_Details = () => {
         return (
             <div
                 key={item.id}
-                className="border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition duration-200"
+                className="border bg-white border-gray-200 rounded-lg  hover:shadow-md transition duration-200"
             >
                 {/* Header */}
                 <button
@@ -29,7 +29,7 @@ const Price_Details = () => {
                         <div className="bg-[#034250] text-white p-2 rounded-lg flex items-center justify-center">
                             <Icon className="w-5 h-5" />
                         </div>
-                        <p className="font-bold text-[18px] text-zink font-sourceSanspro">{item.place}</p>
+                        <p className="font-bold text-[22px] text-zink font-sourceSanspro">{item.place}</p>
                     </div>
                     <span className="text-2xl font-bold text-gray-400">{isActive ? "−" : "+"}</span>
                 </button>
@@ -41,7 +41,7 @@ const Price_Details = () => {
                             entry.description.map((desc, i) => (
                                 <p
                                     key={`${idx}-${i}`}
-                                    className="text-[16px] text-[#333333] font-medium font-sourceSansPro leading-relaxed flex items-start gap-2"
+                                    className="ms-3 text-[20px] text-[#333333] font-normal font-sourceSansPro leading-relaxed flex items-start gap-2"
                                 >
                                     <span className="text-black font-bold">•</span>
                                     {desc}
@@ -60,7 +60,7 @@ const Price_Details = () => {
     const rightColumn = priceDetail.filter(item => ["4", "5", "6"].includes(item.id));
 
     return (
-        <section className="bg-white py-12 px-4 lg:px-5 xl:px-8">
+        <section className="bg-[#E6ECED1A] py-12 px-4 lg:px-5 xl:px-8">
             <div className="max-w-7xl mx-auto">
                 {/* Heading */}
                 <div className="mb-12 flex justify-center flex-col items-center">

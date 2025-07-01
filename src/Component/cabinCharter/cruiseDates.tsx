@@ -1,0 +1,106 @@
+"use client";
+import { useState } from "react";
+import { cruiseDates } from "@/data/cruiseDates";
+
+const CruiseDates = () => {
+    const [activeTab, setActiveTab] = useState<"1" | "2">("1");
+    const data = cruiseDates.find((c) => c.id === activeTab);
+
+    return (
+        <section className="bg-white py-16 px-4 md:px-8">
+            <div className="max-w-7xl mx-auto">
+                {/* Heading */}
+                <div className="text-center mb-10">
+                    <h2 className="text-3xl md:text-[40px] font-playfair text-zink font-semibold">
+                        Cruise Dates
+                    </h2>
+                    <p className="text-zink font-sourceSansPro mt-2 font-normal text-base md:text-[32px]">
+                        Prices start from 999 € per person
+                    </p>
+                </div>
+
+                {/* Tabs */}
+                <div className="flex justify-center mb-6 gap-4">
+                    <button
+                        onClick={() => setActiveTab("1")}
+                        className={`px-6 py-2 border font-playfair text-[25px] text-black font-bold ${activeTab === "1"
+                            ? "border-gray-400 bg-[#E6ECED33] py-4 rounded-xl"
+                            : "border-transparent text-black"
+                            } transition duration-300`}
+                    >
+                        Two Person in Double Cabin
+                        <p className="text-[20px] font-sourceSansPro font-semibold text-mustard">(price per person)</p>
+                    </button>
+                    <button
+                        onClick={() => setActiveTab("2")}
+                        className={`px-6 py-2 border font-playfair text-[25px] font-bold text-black ${activeTab === "2"
+                            ? "border-gray-400 bg-[#E6ECED33] py-4 rounded-xl"
+                            : "border-transparent text-black"
+                            } transition duration-300`}
+                    >
+                        Single Person in Double Cabin
+                        <p className="text-[20px] font-sourceSansPro font-semibold text-mustard">(price per person)</p>
+
+                    </button>
+                </div>
+
+                {/* Table */}
+                {data && (
+                    <div className="overflow-x-auto border border-black max-w-5xl mx-auto rounded-lg">
+                        <table className="w-full table-auto border-collapse text-center text-sm md:text-base font-sourceSansPro">
+                            <thead className="bg-[#D6AB62] text-zink">
+                                <tr className="text-[18px] font-bold font-poopins text-white ">
+                                    <th className="py-3 px-4 border-b border-r border-black ">Date</th>
+                                    <th className="py-3 px-4 border-b border-r border-black">Availability</th>
+                                    <th className="py-3 px-4 border-b border-r border-black">Ensuite Cabin P.P.</th>
+                                    <th className="py-3 px-4 border-b border-r border-black">Non Ensuite Cabin P.P.</th>
+                                    <th className="py-3 px-4 border-b  border-black">Book Now</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {data.dates.map((date, index) => (
+                                    <tr
+                                        key={index}
+                                        className="bg-white text-[16px] font-poppins font-medium hover:bg-[#f3f4f6] transition"
+                                    >
+                                        <td
+                                            className={`px-4 py-3 border-black ${index !== data.dates.length - 1 ? "border-b" : ""} border-r`}
+                                        >
+                                            {date}
+                                        </td>
+                                        <td
+                                            className={`px-4 py-3 text-green-600 capitalize font-bold border-black ${index !== data.dates.length - 1 ? "border-b" : ""} border-r`}
+                                        >
+                                            {data.availibility[index] || "-"}
+                                        </td>
+                                        <td
+                                            className={`px-4 py-3 border-black ${index !== data.dates.length - 1 ? "border-b" : ""} border-r`}
+                                        >
+                                            {data.ensuitCabin[index] || "-"}
+                                        </td>
+                                        <td
+                                            className={`px-4 py-3 border-black ${index !== data.dates.length - 1 ? "border-b" : ""} border-r`}
+                                        >
+                                            {data.nonEnsuitCabin[index] || "-"}
+                                        </td>
+                                        <td
+                                            className={`px-4 py-3 border-black ${index !== data.dates.length - 1 ? "border-b" : ""}`}
+                                        >
+                                            <button className="">
+                                                {data.bookNow[index] || "Book"}
+                                            </button>
+                                        </td>
+                                    </tr>
+
+
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                )}
+            </div>
+        </section>
+    );
+};
+
+export default CruiseDates;

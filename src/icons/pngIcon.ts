@@ -164,5 +164,14 @@ var PngIcons = {
     icon5: "/images/icon6.png", 
     icon6:"/images/icons7.png",
     icon7:"/images/icon4.png",
+
+    star :"/images/stars.png",
+    quote:"/images/quote.png",
+
+    profile1:"/images/profile1.png",
+    profile2:"/images/profile2.png",
+    profile3:"/images/profile3.png",
+    profile4:"/images/profile4.png",
+
 }
 export default PngIcons
