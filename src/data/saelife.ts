@@ -20,8 +20,8 @@ export const Sealife: ItineraryItem[] = [
         id: "3",
         place: "Are there water toys available on the yacht?",
         description: "Yes, a kayak and a stand-up paddleboard are available for rent during the charter.",
-    }
-    , {
+    },
+     {
         id: "4",
         place: "Is travel insurance required?",
         description: "We provide limited tourist insurance; however, it does not cover personal belongings. We highly recommend guests arrange personal travel insurance that covers sailing holidays.",
@@ -35,31 +35,38 @@ export const Sealife: ItineraryItem[] = [
         id: "6",
         place: "Do you provide sunblock and other essentials?",
         description: "We do not provide sunblock, so guests are advised to bring their own. However, towels, soap, and shampoo are included.",
-    }, {
+    }, 
+    {
         id: "7",
         place: "Are towels provided?",
         description: "Yes, each guest receives one swimming towel and one bathroom towel, which are changed once a week.",
-    }, {
+    }, 
+    {
         id: "8",
         place: "Can I rent a single cabin?",
         description: "Single cabins are available for rent. Please refer to the provided link for pricing information.",
-    }, {
+    },
+     {
         id: "9",
         place: "Can we customize the sailing itinerary?",
         description: "The sailing itineraries for cabin charters are fixed to ensure the best experience for all guests.",
-    }, {
+    },
+     {
         id: "10",
         place: "Are electrical outlets available for charging devices?",
         description: "Yes, there are 220V outlets available in the saloon area, though cabins do not have individual outlets. We recommend charging devices during the day when the solar panels fully charge the batteries.",
-    }, {
+    }, 
+    {
         id: "11",
         place: "Can we get information about other guests, such as nationality or age?",
         description: "For privacy reasons, guest information is confidential, but we can provide general age ranges upon request.",
-    }, {
+    },
+     {
         id: "12",
         place: "Is air conditioning available in the cabins?",
         description: "Cabins are not equipped with air conditioning. However,  the cabins are equipped with fans and built-in hatches, which provides excellent airflow.",
-    }, {
+    }, 
+    {
         id: "13",
         place: "Can you accommodate special diets (vegetarian, vegan, etc.)?",
         description: "Yes, we will send a preference form to guests before the trip where they can indicate any dietary requirements.",
@@ -74,8 +81,7 @@ export const Sealife: ItineraryItem[] = [
         place: "Is it suitable for families with children?",
         description: "Cabin charters are open to guests aged 12 years and older.",
     },
-
-    , {
+     {
         id: "17",
         place: "Do I need cash for any extras?",
         description: "Yes, guests should bring cash in Thai Baht to pay for National Park fees, as well as one dinner ashore, which is not included in the package. Drinks onboard are also available for purchase.",
