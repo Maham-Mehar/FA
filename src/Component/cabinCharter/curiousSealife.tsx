@@ -15,7 +15,7 @@ const SealifeFAQ = () => {
         {/* Heading */}
         <div className="mb-12 flex justify-center flex-col items-center">
           <h2 className="text-[24px] sm:text-[40px] font-playfair text-zink font-semibold mb-1">
-            FAQs About Sailing
+            FAQS About Sailing
           </h2>
           <img
             src="/images/rframe.png"
