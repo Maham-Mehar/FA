@@ -1,7 +1,6 @@
 "use client";
 import Slider, { CustomArrowProps } from "react-slick";
 import { yachts, Yacht } from "@/data/sliderData2";
-
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 const PrevArrow = ({ onClick }: CustomArrowProps) => (

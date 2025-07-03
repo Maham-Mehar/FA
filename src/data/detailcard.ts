@@ -10,12 +10,12 @@ export interface Attraction {
     description: string[];
     highlights: string[];
     tip: string;
-}
+}                                      
 
 export interface DestinationAttractions {
     headingText: string;
     items: Attraction[];
-}
+}   
 
 export const attractionsMap: Record<string, DestinationAttractions> = {
     "phi-phi-island": {

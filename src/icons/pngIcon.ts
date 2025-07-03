@@ -51,7 +51,7 @@ var PngIcons = {
     line2: "/images/line2.png",
     line3: "/images/Line_3.png",
     frame1: "/images/Frame.png",
-
+    rframe2: "/images/rframe2.png",
     // Detail Card Hero
     Hbg2: "/images/Hbg_2.png",
     Hbg3: "/images/Hbg_3.png",
@@ -154,24 +154,30 @@ var PngIcons = {
     thPlace_4: "/images/thPlace_4.png",
 
     MapImage: "/images/map2.png",
-    sailImage:"/images/sailimage.png",
-    sailImage1:"/images/sailimage1.png",
-    sailImage2:"/images/sailimage2.png",
-    sailImage3:"/images/sailimage3.png",
-    sailImage4:"/images/sailimage4.png",
+    sailImage: "/images/sailimage.png",
+    sailImage1: "/images/sailimage1.png",
+    sailImage2: "/images/sailimage2.png",
+    sailImage3: "/images/sailimage3.png",
+    sailImage4: "/images/sailimage4.png",
 
     icon4: "/images/icon5.png",
-    icon5: "/images/icon6.png", 
-    icon6:"/images/icons7.png",
-    icon7:"/images/icon4.png",
+    icon5: "/images/icon6.png",
+    icon6: "/images/icons7.png",
+    icon7: "/images/icon4.png",
 
-    star :"/images/stars.png",
-    quote:"/images/quote.png",
+    star: "/images/stars.png",
+    quote: "/images/quote.png",
 
-    profile1:"/images/profile1.png",
-    profile2:"/images/profile2.png",
-    profile3:"/images/profile3.png",
-    profile4:"/images/profile4.png",
+    profile1: "/images/profile1.png",
+    profile2: "/images/profile2.png",
+    profile3: "/images/profile3.png",
+    profile4: "/images/profile4.png",
 
+    // Crewed page images
+    crewedimg1: "/images/crewedadv1.png",
+    crewedimg2: "/images/crewedadv2.png",
+    crewedimg3: "/images/crewedadv3.png",
+    crewedimg4: "/images/crewedadv4.png",
 }
+
 export default PngIcons

@@ -83,21 +83,27 @@ const FunMoments: React.FC = () => {
         {testimonials.map((item, index) => (
           <div
             key={item.id}
-            className={`transition-all duration-300 px-2 sm:px-2 md:px-3 lg:px-4 mt-[47px] ${currentSlide === index ? "scale-110 z-10" : "scale-95 "
+            className={`transition-all duration-300 px-2 sm:px-2 md:px-3 lg:px-4 mt-[47px] ${currentSlide === index ? "scale-97 z-10" : "scale-85 "
               }`}
           >
-            <div className="bg-white border border-gray-200 rounded-[20px] shadow-md p-6 h-full flex flex-col justify-between min-h-[330px] max-w-[530px] ">
+            <div className="bg-white border border-gray-200 rounded-tl-3xl rounded-br-3xl shadow-md h-full flex flex-col justify-between min-h-[270px] max-w-7xl ">
 
-              {/* Top: Stars */}
-              <Image src={item.image2} alt="stars" width={80} height={16} className="mb-3" />
+              <div className="flex flex-col w-full">
+                {/* Top row: two icons justified at the ends */}
+                <div className="flex justify-between mb-2 w-full">
+                  <img src={item.image2} alt="" className="h-6 w-auto mt-6 ms-6" />
+                  <img src={item.image1} alt="" className="h-20 w-auto" />
+                </div>
 
-              {/* Middle: Description */}
-              <p className="text-[16px] leading-[26px] text-zink font-sourceSansPro italic">
-                {item.desp}
-              </p>
+                {/* Description immediately below */}
+                <p className="text-[20px] font-normal leading-[26px] text-zink font-inter px-6 italic">
+                  {item.desp}
+                </p>
+              </div>
+
 
               {/* Bottom: Author */}
-              <div className="flex items-center gap-3 mt-6">
+              <div className="flex items-center gap-3 mt-3 px-6 pb-6">
                 <Image
                   src={item.image3}
                   alt={item.author}
@@ -105,7 +111,7 @@ const FunMoments: React.FC = () => {
                   height={56}
                   className="rounded-full"
                 />
-                <p className="text-[16px] font-semibold text-zink font-sourceSansPro">
+                <p className="text-[20px] font-bold text-mustard font-sourceSansPro">
                   {item.author}
                 </p>
               </div>

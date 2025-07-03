@@ -28,7 +28,7 @@ const CabinCharter = () => {
             <PricingSection />
             <Price_Details />
             <CruiseDates />
-            {/* <FunMoments /> */}
+            <FunMoments />
             <ComparisonChart />
             <FounderNote />
             <SealifeFAQ />

@@ -92,39 +92,58 @@ const Sailing_Itinerary = () => {
     const fullWidthItem = highSeason.find(item => item.id === "7");
 
     return (
-        <section className="bg-white py-12 px-4 lg:px-5 xl:px-8">
-            <div className="max-w-7xl mx-auto">
-                {/* Heading */}
-                <div className="mb-12 flex justify-center flex-col items-center">
-                    <h2 className="text-[24px] sm:text-[40px] font-playfair text-zink font-semibold mb-1">
-                        Sailing Itinerary   </h2>
-                    <img src="/images/rframe.png" alt="" className="w-[500px] flex justify-center text-center my-3 mx-auto" />
+        <div className=" py-12 ">
 
-                    <p className="text-zink text-[16px] sm:text-[24px] font-normal font-sourceSanspro">
-                        A seamless route through the Andaman’s most iconic and secret escapes</p>
+            <section className="bg-white px-4 pb-12 lg:px-5 xl:px-8">
+                <div className="max-w-7xl mx-auto">
+                    {/* Heading */}
+                    <div className="mb-12 flex justify-center flex-col items-center">
+                        <h2 className="text-[24px] sm:text-[40px] font-playfair text-zink font-semibold mb-1">
+                            Sailing Itinerary   </h2>
+                        <img src="/images/rframe.png" alt="" className="w-[500px] flex justify-center text-center my-3 mx-auto" />
+
+                        <p className="text-zink text-[16px] sm:text-[24px] font-normal font-sourceSanspro">
+                            A seamless route through the Andaman’s most iconic and secret escapes</p>
+                    </div>
+
+                    {/* Two Columns */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        {/* Left Column */}
+                        <div className="space-y-4">
+                            {leftColumn.map(item => renderItem(item))}
+                        </div>
+
+                        {/* Right Column */}
+                        <div className="space-y-4">
+                            {rightColumn.map(item => renderItem(item))}
+                        </div>
+                    </div>
+
+                    {/* Full-width Last Item (Image) */}
+                    {fullWidthItem && (
+                        <div className="mt-6">
+                            {renderItem(fullWidthItem)}
+                        </div>
+                    )}
                 </div>
+            </section>
 
-                {/* Two Columns */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                    {/* Left Column */}
-                    <div className="space-y-4">
-                        {leftColumn.map(item => renderItem(item))}
-                    </div>
-
-                    {/* Right Column */}
-                    <div className="space-y-4">
-                        {rightColumn.map(item => renderItem(item))}
+            <section className="max-w-7xl mx-auto px-4 lg:px-5 xl:px-0">
+                <div className="flex justify-center">
+                    <div className="relative w-full h-[520px] overflow-hidden shadow-lg">
+                        <iframe
+                            className="w-full h-full"
+                            src="https://www.youtube.com/embed/jLTjbJ1TUg8?rel=0&modestbranding=1"
+                            title="YouTube video player"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                        />
                     </div>
                 </div>
+            </section>
 
-                {/* Full-width Last Item (Image) */}
-                {fullWidthItem && (
-                    <div className="mt-6">
-                        {renderItem(fullWidthItem)}
-                    </div>
-                )}
-            </div>
-        </section>
+        </div>
     );
 };
 
