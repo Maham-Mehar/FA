@@ -1,11 +1,11 @@
 "use client";
 import Gallery from '@/Component/YachtDetail/gallery';
 import { CiShare2 } from "react-icons/ci";
-import About from '../YachtDetail/about';
 import ContactDetail from './contactDetail';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import VideoSection from './videoSection';
+import YachtAdventure from '../crewed_Charter/yachtAdventure';
 const HeroSection = () => {
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -42,7 +42,8 @@ const HeroSection = () => {
                 </div>
             </div>
             <div className='mt-6'>
-            <VideoSection />
+                <VideoSection />
+                <YachtAdventure />
             </div>
         </div>
 
