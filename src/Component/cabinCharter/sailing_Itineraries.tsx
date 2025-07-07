@@ -25,7 +25,7 @@ const Sailing_Itinerary = () => {
                     className="flex justify-between items-center w-full p-4 cursor-pointer text-left"
                 >
                     <div className="flex items-center gap-4 justify-center">
-                        <div className="bg-[#034250] text-white font-poppins text-[16px] xl:text-[16px] font-semibold px-3 py-1 rounded-lg">
+                        <div className="bg-[#034250] text-white font-poppins text-[15px] xl:text-[16px] font-semibold px-3 py-1 rounded-lg">
                             <p>
                                 {item.days}
                             </p>
@@ -33,7 +33,7 @@ const Sailing_Itinerary = () => {
                             {/* ID below day */}
 
                         </div>
-                        <p className="font-bold text-[18px] xl:[18px] text-zink font-sourceSanspro">{item.place}</p>
+                        <p className="font-bold text-15px lg:text-[18px] xl:[18px] text-zink font-sourceSanspro">{item.place}</p>
                     </div>
                     <span className="text-2xl font-bold text-gray-400">
                         {isActive ? "−" : "+"}
@@ -55,10 +55,10 @@ const Sailing_Itinerary = () => {
                                                 key={`${idx}-${i}`}
                                                 className="text-sm md:text-base odd:bg-white even:bg-[#F5F5F5] odd:hover:bg-[#F5F5F5]"
                                             >
-                                                <td className="border border-gray-300 font-sourceSansPro text-[18px] px-4 py-3 font-bold text-black align-top">
+                                                <td className="border border-gray-300 font-sourceSansPro text-[18px] px-2 md:px-2 lg:px-4 py-3 font-bold text-black align-top">
                                                     {title}
                                                 </td>
-                                                <td className="border border-gray-300 font-sourceSansPro font-normal text-[18px] px-4 py-3 text-black">
+                                                <td className="border border-gray-300 font-sourceSansPro font-normal text-[16px] lg:text-[18px]px-2 md:px-2 lg:px-4 py-3 text-black">
                                                     {descriptions[i] || "-"}
                                                 </td>
                                             </tr>
@@ -130,7 +130,7 @@ const Sailing_Itinerary = () => {
 
             <section className="max-w-7xl mx-auto px-4 lg:px-5 xl:px-0">
                 <div className="flex justify-center">
-                    <div className="relative w-full h-[520px] overflow-hidden shadow-lg">
+                    <div className="relative w-full h-[400px] md:h-[450px] lg:h-[490px] xl:h-[520px] overflow-hidden shadow-lg">
                         <iframe
                             className="w-full h-full"
                             src="https://www.youtube.com/embed/jLTjbJ1TUg8?rel=0&modestbranding=1"

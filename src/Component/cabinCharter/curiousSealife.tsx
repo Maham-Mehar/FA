@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Sealife ,ItineraryItem } from "@/data/saelife";
+import { Sealife, ItineraryItem } from "@/data/saelife";
 
 const SealifeFAQ = () => {
   const [activeId, setActiveId] = useState<string | null>(null);
@@ -29,8 +29,8 @@ const SealifeFAQ = () => {
 
         {/* Accordion */}
         <div className="space-y-4 grid grid-cols-1 md:grid-cols-2 gap-x-8">
-         {Sealife.filter((item): item is ItineraryItem => item !== undefined).map(item => {
-    const isActive = activeId === item.id;
+          {Sealife.filter((item): item is ItineraryItem => item !== undefined).map(item => {
+            const isActive = activeId === item.id;
             return (
               <div
                 key={item.id}

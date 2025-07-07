@@ -4,7 +4,7 @@ import Slider, { CustomArrowProps } from "react-slick";
 import { yachts, Yacht } from "@/data/crewedData";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { useState } from "react";
-
+import Link from "next/link";
 
 const YachtMatchmaker: React.FC = () => {
     const [guests, setGuests] = useState<number>(1);
@@ -171,6 +171,7 @@ const YachtMatchmaker: React.FC = () => {
                 <div className="md:col-span-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {yachts.map((boat: Yacht) => (
+                            <Link href="/yachtDetail">
                             <div key={boat.id} className="">
                                 <div className="mb-3 py-5 transition">
                                     <div className="overflow-hidden">
@@ -202,6 +203,7 @@ const YachtMatchmaker: React.FC = () => {
                                     </div>
                                 </div>
                             </div>
+                            </Link>
                         ))}
                     </div>
                 </div>

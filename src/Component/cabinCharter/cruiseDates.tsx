@@ -42,8 +42,8 @@ const CruiseDates = () => {
                         <p className="text-[20px] font-sourceSansPro font-semibold text-mustard">(price per person)</p>
 
                     </button>
-                </div>
-
+                </div>          
+                           
                 {/* Table */}
                 {data && (
                     <div className="overflow-x-auto border border-black max-w-5xl mx-auto rounded-lg">
