@@ -1,12 +1,12 @@
 "use client";
 const CharterDetail = () => {
   return (
-    <div className="px-4 sm:px-6 lg:px-8 xl:px-0 max-w-7xl mx-auto">
+    <div className="xl:px-0 max-w-7xl mx-auto">
       {/* Tabs */}
 
       {/* Content */}
       <div className="space-y-4">
-        <p className="text-lg font-bold text-zink font-sourceSansPro">Description</p>
+        <p className="text-xl font-bold text-zink font-sourceSansPro">Description</p>
         <p className="text-base font-normal font-sourceSansPro text-zink">
           Hot Chilli is a brand new, comfortable, fast motor catamaran for up to 14 guests for daily excursions and for up to 4 guests for overnight cruises. It features a very capable captain and cook team. This power cat is perfect for island hopping. Hot Chili can reach all the local islands on a day charter due to its cruising speed of 15 knots.
         </p>
@@ -22,7 +22,7 @@ const CharterDetail = () => {
       </div>
 
       {/* Image */}
-      <div className="mt-8 border-t border-b border-gray-400 pt-3">
+      <div className="mt-8 border-t border-b border-gray-400 pt-3 mb-8">
         <img
           src="/images/map4.png"
           alt="Route Map"

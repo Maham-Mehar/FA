@@ -3,8 +3,8 @@ const NightCharter = () => {
         <section className="bg-white p-4 md:p-6 lg:p-8 rounded-lg  space-y-6">
             {/* Day Charter Description */}
             {/* Price Table */}
-            <div className="overflow-x-auto">
-                <table className="min-w-full table-auto border border-gray-300 text-left shadow-md">
+           <div className="overflow-x-auto">
+                <table className="min-w-full table-auto border shadow-md border-gray-300 text-left">
                     <thead className="bg-[#034250] text-white">
                         <tr>
                             <th className="px-4 py-3 font-semibold text-[16px] border border-gray-300 min-w-[180px]">
@@ -14,21 +14,21 @@ const NightCharter = () => {
                                 colSpan={2}
                                 className="px-4 py-3 font-semibold text-[16px] border border-gray-300 text-center"
                             >
-                                Day charter <br /> (max. 14 pax)
+                            OverNight charter <br /> (max. 14 pax)
                             </th>
                         </tr>
 
                     </thead>
 
-                    <tbody className="font-inter text-[16px] font-normal ">
-                        <tr className="text-dark text-[18px] font-bold font-sourceSansPro">
+                    <tbody className="font-inter text-[16px] font-normal">
+                        <tr className="text-dark text-base md:text-[18px] font-bold font-sourceSansPro">
                             <td className=" "></td>
                             <td className="px-4 py-3 border border-gray-300 ">8 pax included</td>
                             <td className="px-4 py-3 border border-gray-300">Additional pax</td>
                         </tr>
 
                         <tr className="odd:bg-white even:bg-gray-50">
-                            <td className="px-4 py-3 border border-gray-300 text-zinc-800 font-bold text-[18px]">
+                            <td className="px-4 py-3 border border-gray-300 text-zinc-800 font-bold  text-base md:text-[18px]">
                                 Nov. – 20th Dec.
                             </td>
                             <td className="px-4 py-3 border border-gray-300">34,900 THB</td>
@@ -36,7 +36,7 @@ const NightCharter = () => {
                         </tr>
 
                         <tr className="odd:bg-white even:bg-gray-50">
-                            <td className="px-4 py-3 border border-gray-300 text-zinc-800 font-bold text-[18px]">
+                            <td className="px-4 py-3 border border-gray-300 text-zinc-800 font-bold  text-base md:text-[18px]">
                                 21st Dec. – Feb.
                             </td>
                             <td className="px-4 py-3 border border-gray-300">39,900 THB</td>
@@ -44,7 +44,7 @@ const NightCharter = () => {
                         </tr>
 
                         <tr className="odd:bg-white even:bg-gray-50">
-                            <td className="px-4 py-3 border border-gray-300 text-zinc-800 font-bold text-[18px]">
+                            <td className="px-4 py-3 border border-gray-300 text-zinc-800 font-bold  text-base md:text-[18px]">
                                 Mar. – Apr.
                             </td>
                             <td className="px-4 py-3 border border-gray-300">34,900 THB</td>
@@ -52,7 +52,7 @@ const NightCharter = () => {
                         </tr>
 
                         <tr className="odd:bg-white even:bg-gray-50">
-                            <td className="px-4 py-3 border border-gray-300 text-zinc-800 font-bold text-[18px]">
+                            <td className="px-4 py-3 border border-gray-300 text-zinc-800 font-bold  text-base md:text-[18px]">
                                 May – Oct.
                             </td>
                             <td className="px-4 py-3 border border-gray-300">29,900 THB</td>
@@ -63,9 +63,9 @@ const NightCharter = () => {
                 </table>
             </div>
 
-            <div className="border-b-1 border-b-gray-400 pb-4">
-                <h2 className="text-xl md:text-2xl font-bold text-zink mb-2">Day Charter</h2>
-                <ul className="list-disc list-inside space-y-1 text-[16px] text-dark font-inter">
+            <div className="border-b-1 border-b-gray-400 pb-6">
+                <h2 className="text-xl lg:text-2xl font-bold text-zink mb-3">Night Charter</h2>
+                <ul className="list-disc list-inside space-y-1 text-sm md:text-[16px] text-dark font-inter">
                     <li>Duration: 8 hours from and to Chalong pier; shorter charters only on request</li>
                     <li>
                         Finish latest with sunset according to this website:{" "}
@@ -83,9 +83,9 @@ const NightCharter = () => {
             </div>
 
             {/* Destinations */}
-            <div className="border-b-1 border-b-gray-400 pb-4">
+            <div className="border-b-1 border-b-gray-400 pb-6">
                 <h3 className="text-lg md:text-xl font-semibold text-zink mb-2">Destinations (choose one):</h3>
-                <ul className="list-disc list-inside space-y-1 text-dark text-[16px] font-inter">
+                <ul className="list-disc list-inside space-y-1 text-dark text-sm md:text-[16px] font-inter">
                     <li>Koh Racha Yai / Racha Noi (best to skip the crowd)</li>
                     <li>Phang Nga Bay / James Bond Island (no clear water for snorkeling in Phang Nga Bay)</li>
                     <li>

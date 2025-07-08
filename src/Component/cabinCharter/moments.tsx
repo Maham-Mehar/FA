@@ -74,29 +74,30 @@ const FunMoments: React.FC = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto py-14">
-      <p className="mt-[50px] font-poppins font-extrabold text-[36px] text-center text-green" style={{ boxShadow: "#00000040" }}>
+    <div className="max-w-7xl mx-auto pb-6 md:pb-8 lg:pb-12">
+      <p className="mt-[50px] px-4 font-poppins font-extrabold text-[24px] md:text-[29px] lg:text-[32px] xl:text-[36px] text-center text-green" style={{ boxShadow: "#00000040" }}>
         Moments That Made Waves</p>
-      <img src="/images/rframe.png" alt="" className="w-[500px] my-3 mx-auto" />
-      <p>From sunset dinners to secret lagoons — hear what made it unforgettable</p>
+      <img src="/images/rframe.png" alt="" className="w-[350px]  md:w-[400px] lg:w-[450px] xl:w-[500px] my-3 mx-auto" />
+      <p className="text-center px-4 text-base md:text-xl lg:text-xl xl:text-2xl max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl mx-auto">From sunset dinners to secret lagoons — hear what made it unforgettable</p>
       <Slider {...settings}>
         {testimonials.map((item, index) => (
           <div
             key={item.id}
-            className={`transition-all duration-300 px-2 sm:px-2 md:px-3 lg:px-4 mt-[47px] ${currentSlide === index ? "scale-97 z-10" : "scale-85 "
+            className={`transition-all duration-300 px-2 sm:px-2 md:px-3 lg:px-4 mt-[47px] ${currentSlide === index ? "scale-105 xl:scale-97 z-10" : "scale-85 "
               }`}
           >
-            <div className="bg-white border border-gray-200 rounded-tl-3xl rounded-br-3xl shadow-md h-full flex flex-col justify-between min-h-[270px] max-w-7xl ">
+            <div className="bg-white border border-gray-200 rounded-tl-3xl rounded-br-3xl shadow-md h-full flex flex-col justify-between min-h-[270px] max-w-7xl w-full ">
 
               <div className="flex flex-col w-full">
                 {/* Top row: two icons justified at the ends */}
-                <div className="flex justify-between mb-2 w-full">
+                <div className="hidden md:block">
+                <div className="flex justify-between mb-2 w-full ">
                   <img src={item.image2} alt="" className="h-6 w-auto mt-6 ms-6" />
-                  <img src={item.image1} alt="" className="h-20 w-auto" />
+                  <img src={item.image1} alt="" className="h-15 lg:h-20 w-auto " />
                 </div>
-
+</div>
                 {/* Description immediately below */}
-                <p className="text-[20px] font-normal leading-[26px] text-zink font-inter px-6 italic">
+                <p className="pt-4 md:pt-0 text-sm md:text-lg lg:text-[19px] font-normal leading-[26px] text-zink font-inter px-2 md:px-3 lg:px-6 italic">
                   {item.desp}
                 </p>
               </div>
@@ -111,7 +112,7 @@ const FunMoments: React.FC = () => {
                   height={56}
                   className="rounded-full"
                 />
-                <p className="text-[20px] font-bold text-mustard font-sourceSansPro">
+                <p className="text-base md:text-lg lg:text-xl font-bold text-mustard font-sourceSansPro">
                   {item.author}
                 </p>
               </div>

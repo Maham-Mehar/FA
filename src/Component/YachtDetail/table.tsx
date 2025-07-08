@@ -57,13 +57,13 @@ const YachtTables = () => {
     return (
         <div>
             <div className="border-b-1 border-gray-400 mb-5">
-                <div className="border-1 border-gray-300 px-5 mb-5 rounded-lg">
+                <div className="border-1 border-gray-300 px-3 md:px-4 lg:px-5 xl:px-7 mb-5 rounded-lg">
                     <div className="flex items-center py-4 ">
                         <p className="p-2 bg-mustard rounded-lg text-white me-3">< IoBoatOutline size={24} /></p>
-                        <p className="text-[23px] text-zink font-bold font-sourceSansPro">Yacht Specifications</p>
+                        <p className="text-xl lg:text-[23px] text-zink font-bold font-sourceSansPro">Yacht Specifications</p>
                     </div>
                     {isActive && hasItinerary && item1.itinerary && (
-                        <div className="px-4 xl:px-0 pb-6">
+                        <div className="pb-6">
                             <div className="overflow-x-auto">
                                 <table className="w-full border border-gray-300 text-left text-zink table-auto">
                                     <tbody>
@@ -93,13 +93,13 @@ const YachtTables = () => {
             </div>
 
             <div className="border-b-1 border-gray-400 mb-5">
-                <div className="border-1 border-gray-300 px-5 mb-5 rounded-lg">
+                <div className="border-1 border-gray-300 px-3 md:px-4 lg:px-5 xl:px-7  mb-5 rounded-lg">
                     <div className="flex items-center py-4 ">
                         <p className="p-2 bg-mustard rounded-lg text-white me-3"><BsBoxes size={24} /></p>
-                        <p className="text-[23px] text-zink font-bold font-sourceSansPro">Equipment</p>
+                        <p className="text-xl lg:text-[23px]text-zink font-bold font-sourceSansPro">Equipment</p>
                     </div>
                     {isActive && hasItinerary && item2.itinerary && (
-                        <div className="px-4 xl:px-0 pb-6">
+                        <div className=" pb-6">
                             <div className="overflow-x-auto">
                                 <table className="w-full border border-gray-300 text-left text-zink table-auto">
                                     <tbody>
@@ -129,13 +129,13 @@ const YachtTables = () => {
             </div>
 
             <div className="border-b-1 border-gray-400 mb-5">
-                <div className="border-1 border-gray-300 px-5 mb-5 rounded-lg">            
-                <div className="flex items-center py-4">
-                    <p className="p-2 bg-mustard rounded-lg text-white me-3"><LuBolt size={24} /></p>
-                    <p className="text-[23px] text-zink font-bold font-sourceSansPro">Activities Equipment</p>
-                </div>
+                <div className="border-1 border-gray-300 px-3 md:px-4 lg:px-5 xl:px-7  mb-5 rounded-lg">
+                    <div className="flex items-center py-4">
+                        <p className="p-2 bg-mustard rounded-lg text-white me-3"><LuBolt size={24} /></p>
+                        <p className="text-xl lg:text-[23px] text-zink font-bold font-sourceSansPro">Activities Equipment</p>
+                    </div>
                     {isActive && hasItinerary && item3.itinerary && (
-                        <div className="px-4 xl:px-0 pb-6">
+                        <div className="pb-6">
                             <div className="overflow-x-auto">
                                 <table className="w-full border border-gray-300 text-left text-zink table-auto">
                                     <tbody>
@@ -163,8 +163,7 @@ const YachtTables = () => {
                     )}
                 </div>
             </div>
-            </div>
-            );
-};
-
-            export default YachtTables;
+        </div>
+    );
+}
+export default YachtTables;

@@ -19,21 +19,21 @@ const CabinCharter = () => {
     return (
         <Fragment>
             <HeroSection />
-             <About />
-             <SeaSide_Sixdays />
+            <About />
+            <SeaSide_Sixdays />
             <SeaEscape />
-        <Thailand_BestLands />
-               <Sailing_Itinerary />
-             <SailingDetails />
-            { /*<PricingSection />
+            <Thailand_BestLands />
+            <Sailing_Itinerary />
+            <SailingDetails />
+            <PricingSection />
             <Price_Details />
             <CruiseDates />
             <FunMoments />
-            <ComparisonChart />
+            {/* <ComparisonChart /> */}
             <FounderNote />
             <SealifeFAQ />
-            <ContactUs /> */}
-        
+            <ContactUs />
+
         </Fragment>
     )
 }

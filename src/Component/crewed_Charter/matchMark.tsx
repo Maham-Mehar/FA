@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
-import Slider, { CustomArrowProps } from "react-slick";
 import { yachts, Yacht } from "@/data/crewedData";
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { useState } from "react";
 import Link from "next/link";
 
@@ -27,7 +25,7 @@ const YachtMatchmaker: React.FC = () => {
         setGuests(prev => Math.max(1, prev - 1));
     };
     // length range 
-    const [length, setLength] = useState(60); // default position
+    const [length, setLength] = useState(60);
 
     const handleLength = (e: React.ChangeEvent<HTMLInputElement>) => {
         setLength(Number(e.target.value));
@@ -40,21 +38,21 @@ const YachtMatchmaker: React.FC = () => {
         return "";
     };
     return (
-        <div className="py-12 bg-gray-50">
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-10 max-w-7xl mx-auto xl:px-0 lg:px-4">
+        <div className="py-12 bg-gray-50 px-4 xl:px-0">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-4 lg:gap-8 xl:gap-10 max-w-7xl mx-auto xl:px-0 lg:px-4">
                 {/* Left column: Form */}
                 <div className="md:col-span-4">
-                    <div className="bg-white rounded-2xl shadow-lg p-6">
-                        <h2 className="text-2xl font-extrabold text-green mb-6 font-playfair">
+                    <div className="bg-white rounded-2xl shadow-lg p-3 lg:p-4 xl:p-6">
+                        <h2 className=" text-xl lg:text-2xl font-extrabold text-green mb-6 font-playfair">
                             Yacht Matchmaker
                         </h2>
 
                         {/* Yacht Type */}
                         <div className="mb-5">
-                            <label className="block text-sm font-semibold mb-2 text-zinc-700">
+                            <label className="block text-sm font-semibold mb-0 lg:mb-2 text-zinc-700">
                                 Select Yacht Type
                             </label>
-                            <select className="w-full border-b-2  border-b-[#42717C] outline-none px-3 py-2 ">
+                            <select className="w-full border-b-2 border-b-[#42717C] outline-none px-3 py-2 ">
                                 <option>Type</option>
                                 <option>Catamaran</option>
                                 <option>Monohull</option>
@@ -169,40 +167,44 @@ const YachtMatchmaker: React.FC = () => {
 
                 {/* Right column: Yacht cards */}
                 <div className="md:col-span-8">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-4 xl:gap-6">
                         {yachts.map((boat: Yacht) => (
                             <Link href="/yachtDetail">
-                            <div key={boat.id} className="">
-                                <div className="mb-3 py-5 transition">
-                                    <div className="overflow-hidden">
-                                        <img
-                                            src={boat.image}
-                                            alt={boat.name}
-                                            className="w-full h-70 object-cover rounded-tl-3xl rounded-br-3xl"
-                                        />
-                                    </div>
-                                    <div className="mt-3 space-y-1 px-3">
-                                        <p className="text-[20px] font-poppins text-red-500 font-semibold">
-                                            from {boat.priceFrom.toLocaleString()} EUR
-                                        </p>
-                                        <h3 className="md:text-[24px] lg:text-[26px] xl:text-[30px] font-playfair text-zink">{boat.name}</h3>
-                                        <p className="text-[22px] font-sourceSanspro text-gray-600">
-                                            Day &amp; Overnight Charter
-                                        </p>
-                                    </div>
-                                    <div className="mt-4 px-2 pt-3 flex justify-between border-t border-gray-300 text-gray-700 text-sm">
-                                        <div className="flex items-center space-x-1">
-                                            <img src="/images/icon1.png" alt="" /> <span>{boat.lengthFt} ft</span>
+                                <div key={boat.id} className="">
+                                    <div className="mb-3 py-5 transition">
+                                        <div className="overflow-hidden">
+                                            <img
+                                                src={boat.image}
+                                                alt={boat.name}
+                                                className="w-full md:h-55 lg:h-64 xl:h-70 object-cover rounded-tl-3xl rounded-br-3xl"
+                                            />
                                         </div>
-                                        <div className="flex items-center space-x-1">
-                                            <img src="/images/icon2.png" alt="" /> <span>{boat.guests}</span>
+                                        <div className="mt-3 space-y-1 px-0 lg:px-3 ">
+                                            <p className="text-lg md:text-base lg:text-lg xl:text-xl font-poppins text-red-500 font-semibold">
+                                                from {boat.priceFrom.toLocaleString()} EUR
+                                            </p>
+                                            <h3 className="text-[24px] md:text-[22px] lg:text-[26px] xl:text-[30px] font-playfair text-zink">{boat.name}</h3>
+                                            <p className="text-lg md:text-[17px] lg:text-xl xl:text-[22px] font-sourceSanspro text-gray-600">
+                                                Day &amp; Overnight Charter
+                                            </p>
                                         </div>
-                                        <div className="flex items-center space-x-1 pe-8">
-                                            <img src="/images/icon3.png" alt="" /> <span>{boat.cabins}</span>
+                                        <div className="mt-4 px-2 pt-3 flex justify-between border-t border-gray-300 text-gray-700 text-sm">
+                                            <div className="flex items-center space-x-1">
+                                                <img src="/images/icon1.png" alt="" className="lg:w-5 md:w-3 w-4" />
+                                                <span>{boat.lengthFt} ft</span>
+                                            </div>
+                                            <div className="flex items-center space-x-1">
+                                                <img src="/images/icon2.png" alt="" className="lg:w-5 md:w-3 w-4" />
+                                                <span>{boat.guests}</span>
+                                            </div>
+                                            <div className="flex items-center space-x-1 pe-8">
+                                                <img src="/images/icon3.png" alt="" className="lg:w-5 md:w-3 w-4" />
+                                                <span>{boat.cabins}</span>
+                                            </div>
                                         </div>
+
                                     </div>
                                 </div>
-                            </div>
                             </Link>
                         ))}
                     </div>

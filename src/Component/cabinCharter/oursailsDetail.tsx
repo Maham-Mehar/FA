@@ -82,7 +82,7 @@ const SailingDetails = () => {
             Discover the features that make our catamaran the ultimate escape vessel
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-10 items-center justify-center lg:justify-start lg:items-start">
           {/* Left: Image Slider (5 of 12 columns) */}
           <div className="md:col-span-5">
             <div className="relative w-full h-[400px] rounded-tl-3xl rounded-br-3xl overflow-hidden mb-4">
@@ -118,7 +118,7 @@ const SailingDetails = () => {
           {/* Right: Features & Table (7 of 12 columns) */}
           <div className="md:col-span-7 flex flex-col gap-6">
             {/* Feature Highlights */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6 lg:mt-0">
               {features.map((feature, index) => (
                 <div
                   key={index}
@@ -135,7 +135,7 @@ const SailingDetails = () => {
 
             {/* Table Style Details */}
             <div className="w-full border border-gray-200 rounded-lg overflow-hidden">
-              <table className="w-full table-auto text-left text-[15px] font-sourceSanspro">
+              <table className="w-full table-auto text-left text-[15px] font-sourceSanspro hidden md:block">
                 <tbody>
                   {catamaranDetails.map((item, idx) => (
                     <tr key={idx} className="bg-white">
@@ -150,6 +150,20 @@ const SailingDetails = () => {
                 </tbody>
               </table>
             </div>
+
+               <div className="block md:hidden">
+                {catamaranDetails.map((item, idx) => (
+                  <div key={idx} className="bg-white">
+                    <p className="font-bold text-[24px] font-sourceSansPro text-zink align-top sm:w-auto md:px-4 md:py-3 md:text-[20px] md:block md:w-auto">
+                      <span className="">{item.label}:</span>
+                    </p>
+                    <p className="text-zink font-normal pt-1 pb-3 font-sourceSansPro text-[20px] leading-relaxed sm:block sm:w-auto md:text-[16px] md:py-3 md:block md:w-auto">
+                      <span className="">{item.description}</span>
+                    </p>
+                  </div>
+                ))}
+              </div>
+
           </div>
         </div>
 

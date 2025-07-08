@@ -17,7 +17,7 @@ const Price_Details = () => {
         return (
             <div
                 key={item.id}
-                className="border bg-white border-gray-200 rounded-lg  hover:shadow-md transition duration-200"
+                className="border bg-white border-gray-200 rounded-lg hover:shadow-md transition duration-200"
             >
                 {/* Header */}
                 <button
@@ -29,7 +29,7 @@ const Price_Details = () => {
                         <div className="bg-[#034250] text-white p-2 rounded-lg flex items-center justify-center">
                             <Icon className="w-5 h-5" />
                         </div>
-                        <p className="font-bold text-[22px] text-zink font-sourceSanspro">{item.place}</p>
+                        <p className="font-bold text-[17px] md:text-[19px] lg:text-[22px] text-zink font-sourceSanspro">{item.place}</p>
                     </div>
                     <span className="text-2xl font-bold text-gray-400">{isActive ? "−" : "+"}</span>
                 </button>
@@ -41,7 +41,7 @@ const Price_Details = () => {
                             entry.description.map((desc, i) => (
                                 <p
                                     key={`${idx}-${i}`}
-                                    className="ms-3 text-[20px] text-[#333333] font-normal font-sourceSansPro leading-relaxed flex items-start gap-2"
+                                    className="ms-3 text-base lg:text-lg xl:text-xl text-[#333333] font-normal font-sourceSansPro leading-relaxed flex items-start gap-2"
                                 >
                                     <span className="text-black font-bold">•</span>
                                     {desc}
@@ -60,15 +60,15 @@ const Price_Details = () => {
     const rightColumn = priceDetail.filter(item => ["4", "5", "6"].includes(item.id));
 
     return (
-        <section className="bg-[#E6ECED1A] py-12 px-4 lg:px-5 xl:px-8">
+        <section className="bg-[#E6ECED1A] py-12 px-4 lg:px-4 xl:px-8">
             <div className="max-w-7xl mx-auto">
                 {/* Heading */}
                 <div className="mb-12 flex justify-center flex-col items-center">
-                    <h2 className="text-[24px] sm:text-[40px] font-playfair text-zink font-semibold mb-1">
+                    <h2 className="text-[24px] md:text-[36px] lg:text-[40px] font-playfair text-zink font-semibold mb-1">
                         Sailing Itinerary
                     </h2>
                     <img src="/images/rframe.png" alt="" className="w-[500px] my-3 mx-auto" />
-                    <p className="text-zink text-[16px] sm:text-[24px] font-normal font-sourceSanspro">
+                    <p className="text-zink text-[16px] text-[19px] lg:text-[24px] font-normal font-sourceSanspro text-center">
                         A seamless route through the Andaman’s most iconic and secret escapes
                     </p>
                 </div>

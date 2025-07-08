@@ -31,9 +31,8 @@ const Sailing_Itinerary = () => {
                             </p>
                             <p className="text-center">{item.id}</p>
                             {/* ID below day */}
-
                         </div>
-                        <p className="font-bold text-15px lg:text-[18px] xl:[18px] text-zink font-sourceSanspro">{item.place}</p>
+                        <p className="font-bold text-[18px] lg:text-[20px] xl:[23px] text-zink font-sourceSanspro">{item.place}</p>
                     </div>
                     <span className="text-2xl font-bold text-gray-400">
                         {isActive ? "−" : "+"}
@@ -55,23 +54,20 @@ const Sailing_Itinerary = () => {
                                                 key={`${idx}-${i}`}
                                                 className="text-sm md:text-base odd:bg-white even:bg-[#F5F5F5] odd:hover:bg-[#F5F5F5]"
                                             >
-                                                <td className="border border-gray-300 font-sourceSansPro text-[18px] px-2 md:px-2 lg:px-4 py-3 font-bold text-black align-top">
+                                                <td className="border border-gray-300 font-sourceSansPro text-[18px] lg:text-[23px] px-2 md:px-2 lg:px-4 py-3 font-bold text-black align-top">
                                                     {title}
                                                 </td>
-                                                <td className="border border-gray-300 font-sourceSansPro font-normal text-[16px] lg:text-[18px]px-2 md:px-2 lg:px-4 py-3 text-black">
+                                                <td className="border border-gray-300 font-sourceSansPro font-normal text-[18px] lg:text-[22px] px-2 md:px-2 lg:px-4 py-3 text-black">
                                                     {descriptions[i] || "-"}
                                                 </td>
                                             </tr>
                                         ));
                                     })}
                                 </tbody>
-
-
                             </table>
                         </div>
                     </div>
                 )}
-
                 {/* Optional Image Box */}
                 {isActive && !hasItinerary && item.image && (
                     <div className="px-4 pb-6">
@@ -90,11 +86,10 @@ const Sailing_Itinerary = () => {
     const leftColumn = highSeason.filter(item => item.id === "1" || item.id === "2" || item.id === "3");
     const rightColumn = highSeason.filter(item => item.id === "4" || item.id === "5" || item.id === "6");
     const fullWidthItem = highSeason.find(item => item.id === "7");
-
     return (
         <div className=" py-12 ">
 
-            <section className="bg-white px-4 pb-12 lg:px-5 xl:px-8">
+            <section className="bg-white px-4 lg:px-5 xl:px-8">
                 <div className="max-w-7xl mx-auto">
                     {/* Heading */}
                     <div className="mb-12 flex justify-center flex-col items-center">
@@ -128,7 +123,7 @@ const Sailing_Itinerary = () => {
                 </div>
             </section>
 
-            <section className="max-w-7xl mx-auto px-4 lg:px-5 xl:px-0">
+            <section className="max-w-7xl mx-auto px-4 lg:px-5 xl:px-0 mt-10">
                 <div className="flex justify-center">
                     <div className="relative w-full h-[400px] md:h-[450px] lg:h-[490px] xl:h-[520px] overflow-hidden shadow-lg">
                         <iframe

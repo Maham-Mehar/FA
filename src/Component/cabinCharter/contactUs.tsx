@@ -82,7 +82,7 @@ const ContactUs = () => {
 
     return (
         <div className="">
-            <section className="bg-white py-12 px-4 lg:px-6 ">
+            <section className="bg-white py-7 lg:py-9 xl:py-12 px-4 lg:px-6 ">
                 <div className="max-w-7xl mx-auto bg-white p-0 xl:py-6 ">
                     {/* Left Side - Form */}
                     <div className="col-span-12 lg:col-span-7">
@@ -158,7 +158,7 @@ const ContactUs = () => {
                             {/* Submit Button */}
                             <button
                                 type="submit"
-                                className="bg-[#034250] text-white text-sm font-semibold px-6 py-2 rounded-md w-fit md:col-span-2"
+                                className="bg-zink text-white text-lg font-semibold px-7 lg:px-10 py-2 lg:py-3 rounded-md w-fit md:col-span-2 hover:pointer hover:bg-[#D6AB62]"
                             >
                                 Submit
                             </button>

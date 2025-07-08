@@ -79,7 +79,7 @@ export const priceDetail: ItineraryItem[] = [
     {
         id: "4",
         icon: TbCopyPlus,
-        place: "Optional extras:",
+        place: "Optional extras",
         itinerary: [
             {
                 description: [

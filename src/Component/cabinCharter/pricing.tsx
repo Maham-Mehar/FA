@@ -51,7 +51,7 @@ const pricingOptions = [
 
 const PricingSection = () => {
   return (
-    <section className="bg-[#E6ECED1A] py-20 px-4 md:px-8">
+    <section className="bg-[#E6ECED1A] py-10 px-14 md:px-16 lg:px-4 xl:px-0">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-12">
@@ -66,17 +66,17 @@ const PricingSection = () => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-3 xl:gap-6">
           {pricingOptions.map((option, index) => (
             <div
               key={index}
-              className="border border-gray-200 bg-white p-6 rounded-xl shadow-sm hover:shadow-md hover:border-[#D6AB62] transition duration-200 flex flex-col justify-between"
+              className="border border-gray-200 bg-white p-3 xl:p-6 rounded-xl shadow-sm hover:shadow-md hover:border-[#D6AB62] transition duration-200 flex flex-col justify-between"
             >
               <div>
-                <h3 className="text-[15px] font-semiboldfont-sourceSansPro text-mustard mb-2 leading-tight">
+                <h3 className="text-[16px] xl:text-[15px] font-semiboldfont-sourceSansPro text-mustard mb-2 leading-tight">
                   {option.title}
                 </h3>
-                <p className="text-zink text-[32px] font-sourceSansPro font-bold leading-none">
+                <p className="text-zink md:text-[26px] lg:text-[28px] text-[32px] font-sourceSansPro font-bold leading-none">
                   From {option.price}
                 </p>
                 <p className="text-zink text-[16px] font-sourceSansPro font-semibold mb-3">{option.per}</p>
