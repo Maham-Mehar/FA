@@ -90,16 +90,16 @@ const ContactDetail = () => {
     return (
         <div className="bg-white sticky rounded-lg p-3 max-w-[500px] w-full shadow-lg">
             <div className="flex flex-col items-center justify-center text-center">
-            <p className="text-[26px] xl:text-[26px] font-playfair text-[#034250] font-extrabold">
-                Hot Chilli 38ft – Stealth Inquiry
-            </p>
-            <p className="text-[#034250] font-inter text-[16px] mt-1">
-                Looking for a yacht charter?
-            </p>
-            <p className="text-[#034250] font-inter text-[16px] mt-1">+66 61 234 5623</p>
-            <p className="text-[#034250] font-inter text-[16px]">+66 61 234 5623</p>
-</div>
-            <form onSubmit={handleSubmit} className="mt-6 space-y-3">
+                <p className="text-lg md:text-xl lg:text-[23px] xl:text-[26px] font-playfair text-[#034250] font-extrabold">
+                    Hot Chilli 38ft – Stealth Inquiry
+                </p>
+                <p className="text-zink font-inter text-sm lg:text-[16px] mt-2">
+                    Looking for a yacht charter?
+                </p>
+                <p className="text-[#034250] font-inter text-sm lg:text-[16px] mt-2">+66 61 234 5623</p>
+                <p className="text-[#034250] font-inter text-sm lg:text-[16px]">+66 61 234 5623</p>
+            </div>
+            <form onSubmit={handleSubmit} className="mt-3 lg:mt-4 xl:mt-6 space-y-3">
                 {formFields.map((field, index) => {
                     if (field.id === "travelDate" || field.id === "returnDate") return null; // skip these for now
 
@@ -141,7 +141,7 @@ const ContactDetail = () => {
                 })}
 
                 {/* Travel Date + Return Date Row */}
-                <div className="flex flex-col md:flex-row gap-2">
+                <div className="flex flex-col lg:flex-row gap-3">
                     {["travelDate", "returnDate"].map((id) => {
                         const field = formFields.find((f) => f.id === id)!;
                         const index = formFields.findIndex((f) => f.id === id);
@@ -150,7 +150,7 @@ const ContactDetail = () => {
                         return (
                             <div
                                 key={id}
-                                className="relative w-full md:w-[140px] min-h-[70px]"
+                                className="relative w-full lg:w-[130px] xl:w-[170px] min-h-[70px]"
                             >
                                 <input
                                     type="date"
@@ -162,19 +162,17 @@ const ContactDetail = () => {
                                     onBlur={() => handleBlur(id, field.required)}
                                     onKeyDown={(e) => handleKeyDown(e, index, id, field.required)}
                                     required={field.required}
-                                    className={`${inputFieldBase} ${
-                                        hasError
-                                            ? "border-red-500 focus:border-red-500"
-                                            : "border-[#81A1A8] focus:border-[#034250]"
-                                    } peer-empty`}
+                                    className={`${inputFieldBase} ${hasError
+                                        ? "border-red-500 focus:border-red-500"
+                                        : "border-[#81A1A8] focus:border-[#034250]"
+                                        } peer-empty`}
                                 />
                                 <label
                                     htmlFor={id}
-                                    className={`${labelStyle} ${
-                                        hasError
-                                            ? "text-red-500 peer-focus:text-red-500"
-                                            : "text-zinc-400 peer-focus:text-[#034250]"
-                                    }`}
+                                    className={`${labelStyle} ${hasError
+                                        ? "text-red-500 peer-focus:text-red-500"
+                                        : "text-zinc-400 peer-focus:text-[#034250]"
+                                        }`}
                                 >
                                     {field.label}
                                     {field.required && <span className="text-red-500 ml-1">*</span>}

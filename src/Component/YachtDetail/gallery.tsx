@@ -20,31 +20,31 @@ const Gallery = () => {
   return (
     <div className="w-full py-7">
       {/* Gallery Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-2">
+      <div className="grid grid-cols-4 md:grid-cols-4 lg:grid-cols-5 gap-2">
         {/* Main Image */}
-        <div className="lg:col-span-2 row-span-2">
+        <div className="col-span-2 row-span-2">
           <Image
             src={pictures[0]}
             alt="main-img"
-            className="rounded-xl w-full min-h-[180px] sm:min-h-[250px] md:min-h-[280px] lg:h-[320px] xl:h-[350px] object-cover"
+            className="rounded-xl w-full min-h-[185px] sm:min-h-[250px] md:min-h-[267px] lg:h-[308px] xl:h-[350px] object-cover"
             width={387}
             height={313}
           />
         </div>
 
         {/* 2 Tall Images */}
-        <div className="grid grid-rows-2 gap-0 xl:gap-2">
-          {pictures.slice(1, 3).map((img, idx) => (
-            <Image
-              key={idx}
-              src={img}
-              alt={`img-${idx}`}
-              className="rounded-lg w-full h-[80px] sm:h-[120px] lg:h-[150px] xl:h-[170px] object-cover"
-              width={200}
-              height={210}
-            />
-          ))}
-        </div>
+  <div className="hidden lg:grid grid-rows-2 gap-2">
+  {pictures.slice(1, 3).map((img, idx) => (
+    <Image
+      key={idx}
+      src={img}
+      alt={`img-${idx}`}
+      className="rounded-lg w-full h-[80px] sm:h-[120px] md:h-[130px] lg:h-[148px] xl:h-[170px] object-cover"
+      width={200}
+      height={210}
+    />
+  ))}
+</div>
 
         {/* 2 Tall Images */}
         <div className="grid grid-rows-2 gap-2">
@@ -53,7 +53,7 @@ const Gallery = () => {
               key={idx}
               src={img}
               alt={`img-${idx}`}
-              className="rounded-lg w-full h-[80px] sm:h-[120px] md:h-[170px] object-cover"
+              className="rounded-lg w-full h-[90px] sm:h-[120px] md:h-[130px] lg:h-[148px] xl:h-[170px] object-cover"
               width={200}
               height={210}
             />
@@ -67,7 +67,7 @@ const Gallery = () => {
               <Image
                 src={img}
                 alt={`img-${index}`}
-                className="rounded-lg w-full h-[40px] sm:h-[60px] md:h-[81px] object-cover"
+                className="rounded-lg w-full h-[40px] sm:h-[60px] lg:h-[70px] xl:h-[81px] object-cover"
                 width={100}
                 height={81}
               />

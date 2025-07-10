@@ -4,9 +4,7 @@ import { Fragment } from "react"
 const YachtDetail = () => {
     return (
         <Fragment>
-            {/* <HeroSection /> */}
             <HeroSection />
-            
         </Fragment>
     )
 }

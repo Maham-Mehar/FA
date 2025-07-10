@@ -169,7 +169,7 @@ const YachtMatchmaker: React.FC = () => {
                 <div className="md:col-span-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-4 xl:gap-6">
                         {yachts.map((boat: Yacht) => (
-                            <Link href="/yachtDetail">
+                            <Link href="/yachtDetail" key={boat.id}>
                                 <div key={boat.id} className="">
                                     <div className="mb-3 py-5 transition">
                                         <div className="overflow-hidden">

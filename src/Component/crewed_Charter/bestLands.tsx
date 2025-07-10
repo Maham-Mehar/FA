@@ -38,18 +38,18 @@ const BestLands = () => {
       <div className="absolute left-10 top-0 z-0 hidden lg:block">
         <img src="/images/seashell.png" alt="" />
       </div>
-      <div className="absolute right-0 top-55 z-0">
+      <div className="absolute right-0 md:top-35 lg:top-43 xl:top-55 z-0">
         <img src={PngIcons.frame1} alt="" className="w-auto h-auto" />
       </div>
       <div className="absolute bottom-0 left-0 z-0">
         <img src={PngIcons.line2} alt="" />
       </div>
       <div className="relative mt-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10 lg:gap-[70px] xl:gap-10 max-w-7xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10 lg:gap-[70px] xl:gap-10 max-w-7xl shadow-lg">
           {values.map((isle, idx) => (
             <div
               key={isle.id}
-              className={` overflow-hidden p-0 lg:p-0 xl:p-6 ${idx === 1 ? "mt-0 md:mt-30 lg:mt-36 xl:mt-40" : ""
+              className={` overflow-hidden shadow-lg p-0 lg:p-0 xl:p-6 ${idx === 1 ? "mt-0 md:mt-30 lg:mt-36 xl:mt-40" : ""
                 }`}
             >
               <div className="relative">

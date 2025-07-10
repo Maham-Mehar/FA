@@ -37,7 +37,7 @@ const DayTripSlider = () => {
               key={label}
               onClick={() => setActiveTab(label)}
               className={`py-1 text-base md:text-lg lg:text-[20px] font-poppins font-medium flex items-center gap-2 transition ${activeTab === label
-                ? "text-[#034250] bg-white shadow-md"
+                ? "text-mustard border-b-2 border-mustard"
                 : "text-[#034250] border-b-2 border-b-zink"
                 }`}
             >
