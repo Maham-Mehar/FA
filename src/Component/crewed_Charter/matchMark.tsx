@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 // import { yachts, Yacht } from "@/data/crewedData";
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+// abds
 interface Yacht {
     capacity: string;
     primaryImage: string;
