@@ -1,4 +1,4 @@
-import { redirect } from "next/navigation";
+
 import Adventure from "@/Component/crewed_Charter/adventure";
 import BestLands from "@/Component/crewed_Charter/bestLands";
 import HeroSection from "@/Component/crewed_Charter/hero";
@@ -14,7 +14,6 @@ export default function Home() {
       <Adventure />
       <BestLands />
       <YachtAdventure />
-      
     </Fragment>
   );
 }

@@ -6,8 +6,10 @@ import VideoSection from './videoSection';
 import YachtAdventure from '../crewed_Charter/yachtAdventure';
 import TabSection from './tabSection';
 import ContactDetail from './contactDetail';
-
-const HeroSection = () => {
+interface HeroSection {
+    id: string | number;
+}
+const HeroSection: React.FC<HeroSection> = ({ id }) => {
     const [isScrolled, setIsScrolled] = useState(false);
 
     const values = [
