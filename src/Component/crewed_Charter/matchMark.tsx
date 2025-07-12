@@ -4,8 +4,9 @@ import { useRouter } from "next/navigation";
 // import { yachts, Yacht } from "@/data/crewedData";
 import { useState, useEffect } from "react";
 import axios from "axios";
-// abds
+
 interface Yacht {
+    _id: string;
     capacity: string;
     primaryImage: string;
     daytripPriceEuro: string;
@@ -24,8 +25,8 @@ const YachtMatchmaker: React.FC = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("https://faraway.thedevapp.online/yacht/user/all-yachts");
-                setData(response.data.data);
+                const response = await axios.get("https://faraway.thedevapp.online/yacht/all-yachts");
+                setData(response.data.data.yachts);
                 setError(null);
             } catch (err: any) {
                 setError(err?.response?.data?.message || "Failed to fetch");
@@ -34,7 +35,7 @@ const YachtMatchmaker: React.FC = () => {
                 setLoading(false);
             }
         };
-        fetchData();
+        fetchData();                                                           
     }, []);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -47,7 +48,7 @@ const YachtMatchmaker: React.FC = () => {
         }
     };
 
-    const increment = () => {
+    const increment = () => {   
         setGuests(prev => Math.min(150, prev + 1));
     };
 
@@ -193,7 +194,7 @@ const YachtMatchmaker: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>            
 
                 {/* Right column: Yacht cards */}
                 <div className="md:col-span-8">
@@ -201,10 +202,10 @@ const YachtMatchmaker: React.FC = () => {
                         {loading ? (
                             <div className="col-span-2 flex items-center justify-center min-h-[40rem]">
                                 <div className="w-10 h-10 border-3 border-t-transparent border-[#2185D0] rounded-full animate-spin" />
-                            </div>
+                            </div>                 
                         ) : (
                             data.map((boat, index) => (
-                                <div key={index} className="" onClick={() => router.push(`${index}`)}>
+                                <div key={index} className="" onClick={() => router.push(`/yacht-charter-phuket/crewed_boats/${boat._id}`)}>
                                     <div className="mb-3 py-5 transition">
                                         <div className="overflow-hidden">
                                             <img
@@ -225,7 +226,7 @@ const YachtMatchmaker: React.FC = () => {
                                         <div className="mt-4 px-2 pt-3 flex justify-between border-t border-gray-300 text-gray-700 text-sm">
                                             <div className="flex items-center space-x-1">
                                                 <img src="/images/icon1.png" alt="" className="lg:w-5 md:w-3 w-4" />
-                                                <span>{boat.lengthRange} ft</span>
+                                                <span>{boat.lengthRange}</span>
                                             </div>
                                             <div className="flex items-center space-x-1">
                                                 <img src="/images/icon2.png" alt="" className="lg:w-5 md:w-3 w-4" />

@@ -1,3 +1,4 @@
+
 import HeroSection from '@/Component/YachtDetail/hero';
 
 const YachtDetail = async ({
@@ -12,6 +13,5 @@ const YachtDetail = async ({
         </div>
     );
 };
+
 export default YachtDetail
-
-

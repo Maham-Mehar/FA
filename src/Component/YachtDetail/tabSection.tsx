@@ -7,17 +7,24 @@ import { IoMoonOutline, IoBoatOutline } from "react-icons/io5";
 import About from "./about";
 import DayCharter from "./dayCharter";
 import NightCharter from "./nightCharter";
+import { Yacht } from "../YachtDetail/hero";
 
-const TabSection =()=>{
+type Props = {
+  data: Yacht | null;
+};
+
+const TabSection: React.FC<Props> = ({ data }) => {
+
+  // console.log(data, 'multipled>>>>')
 
 
   const features = [
-    { title: "Length", value: "38 ft", icon: RxRulerSquare },
-    { title: "Type", value: "Power", icon: LuSailboat },
-    { title: "Cabins", value: "1", icon: LuDoorOpen },
-    { title: "Bathrooms", value: "2", icon: LuToilet },
-    { title: "Day Charter Capacity", value: "14", icon: FiSun },
-    { title: "Overnight Charter Capacity", value: "4", icon: IoMoonOutline },
+    { title: "Length", value: data?.lengthOverall, icon: RxRulerSquare },
+    { title: "Type", value: data?.boatType, icon: LuSailboat },
+    { title: "Cabins", value: data?.cabins, icon: LuDoorOpen },
+    { title: "Bathrooms", value: data?.bathrooms, icon: LuToilet },
+    { title: "Day Charter Capacity", value: data?.passengerDayTrip, icon: FiSun },
+    { title: "Overnight Charter Capacity", value: data?.passengerOvernight, icon: IoMoonOutline },
   ];
 
   const dayTripCards = [
@@ -41,8 +48,8 @@ const TabSection =()=>{
     }
   };
 
-  return(
-<div>
+  return (
+    <div>
       {/* Features */}
       <div className="flex flex-wrap gap-4 mt-3 md:mt-4 lg:mt-6 xl:mt-8 justify-center md:justify-start">
         {features.map(({ title, value, icon: Icon }, index) => (
@@ -62,6 +69,13 @@ const TabSection =()=>{
           </div>
         ))}
       </div>
+      {/* 
+ lengthOverall: string;
+    boatType: string;
+    cabins: string;
+    bathrooms: string;
+    passengerDayTrip: string;
+    passengerOvernight: string; */}
 
       {/* Tabs */}
       <div className="flex flex-wrap gap-2 sm:gap-4 md:gap-5 lg:gap-7 overflow-x-auto mt-6">
@@ -84,7 +98,7 @@ const TabSection =()=>{
 
       {/* Render Tab Content */}
       <div className="mt-6">{renderContent()}</div>
-      </div>
+    </div>
   )
 }
-      export default TabSection
+export default TabSection

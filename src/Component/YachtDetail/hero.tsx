@@ -1,16 +1,57 @@
 "use client";
+
+import { useEffect, useState } from "react";
+import axios from "axios";
 import Gallery from '@/Component/YachtDetail/gallery';
-import { CiShare2 } from "react-icons/ci";
-import { useState, useEffect } from 'react';
 import VideoSection from './videoSection';
 import YachtAdventure from '../crewed_Charter/yachtAdventure';
 import TabSection from './tabSection';
 import ContactDetail from './contactDetail';
-interface HeroSection {
+
+interface Hero {
     id: string | number;
 }
-const HeroSection: React.FC<HeroSection> = ({ id }) => {
+
+export interface Yacht {
+    _id: string;
+    lengthOverall: string;
+    boatType: string;
+    cabins: string;
+    bathrooms: string;
+    passengerDayTrip: string;
+    passengerOvernight: string;
+    capacity: string;
+    title: string;
+    primaryImage: string;
+    daytripPriceEuro: string;
+    lengthRange: string;
+    galleryImages: string[];
+    guests: string;
+
+}
+
+const HeroSection: React.FC<Hero> = ({ id }) => {
+
     const [isScrolled, setIsScrolled] = useState(false);
+    const [data, setData] = useState<Yacht | null>(null);
+    const [loading, setLoading] = useState<boolean>(true);
+    const [error, setError] = useState<string | null>(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get(`https://faraway.thedevapp.online/yacht?id=${id}`);
+                setData(response.data.data);
+                setError(null);
+            } catch (err: any) {
+                setError(err?.response?.data?.message || "Failed to fetch");
+                setData([]);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchData();
+    }, []);
 
     const values = [
         { title: "Hot Chilli 38ft – Stealth" },
@@ -30,34 +71,19 @@ const HeroSection: React.FC<HeroSection> = ({ id }) => {
                 {/* Breadcrumb */}
                 <p className="sourceSansPro text-gray-400 text-[15px] font-normal mt-5">
                     Crewed Charter Phuket /{" "}
-                    {values.map((item, index) => (
-                        <span key={index} className="font-bold text-zink">
-                            {item.title}
-                        </span>
-                    ))}
+                    <span className="font-bold text-zink">
+                        {data ? data.title : ""}
+                    </span>
                 </p>
-
-                {/* Title and Share Button */}
-                <div className="flex justify-between mt-4 flex-wrap gap-2">
-                    {values.map((item, index) => (
-                        <p
-                            key={index}
-                            className="text-[22px] md:text-[24px] lg:text-[26px] xl:text-[33px] font-playfair text-zink font-extrabold"
-                        >
-                            {item.title}
-                        </p>
-                    ))}
-                    <button className="flex items-center border border-gray-400 px-3 py-2 text-[14px] poppins text-zink">
-                        <CiShare2 size={20} className="me-2" />
-                        Share
-                    </button>
-                </div>
+                <p className="text-[33px] font-playfair font-extrabold text-zink">
+                    {data ? data.title : ""}
+                </p>
 
                 {/* Gallery + Tabs + Sticky Sidebar */}
                 <div className="flex flex-col md:flex-row gap-5 relative mt-6">
                     <div className="w-full md:w-[70%]">
                         <Gallery />
-                        <TabSection />
+                        <TabSection data={data} />
                     </div>
                     <div
                         className={`w-full md:w-[30%] self-start sticky transition-all duration-300 ${isScrolled ? "top-[5.7rem]" : "top-0"
@@ -65,7 +91,6 @@ const HeroSection: React.FC<HeroSection> = ({ id }) => {
                     >
                         <ContactDetail />
                     </div>
-
                 </div>
 
                 {/* Video & Adventure */}
