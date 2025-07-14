@@ -14,7 +14,7 @@ const HeroSection = () => {
       </div>
 
       {/* DESCRIPTION PARAGRAPH */}
-      <p className="text-center text-[#034250] font-sourceSansPro text-base sm:text-lg md:text-xl font-normal max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 leading-relaxed">
+      <p className="text-center text-[#034250] font-sourceSansPro text-base sm:text-lg md:text-xl font-normal max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 py-10 sm:py-12 leading-relaxed">
         Experience the epitome of luxury with Far Away Yachting’s private yacht in Phuket. Explore
         our magical destinations like Phi Phi Islands, the breathtaking Phang Nga Bay, and more in
         unparalleled style & comfort. Embark on a bareboat charter or indulge in a fully crewed

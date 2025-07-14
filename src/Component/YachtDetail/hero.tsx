@@ -92,12 +92,12 @@ const HeroSection: React.FC<Hero> = ({ id }) => {
         {/* Gallery + Tabs + Sticky Sidebar */}
         <div className="flex flex-col md:flex-row gap-5 relative mt-6">
           <div className="w-full md:w-[70%]">
-            <Gallery data={data} /> {/* ✅ Pass yacht data */}
+            <Gallery data={data} />
             <TabSection data={data} />
           </div>
           <div
             className={`w-full md:w-[30%] self-start sticky transition-all duration-300 ${
-              isScrolled ? "top-[5.7rem]" : "top-0"
+              isScrolled ? "top-[8.4rem]" : "top-13"
             }`}
           >
             <ContactDetail />

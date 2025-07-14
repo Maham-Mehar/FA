@@ -2,7 +2,7 @@ const Banner = () => {
   return (
     <div>
       {/* HERO IMAGE SECTION */}
-      <div className="bg-[url('/images/BANNER.png')] bg-cover bg-center bg-no-repeat min-h-[50vh] md:min-h-[50vh] lg:[48vh] xl:min-h-[60vh] flex items-center">
+      <div className="bg-[url('/images/BANNER.png')] bg-cover bg-center bg-no-repeat min-h-[58vh] md:min-h-[58vh] lg:[48vh] xl:min-h-[60vh] flex items-center">
         <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-4 md:gap-6 lg:gap-8 xl:gap-10 py-10">
             {/* LEFT SIDE - Heading & Subheading */}

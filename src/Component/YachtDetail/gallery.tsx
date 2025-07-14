@@ -4,36 +4,23 @@ import { useState } from "react";
 import Image from "next/image";
 import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
-import { Yacht } from "../YachtDetail/hero"; // Make sure this interface includes galleryImages: string[]
+import { Yacht } from "../YachtDetail/hero";
 
+type Props = {
+  data: Yacht | null;
+};
 type SliderItem = {
   image: string;
   alt?: string;
 };
 
-type Props = {
-  data: Yacht | null;
-};
-
 const Gallery: React.FC<Props> = ({ data }) => {
+
+  if (!data) return null;
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const pictures: SliderItem[] =
-    data?.galleryImages?.map((img) => ({
-      image: img,
-      alt: data?.title || "Yacht Image",
-    })) || [];
-
-  if (pictures.length === 0 && data?.primaryImage) {
-    pictures.push({ image: data.primaryImage, alt: "Primary image" });
-  } else if (pictures.length === 0) {
-    pictures.push({ image: "/images/fallback.jpg", alt: "Fallback image" });
-  }
-
-  const maxImages = 9;
-
-  const openLightbox = (idx: number) => { 
+  const openLightbox = (idx: number) => {
     setCurrentIndex(idx);
     setIsOpen(true);
   };
@@ -42,13 +29,15 @@ const Gallery: React.FC<Props> = ({ data }) => {
 
   const showPrev = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
-    setCurrentIndex((prevIndex) => (prevIndex + pictures.length - 1) % pictures.length);
+    setCurrentIndex((prevIndex) => (prevIndex + data.galleryImages.length - 1) % data.galleryImages.length);
   };
 
   const showNext = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % pictures.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % data.galleryImages.length);
   };
+
+  const maxImages = 9;
 
   return (
     <div className="w-full pb-7">
@@ -77,8 +66,8 @@ const Gallery: React.FC<Props> = ({ data }) => {
             </button>
 
             <img
-              src={pictures[currentIndex].image}
-              alt={pictures[currentIndex].alt ?? `Slide ${currentIndex + 1}`}
+              src={data.galleryImages[currentIndex] || ""}
+              alt={data.galleryImages[currentIndex] ?? `Slide ${currentIndex + 1}`}
               className="max-h-[70vh] max-w-[50rem] w-full"
               onClick={(e) => e.stopPropagation()}
             />
@@ -91,30 +80,30 @@ const Gallery: React.FC<Props> = ({ data }) => {
             </button>
 
             <div className="absolute bottom-4 right-4 text-white text-sm">
-              {currentIndex + 1} / {pictures.length}
+              {currentIndex + 1} / {data.galleryImages.length}
             </div>
           </div>
         )}
 
-        {/* Main Image */}
-        <div className="col-span-2 row-span-2">
-          <Image
-            src={pictures[0].image}
-            alt={pictures[0].alt ?? "Main Image"}
-            className="rounded-xl w-full min-h-[185px] sm:min-h-[250px] md:min-h-[267px] lg:h-[308px] xl:h-[350px] object-cover"
-            width={387}
-            height={313}
-            onClick={() => openLightbox(0)}
-          />
-        </div>
+        {/* {data?.galleryImages?.[0] && ( */}
+          <div className="col-span-2 row-span-2">
+            <Image
+              src={data.galleryImages[0] || ""}
+              alt="Yacht Image"
+              className="rounded-xl w-full min-h-[185px] sm:min-h-[250px] md:min-h-[267px] lg:h-[308px] xl:h-[350px] object-cover"
+              width={387}
+              height={313}
+              onClick={() => openLightbox(0)}
+            />
+          </div>
 
         {/* 2 Tall Images */}
         <div className="hidden lg:grid grid-rows-2 gap-2">
-          {pictures.slice(1, 3).map((img, idx) => (
+          {data?.galleryImages.slice(1, 3).map((img, idx) => (
             <Image
               key={idx + 1}
-              src={img.image}
-              alt={img.alt ?? `img-${idx + 1}`}
+              src={img}
+              alt="Yacht Image"
               className="rounded-lg w-full h-[80px] sm:h-[120px] md:h-[130px] lg:h-[148px] xl:h-[170px] object-cover"
               width={200}
               height={210}
@@ -123,13 +112,13 @@ const Gallery: React.FC<Props> = ({ data }) => {
           ))}
         </div>
 
-        {/* 2 More Tall Images */}
+        {/* 2 Tall Images */}
         <div className="grid grid-rows-2 gap-2">
-          {pictures.slice(3, 5).map((img, idx) => (
+          {data?.galleryImages.slice(3, 5).map((img, idx) => (
             <Image
               key={idx + 3}
-              src={img.image}
-              alt={img.alt ?? `img-${idx + 3}`}
+              src={img}
+              alt="Yacht Image"
               className="rounded-lg w-full h-[90px] sm:h-[120px] md:h-[130px] lg:h-[148px] xl:h-[170px] object-cover"
               width={200}
               height={210}
@@ -140,19 +129,19 @@ const Gallery: React.FC<Props> = ({ data }) => {
 
         {/* 4 Small Images */}
         <div className="grid grid-rows-3 gap-2">
-          {pictures.slice(5, 9).map((img, index) => (
+          {data?.galleryImages.slice(5, 9).map((img, index) => (
             <div key={index + 5} className="relative">
               <Image
-                src={img.image}
-                alt={img.alt ?? `img-${index + 5}`}
+                src={img}
+                alt="Yacht Image"
                 className="rounded-lg w-full h-[40px] sm:h-[60px] lg:h-[70px] xl:h-[81px] object-cover"
                 width={100}
                 height={81}
                 onClick={() => openLightbox(index + 5)}
               />
-              {index === 3 && pictures.length > maxImages && (
+              {index === 3 && data.galleryImages.length > maxImages && (
                 <div className="absolute inset-0 bg-black/60 flex items-center justify-center text-white font-bold text-sm rounded-lg">
-                  +{pictures.length - maxImages}
+                  +{data.galleryImages.length - maxImages}
                 </div>
               )}
             </div>

@@ -6,7 +6,7 @@ const Cards = () => {
   return (
     <div className="bg-white xl:py-12 px-4 sm:px-4 xl:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 md:gap-5 lg:gx-6 xl:gx-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gx-0 md:gap-10 lg:gap-8">
           {CardData.map((item, index) => (
             <div
               key={index}
@@ -19,7 +19,7 @@ const Cards = () => {
                   alt="card"
                   width={400}
                   height={300}
-                  className="object-cover w-full h-[250px] sm:h-[300px] md:h-[340px] lg:[300px] xl:h-[380px] rounded-tl-3xl rounded-br-3xl"
+                  className="object-cover w-full h-[270px] sm:h-[300px] md:h-[270px] lg:h-[280px] xl:h-[360px] rounded-tl-3xl rounded-br-3xl"
                 />
                 <div className="absolute bottom-0 bg-opacity-40 w-full text-white px-4 py-2">
                   <p className="text-foreground font-playfair text-xl sm:text-2xl lg:text-[32px] xl:text-[36px] font-extrabold transition-all duration-300">
@@ -33,11 +33,11 @@ const Cards = () => {
                 <p className=" text-[17px] font-sourceSansPro lg:text-[17px] xl:text-[20px] text-black">{item.description}</p>
                 <div className="flex justify-between items-center sm:items-center mt-4 gap-4">
                   <Link href={`/cardDetail/${item.id}`}>
-                  <p className="text-zink font-poppins text-[18px] sm:text-[21px] font-extrabold underline cursor-pointer hover:text-[#D6AB61]">
-                    Read More
-                  </p>
+                    <p className="text-zink font-poppins text-[18px] sm:text-[21px] font-extrabold underline cursor-pointer hover:text-[#D6AB61]">
+                      Read More
+                    </p>
                   </Link>
-                  <button className="border font-poppins bg-white text-[17px] sm:text-[19px] border-mustard text-zink px-5 lg:px-4 xl:px-5 py-2 rounded-lg hover:bg-[#034250] hover:text-white transition">
+                  <button className="border font-poppins bg-white text-base lg:text-[17px] xl:text-[19px] border-mustard text-zink px-3 lg:px-4 xl:px-5 py-2 rounded-lg hover:bg-[#034250] hover:text-white transition">
                     Contact Us
                   </button>
                 </div>

@@ -36,7 +36,7 @@ const DayTripSlider = () => {
             <button
               key={label}
               onClick={() => setActiveTab(label)}
-              className={`py-1 text-base md:text-lg lg:text-[20px] font-poppins font-medium flex items-center gap-2 transition ${activeTab === label
+              className={`py-1 text-base md:text-lg xl:text-xl font-poppins font-medium flex items-center gap-2 transition ${activeTab === label
                 ? "text-mustard border-b-2 border-mustard"
                 : "text-[#034250] border-b-2 border-b-zink"
                 }`}
@@ -58,7 +58,7 @@ const DayTripSlider = () => {
                 alt={currentCard.category}
                 width={400}
                 height={400}
-                className="object-cover w-full h-[300px] md:h-full xl:h-[600px]"
+                className="object-cover w-full h-[300px] md:h-[490px] lg:h-[565px] xl:h-[600px]"
               />
 
             </div>

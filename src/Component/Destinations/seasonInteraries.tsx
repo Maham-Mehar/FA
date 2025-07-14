@@ -18,13 +18,13 @@ const ItinerarySection = () => {
         <button
           type="button"
           onClick={() => toggleItem(item.id)}
-          className="flex justify-between items-center w-full p-4 cursor-pointer text-left"
+          className="flex justify-between items-center w-full p-2 lg:p-3 xl:p-4 cursor-pointer text-left"
         >
           <div className="flex items-center gap-4">
-            <span className="bg-[#034250] text-white font-poppins text-[12px] xl:text-[13px] font-medium px-3 py-1 rounded-lg">
+            <span className="bg-[#034250] text-white font-poppins text-[13px] lg:text-[13px] font-medium px-2 py-1 rounded-lg">
               {item.days}
             </span>
-            <h4 className="font-semibold text-sm xl:text-base text-zink">
+            <h4 className="font-semibold text-base text-zink">
               {item.place}
             </h4>
           </div>
@@ -56,24 +56,24 @@ const ItinerarySection = () => {
   return (
     <section className="bg-white py-12 px-4 lg:px-5 xl:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-6 lg:gap-10 xl:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-6 lg:gap-10 xl:gap-16">
           {/* High Season */}
-          <div>
-            <h2 className="text-[24px] sm:text-[28px] font-playfair text-zink font-bold mb-1">
+          <div className="text-center lg:text-left">
+            <h2 className="text-[19px] md:text-[23px] lg:text-[25px] xl:text-[28px] font-playfair text-zink font-bold mb-1">
               High Season Itineraries
             </h2>
-            <p className="text-mustard text-[16px] sm:text-[18px] mb-6 font-sourceSanspro">
+            <p className="text-mustard text-[16px] lg:text-[18px] mb-6 font-sourceSanspro">
               (From November till April)
             </p>
             <div className="space-y-4">{highSeason.map(renderItem)}</div>
           </div>
 
           {/* Green Season */}
-          <div>
-            <h2 className="text-[24px] sm:text-[28px] font-playfair font-bold text-[#034250] mb-1">
+          <div className="text-center lg:text-left">
+            <h2 className="text-[19px] md:text-[23px] lg:text-[25px] xl:text-[28px] font-playfair text-zink font-bold mb-1">
               Green Season Itineraries
             </h2>
-            <p className="text-mustard text-[16px] sm:text-[18px] mb-6 font-sourceSanspro">
+            <p className="text-mustard text-[16px] lg:text-[18px] mb-6 font-sourceSanspro">
               (From May till October)
             </p>
             <div className="space-y-4">{greenSeason.map(renderItem)}</div>

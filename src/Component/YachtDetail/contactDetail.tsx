@@ -59,7 +59,7 @@ const ContactDetail = () => {
     };
 
     const inputFieldBase =
-        "peer w-full border-b-2 py-[14px] px-1 placeholder-transparent focus:outline-none bg-white";
+        "peer w-full border-b-2 py-[10px] px-1 placeholder-transparent focus:outline-none bg-white";
     const labelStyle = `
     absolute left-1 top-[14px] text-[16px] transition-all duration-200 bg-white px-1
     peer-placeholder-shown:top-[14px] peer-placeholder-shown:text-[16px] peer-placeholder-shown:text-zinc-400
@@ -88,20 +88,20 @@ const ContactDetail = () => {
     };
 
     return (
-        <div className="bg-white sticky rounded-lg p-3 max-w-[500px] w-full shadow-lg">
+        <div className="bg-white sticky rounded-lg p-3 max-w-[500px] w-full border-2 border-zink">
             <div className="flex flex-col items-center justify-center text-center">
-                <p className="text-lg md:text-xl lg:text-[23px] xl:text-[26px] font-playfair text-[#034250] font-extrabold">
+                <p className="text-lg md:text-xl lg:text-[23px] xl:text-[24px] font-playfair text-[#034250] font-extrabold">
                     Hot Chilli 38ft – Stealth Inquiry
                 </p>
-                <p className="text-zink font-inter text-sm lg:text-[16px] mt-2">
+                <p className="text-zink font-inter text-sm lg:text-[16px] mt-1">
                     Looking for a yacht charter?
                 </p>
-                <p className="text-[#034250] font-inter text-sm lg:text-[16px] mt-2">+66 61 234 5623</p>
+                <p className="text-[#034250] font-inter text-sm lg:text-[16px] mt-1">+66 61 234 5623</p>
                 <p className="text-[#034250] font-inter text-sm lg:text-[16px]">+66 61 234 5623</p>
             </div>
-            <form onSubmit={handleSubmit} className="mt-3 lg:mt-4 xl:mt-6 space-y-3">
+            <form onSubmit={handleSubmit} className="mt-3 lg:mt-4 xl:mt-2 space-y-3">
                 {formFields.map((field, index) => {
-                    if (field.id === "travelDate" || field.id === "returnDate") return null; // skip these for now
+                    if (field.id === "travelDate" || field.id === "returnDate") return null; 
 
                     const hasError = errors[field.id];
                     return (
@@ -150,7 +150,7 @@ const ContactDetail = () => {
                         return (
                             <div
                                 key={id}
-                                className="relative w-full lg:w-[130px] xl:w-[170px] min-h-[70px]"
+                                className="relative w-full lg:w-[130px] xl:w-[170px] min-h-[65px]"
                             >
                                 <input
                                     type="date"
@@ -199,7 +199,7 @@ const ContactDetail = () => {
                             if (e.key === "Enter" && !e.shiftKey) e.preventDefault();
                         }}
                         required
-                        className="peer w-full border-b-2 border-[#81A1A8] focus:border-[#034250] focus:outline-none px-1 placeholder-transparent resize-none h-[70px] bg-white"
+                        className="peer w-full border-b-2 border-[#81A1A8] focus:border-[#034250] focus:outline-none px-1 placeholder-transparent resize-none h-[30px] bg-white"
                     ></textarea>
                     <label htmlFor="message" className={labelStyle}>
                         Message

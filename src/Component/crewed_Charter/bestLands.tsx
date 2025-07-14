@@ -38,27 +38,27 @@ const BestLands = () => {
       <div className="absolute left-10 top-0 z-0 hidden lg:block">
         <img src="/images/seashell.png" alt="" />
       </div>
-      <div className="absolute right-0 md:top-35 lg:top-43 xl:top-55 z-0">
+      <div className="absolute right-0 md:top-35 lg:top-49 xl:top-65 z-0">
         <img src={PngIcons.frame1} alt="" className="w-auto h-auto" />
       </div>
       <div className="absolute bottom-0 left-0 z-0">
         <img src={PngIcons.line2} alt="" />
       </div>
       <div className="relative mt-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10 lg:gap-[70px] xl:gap-10 max-w-7xl shadow-lg">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 lg:gap-23 xl:gap-30 max-w-6xl mx-auto">
           {values.map((isle, idx) => (
             <div
               key={isle.id}
-              className={` overflow-hidden shadow-lg p-0 lg:p-0 xl:p-6 ${idx === 1 ? "mt-0 md:mt-30 lg:mt-36 xl:mt-40" : ""
+              className={` overflow-hidde p-0 lg:p-0 xl:p-6 ${idx === 1 ? "mt-0 md:mt-30 lg:mt-36 xl:mt-40" : ""
                 }`}
             >
               <div className="relative">
                 <img
                   src={isle.image}
                   alt={isle.title}
-                  className="w-full xl:w-[700] h-[230px] md:h-[270px] lg:h-[330px] xl:h-[350px] object-cover rounded-lg"
+                  className="w-full xl:w-[600px] h-[230px] md:h-[270px] lg:h-[330px] xl:h-[350px] object-cover rounded-lg"
                 />
-                <div className="absolute bottom-2 left-2 text-[28px] md:text-[28px] lg:text-[36px] xl:text-[40px] font-extrabold font-playfair text-white bg-opacity-50 px-3 py-1 rounded-lg">
+                <div className="absolute bottom-2 left-2 text-[28px] md:text-[28px] lg:text-[36px] xl:text-[36px] font-extrabold font-playfair text-white bg-opacity-50 px-3 py-1 rounded-lg">
                   {isle.title}
                 </div>
               </div>

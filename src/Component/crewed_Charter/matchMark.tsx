@@ -35,7 +35,7 @@ const YachtMatchmaker: React.FC = () => {
                 setLoading(false);
             }
         };
-        fetchData();                                                           
+        fetchData();
     }, []);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -48,7 +48,7 @@ const YachtMatchmaker: React.FC = () => {
         }
     };
 
-    const increment = () => {   
+    const increment = () => {
         setGuests(prev => Math.min(150, prev + 1));
     };
 
@@ -194,7 +194,7 @@ const YachtMatchmaker: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                </div>            
+                </div>
 
                 {/* Right column: Yacht cards */}
                 <div className="md:col-span-8">
@@ -202,14 +202,14 @@ const YachtMatchmaker: React.FC = () => {
                         {loading ? (
                             <div className="col-span-2 flex items-center justify-center min-h-[40rem]">
                                 <div className="w-10 h-10 border-3 border-t-transparent border-[#2185D0] rounded-full animate-spin" />
-                            </div>                 
+                            </div>
                         ) : (
                             data.map((boat, index) => (
                                 <div key={index} className="" onClick={() => router.push(`/yacht-charter-phuket/crewed_boats/${boat._id}`)}>
                                     <div className="mb-3 py-5 transition">
                                         <div className="overflow-hidden">
                                             <img
-                                                src="/images/Slide1.png"
+                                                src={boat.primaryImage}
                                                 alt="teast"
                                                 className="w-full md:h-55 lg:h-64 xl:h-70 object-cover rounded-tl-3xl rounded-br-3xl"
                                             />
@@ -226,7 +226,7 @@ const YachtMatchmaker: React.FC = () => {
                                         <div className="mt-4 px-2 pt-3 flex justify-between border-t border-gray-300 text-gray-700 text-sm">
                                             <div className="flex items-center space-x-1">
                                                 <img src="/images/icon1.png" alt="" className="lg:w-5 md:w-3 w-4" />
-                                                <span>{boat.lengthRange}</span>
+                                                <span>{boat.lengthRange.replace(/[<>]/g, "")} ft</span>
                                             </div>
                                             <div className="flex items-center space-x-1">
                                                 <img src="/images/icon2.png" alt="" className="lg:w-5 md:w-3 w-4" />
