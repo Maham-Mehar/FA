@@ -75,10 +75,10 @@ const FunMoments: React.FC = () => {
 
   return (
     <div className="max-w-7xl mx-auto pb-6 md:pb-8 lg:pb-12">
-      <p className="mt-[50px] px-4 font-poppins font-extrabold text-[24px] md:text-[29px] lg:text-[32px] xl:text-[36px] text-center text-green" style={{ boxShadow: "#00000040" }}>
+      <p className="mt-[50px] px-4 font-poppins text-zink font-extrabold text-[24px] md:text-[29px] lg:text-[32px] xl:text-[36px] text-center text-green" style={{ boxShadow: "#00000040" }}>
         Moments That Made Waves</p>
       <img src="/images/rframe.png" alt="" className="w-[350px]  md:w-[400px] lg:w-[450px] xl:w-[500px] my-3 mx-auto" />
-      <p className="text-center px-4 text-base md:text-xl lg:text-xl xl:text-2xl max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl mx-auto">From sunset dinners to secret lagoons — hear what made it unforgettable</p>
+      <p className="text-center px-4 text-base text-zink md:text-xl lg:text-xl xl:text-2xl max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl mx-auto">From sunset dinners to secret lagoons — hear what made it unforgettable</p>
       <Slider {...settings}>
         {testimonials.map((item, index) => (
           <div

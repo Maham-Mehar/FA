@@ -3,9 +3,9 @@ const NightCharter = () => {
         <section className="bg-white p-4 md:p-6 lg:p-8 rounded-lg  space-y-6">
             {/* Day Charter Description */}
             {/* Price Table */}
-           <div className="overflow-x-auto">
+            <div className="overflow-x-auto">
                 <table className="min-w-full table-auto border shadow-md border-gray-300 text-left">
-                    <thead className="bg-[#034250] text-white">
+                    <thead className="bg-zink text-white">
                         <tr>
                             <th className="px-4 py-3 font-semibold text-[16px] border border-gray-300 min-w-[180px]">
                                 Hot Chilli
@@ -14,7 +14,7 @@ const NightCharter = () => {
                                 colSpan={2}
                                 className="px-4 py-3 font-semibold text-[16px] border border-gray-300 text-center"
                             >
-                            OverNight charter <br /> (max. 14 pax)
+                                Overnight charter <br /> (max. 14 pax)
                             </th>
                         </tr>
 
@@ -23,40 +23,40 @@ const NightCharter = () => {
                     <tbody className="font-inter text-[16px] font-normal">
                         <tr className="text-dark text-base md:text-[18px] font-bold font-sourceSansPro">
                             <td className=" "></td>
-                            <td className="px-4 py-3 border border-gray-300 ">8 pax included</td>
-                            <td className="px-4 py-3 border border-gray-300">Additional pax</td>
+                            <td className="px-4 py-3 border border-gray-300 text-dark ">8 pax included</td>
+                            <td className="px-4 py-3 border border-gray-300 text-dark">Additional pax</td>
                         </tr>
 
                         <tr className="odd:bg-white even:bg-gray-50">
-                            <td className="px-4 py-3 border border-gray-300 text-zinc-800 font-bold  text-base md:text-[18px]">
+                            <td className="px-4 py-3 border border-gray-300 text-zinc-800 font-bold text-zink text-base md:text-[18px]">
                                 Nov. – 20th Dec.
                             </td>
-                            <td className="px-4 py-3 border border-gray-300">34,900 THB</td>
-                            <td className="px-4 py-3 border border-gray-300">1,000 THB</td>
+                            <td className="px-4 py-3 border border-gray-300 text-dark">34,900 THB</td>
+                            <td className="px-4 py-3 border border-gray-300 text-dark">1,000 THB</td>
                         </tr>
 
                         <tr className="odd:bg-white even:bg-gray-50">
-                            <td className="px-4 py-3 border border-gray-300 text-zinc-800 font-bold  text-base md:text-[18px]">
+                            <td className="px-4 py-3 border border-gray-300 text-zinc-800 font-bold text-zink text-base md:text-[18px]">
                                 21st Dec. – Feb.
                             </td>
-                            <td className="px-4 py-3 border border-gray-300">39,900 THB</td>
-                            <td className="px-4 py-3 border border-gray-300">2,000 THB</td>
+                            <td className="px-4 py-3 border border-gray-300 text-dark">39,900 THB</td>
+                            <td className="px-4 py-3 border border-gray-300 text-dark">2,000 THB</td>
                         </tr>
 
                         <tr className="odd:bg-white even:bg-gray-50">
-                            <td className="px-4 py-3 border border-gray-300 text-zinc-800 font-bold  text-base md:text-[18px]">
+                            <td className="px-4 py-3 border border-gray-300 text-zinc-800 font-bold text-zink text-base md:text-[18px]">
                                 Mar. – Apr.
                             </td>
-                            <td className="px-4 py-3 border border-gray-300">34,900 THB</td>
-                            <td className="px-4 py-3 border border-gray-300">1,500 THB</td>
+                            <td className="px-4 py-3 border border-gray-300 text-dark">34,900 THB</td>
+                            <td className="px-4 py-3 border border-gray-300 text-dark">1,500 THB</td>
                         </tr>
 
                         <tr className="odd:bg-white even:bg-gray-50">
-                            <td className="px-4 py-3 border border-gray-300 text-zinc-800 font-bold  text-base md:text-[18px]">
+                            <td className="px-4 py-3 border border-gray-300 text-zinc-800 font-bold text-zink text-base md:text-[18px]">
                                 May – Oct.
                             </td>
-                            <td className="px-4 py-3 border border-gray-300">29,900 THB</td>
-                            <td className="px-4 py-3 border border-gray-300">1,000 THB</td>
+                            <td className="px-4 py-3 border border-gray-300 text-dark">29,900 THB</td>
+                            <td className="px-4 py-3 border border-gray-300 text-dark">1,000 THB</td>
                         </tr>
                     </tbody>
 

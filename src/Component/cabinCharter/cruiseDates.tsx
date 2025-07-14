@@ -61,21 +61,21 @@ const CruiseDates = () => {
                                 {data.dates.map((date, index) => (
                                     <tr
                                         key={index}
-                                        className="bg-white text-[16px] lg:text-[18px] font-poppins font-medium hover:bg-[#f3f4f6] transition"
+                                        className="bg-white text-[16px] lg:text-[18px] text-zink font-poppins font-medium hover:bg-[#f3f4f6] transition"
                                     >
-                                        <td className={`px-4 py-3 border-black ${index !== data.dates.length - 1 ? "border-b" : ""} border-r`}>
+                                        <td className={`px-4 py-3 text-zink border-black ${index !== data.dates.length - 1 ? "border-b" : ""} border-r`}>
                                             {date}
                                         </td>
-                                        <td className={`px-4 py-3 text-green-600 capitalize font-bold border-black ${index !== data.dates.length - 1 ? "border-b" : ""} border-r`}>
+                                        <td className={`px-4 py-3 text-green-600 capitalize font-bold text-zink border-black ${index !== data.dates.length - 1 ? "border-b" : ""} border-r`}>
                                             {data.availibility[index] || "-"}
                                         </td>
-                                        <td className={`px-4 py-3 border-black ${index !== data.dates.length - 1 ? "border-b" : ""} border-r`}>
+                                        <td className={`px-4 py-3 text-zink border-black ${index !== data.dates.length - 1 ? "border-b" : ""} border-r`}>
                                             {data.ensuitCabin[index] || "-"}
                                         </td>
-                                        <td className={`px-4 py-3 border-black ${index !== data.dates.length - 1 ? "border-b" : ""} border-r`}>
+                                        <td className={`px-4 py-3 text-zink border-black ${index !== data.dates.length - 1 ? "border-b" : ""} border-r`}>
                                             {data.nonEnsuitCabin[index] || "-"}
                                         </td>
-                                        <td className={`px-4 py-3 border-black ${index !== data.dates.length - 1 ? "border-b" : ""}`}>
+                                        <td className={`px-4 py-3 text-zink border-black ${index !== data.dates.length - 1 ? "border-b" : ""}`}>
                                             <button className="text-dark hover:text-[#D6AB62]">
                                                 {data.bookNow[index] || "Book"}
                                             </button>

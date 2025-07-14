@@ -25,7 +25,7 @@ const Licence = () => {
           alt="Certificate 1"
           className="mt-5 xl:mt-12"
         />
-        <p className="mt-3 text-lg font-normal">
+        <p className="mt-3 text-lg font-normal text-dark">
           Tourism Authority Thailand OTD Licence #34/02546
         </p>
       </div>

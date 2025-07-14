@@ -199,7 +199,7 @@ const ContactDetail = () => {
                             if (e.key === "Enter" && !e.shiftKey) e.preventDefault();
                         }}
                         required
-                        className="peer w-full border-b-2 border-[#81A1A8] focus:border-[#034250] focus:outline-none px-1 placeholder-transparent resize-none h-[30px] bg-white"
+                        className="peer w-full border-b-2 border-[#81A1A8] focus:border-[#034250] focus:outline-none px-1 placeholder-transparent resize-none h-[40px] bg-white"
                     ></textarea>
                     <label htmlFor="message" className={labelStyle}>
                         Message

@@ -35,18 +35,17 @@ const HeroSection: React.FC<Hero> = ({ id }) => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-  // ✅ Fetch data by ID
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
           `https://faraway.thedevapp.online/yacht?id=${id}`
         );
-        setData(response.data.data); // ✅ Should be a single yacht object
+        setData(response.data.data); 
         setError(null);
       } catch (err: any) {
         setError(err?.response?.data?.message || "Failed to fetch");
-        setData(null); // ✅ Corrected from setData([])
+        setData(null); 
       } finally {
         setLoading(false);
       }
@@ -54,7 +53,6 @@ const HeroSection: React.FC<Hero> = ({ id }) => {
     fetchData();
   }, [id]);
 
-  // ✅ Scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
@@ -66,7 +64,7 @@ const HeroSection: React.FC<Hero> = ({ id }) => {
   if (loading) {
     return (
       <div className="min-h-[50vh] flex justify-center items-center">
-        <div className="animate-spin w-10 h-10 border-4 border-t-transparent border-blue-500 rounded-full" />
+        <div className="animate-spin w-10 h-10 border-4 border-t-transparent border-zink rounded-full" />
       </div>
     );
   }
