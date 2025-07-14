@@ -176,9 +176,9 @@ const ContactSection = () => {
                         <h3 className=" text-[23px] md:text-[22px] lg:text-[25px] xl:text-[30px] font-bold font-inter text-zink mb-2 font-semibold">
                             Got Questions? <span className="text-mustard">Let's Chat!</span>
                         </h3>
-                        <p className="text-dark mb-4 text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px] font-normal">
+                        <p className="text-black mb-4 text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px] font-normal">
                             Want help planning your adventure? </p>
-                        <p className="text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] font-normal text-dark"> <span className="font-bold">Fill out </span>Fill out the form and one of our
+                        <p className="text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] font-normal text-black"> <span className="font-bold">Fill out </span>Fill out the form and one of our
                             friendly experts will get back to you soon!
                         </p>
                         <ul className="space-y-3 text-sm sm:text-base mt-3">
