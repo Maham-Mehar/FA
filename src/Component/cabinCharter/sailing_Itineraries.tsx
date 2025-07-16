@@ -93,8 +93,7 @@ const Sailing_Itinerary = () => {
                 <div className="max-w-7xl mx-auto">
                     {/* Heading */}
                     <div className="mb-12 flex justify-center flex-col items-center">
-                        <h2 className="text-[24px] sm:text-[40px] font-playfair text-zink font-semibold mb-1">
-                            Sailing Itinerary   </h2>
+                        <h2 className="text-[24px] sm:text-[40px] font-playfair text-zink font-semibold mb-1">Sailing Itinerary   </h2>
                         <img src="/images/rframe.png" alt="" className="w-[500px] flex justify-center text-center my-3 mx-auto" />
 
                         <p className="text-zink text-[16px] sm:text-[24px] font-normal font-sourceSanspro">
@@ -107,7 +106,6 @@ const Sailing_Itinerary = () => {
                         <div className="space-y-4">
                             {leftColumn.map(item => renderItem(item))}
                         </div>
-
                         {/* Right Column */}
                         <div className="space-y-4">
                             {rightColumn.map(item => renderItem(item))}

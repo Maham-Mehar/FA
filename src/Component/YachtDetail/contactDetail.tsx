@@ -206,7 +206,7 @@ const ContactDetail = () => {
                     </label>
                 </div>
 
-                {/* Submit Button */}
+                {/* Submit Button */} 
                 <div className="flex items-center justify-center mb-2">
                     <button
                         type="submit"

@@ -1,30 +1,29 @@
-const DayCharter = () => {
+import { Yacht } from "../YachtDetail/hero";
+
+type Props = {
+    data: Yacht | null;
+};
+
+
+const DayCharter: React.FC<Props> = ({ data }) => {
+    // const rawHTML = dayCharter;
     return (
         <section className="bg-white rounded-lg space-y-6">
             {/* Day Charter Description */}
             <div className="border-b-1 border-b-gray-400 pb-6">
                 <h2 className="text-xl lg:text-2xl font-bold text-zink mb-3">Day Charter</h2>
-                <ul className="list-disc list-inside space-y-1 text-sm md:text-[16px] text-dark font-inter">
-                    <li>Duration: 8 hours from and to Chalong pier; shorter charters only on request</li>
-                    <li>
-                        Finish latest with sunset according to this website:{" "}
-                        <a
-                            href="https://www.timeanddate.com/sun/thailand/phuket"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className=" underline text-dark"
-                        >
-                            timeanddate.com/sun/thailand/phuket
-                        </a>
-                    </li>
-                    <li>Additional children between 3–12 years old charged 50% of the adult rate; below 3 years free</li>
-                </ul>
+                {data?.dayCharter ? (
+                    <div dangerouslySetInnerHTML={{ __html: data.dayCharter }} />
+                ) : (
+                    <p className="text-gray-500">No day charter information available.</p>
+                )}
             </div>
 
             {/* Destinations */}
-            <div className="border-b-1 border-b-gray-400 pb-6">
+            {/* <div className="border-b-1 border-b-gray-400 pb-6">
                 <h3 className="text-lg md:text-xl font-semibold text-zink mb-2">Destinations (choose one):</h3>
                 <ul className="list-disc list-inside space-y-1 text-dark text-sm md:text-[16px] font-inter">
+
                     <li>Koh Racha Yai / Racha Noi (best to skip the crowd)</li>
                     <li>Phang Nga Bay / James Bond Island (no clear water for snorkeling in Phang Nga Bay)</li>
                     <li>
@@ -34,11 +33,11 @@ const DayCharter = () => {
                     <li>Phi Phi Leh + Koh Haa + Maiton (10 hours charter +6000 THB)</li>
                     <li>All other itineraries and relocation ONLY on request and eventually surcharge!!!</li>
                 </ul>
-            </div>
+            </div> */}
 
             {/* Price Table */}
             {/* Price Table */}
-            <div className="overflow-x-auto">
+            {/* <div className="overflow-x-auto">
                 <table className="min-w-full table-auto border shadow-md border-gray-300 text-left">
                     <thead className="bg-zink text-white">
                         <tr>
@@ -96,7 +95,7 @@ const DayCharter = () => {
                     </tbody>
 
                 </table>
-            </div>
+            </div> */}
 
         </section>
     )

@@ -74,7 +74,7 @@ const YachtMatchmaker: React.FC = () => {
                 {/* Left column: Form */}
                 <div className="md:col-span-4">
                     <div className="bg-white rounded-2xl shadow-lg p-3 lg:p-4 xl:p-6">
-                        <h2 className=" text-xl lg:text-2xl font-extrabold text-green mb-6 font-playfair">
+                        <h2 className=" text-xl lg:text-2xl font-extrabold text-zink mb-6 font-playfair">
                             Yacht Matchmaker
                         </h2>
 

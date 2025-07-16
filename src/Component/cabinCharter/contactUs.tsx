@@ -1,6 +1,6 @@
 "use client";
 import { useState, useRef } from "react";
-import { formFields, contactDetails } from "@/data/contact";
+import { formFields} from "@/data/contact";
 
 const ContactUs = () => {
     const [formValues, setFormValues] = useState<Record<string, string>>({});

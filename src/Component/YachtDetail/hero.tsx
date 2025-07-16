@@ -27,6 +27,9 @@ export interface Yacht {
   lengthRange: string;
   galleryImages: string[];
   guests: string;
+  dayCharter: string;
+  overnightCharter:string;
+  specifications:string;
 }
 
 const HeroSection: React.FC<Hero> = ({ id }) => {

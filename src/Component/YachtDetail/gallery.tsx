@@ -85,10 +85,10 @@ const Gallery: React.FC<Props> = ({ data }) => {
           </div>
         )}
 
-        {/* {data?.galleryImages?.[0] && ( */}
+        {data?.galleryImages?.[0] && (
           <div className="col-span-2 row-span-2">
             <Image
-              src={data.galleryImages[0] || ""}
+              src={data.galleryImages[0]}
               alt="Yacht Image"
               className="rounded-xl w-full min-h-[185px] sm:min-h-[250px] md:min-h-[267px] lg:h-[308px] xl:h-[350px] object-cover"
               width={387}
@@ -96,6 +96,8 @@ const Gallery: React.FC<Props> = ({ data }) => {
               onClick={() => openLightbox(0)}
             />
           </div>
+        )}
+
 
         {/* 2 Tall Images */}
         <div className="hidden lg:grid grid-rows-2 gap-2">

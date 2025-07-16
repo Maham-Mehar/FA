@@ -14,10 +14,6 @@ type Props = {
 };
 
 const TabSection: React.FC<Props> = ({ data }) => {
-
-  // console.log(data, 'multipled>>>>')
-
-
   const features = [
     { title: "Length", value: data?.lengthOverall, icon: RxRulerSquare },
     { title: "Type", value: data?.boatType, icon: LuSailboat },
@@ -38,11 +34,11 @@ const TabSection: React.FC<Props> = ({ data }) => {
   const renderContent = () => {
     switch (activeTab) {
       case "About Boat":
-        return <About />;
+        return <About data={data} />;
       case "Day Charter":
-        return <DayCharter />;
+        return <DayCharter data={data} />;
       case "Overnight Charter":
-        return <NightCharter />;
+        return <NightCharter data={data}/>;
       default:
         return null;
     }

@@ -1,9 +1,15 @@
-const NightCharter = () => {
+"use client"
+import { Yacht } from "../YachtDetail/hero";
+type Props = {
+  data: Yacht | null;
+};
+
+const NightCharter: React.FC<Props> = ({ data }) => {
     return (
         <section className="bg-white p-4 md:p-6 lg:p-8 rounded-lg  space-y-6">
             {/* Day Charter Description */}
             {/* Price Table */}
-            <div className="overflow-x-auto">
+            {/* <div className="overflow-x-auto">
                 <table className="min-w-full table-auto border shadow-md border-gray-300 text-left">
                     <thead className="bg-zink text-white">
                         <tr>
@@ -20,7 +26,7 @@ const NightCharter = () => {
 
                     </thead>
 
-                    <tbody className="font-inter text-[16px] font-normal">
+                    {/* <tbody className="font-inter text-[16px] font-normal">
                         <tr className="text-dark text-base md:text-[18px] font-bold font-sourceSansPro">
                             <td className=" "></td>
                             <td className="px-4 py-3 border border-gray-300 text-black ">8 pax included</td>
@@ -58,32 +64,21 @@ const NightCharter = () => {
                             <td className="px-4 py-3 border border-gray-300 text-black">29,900 THB</td>
                             <td className="px-4 py-3 border border-gray-300 text-black">1,000 THB</td>
                         </tr>
-                    </tbody>
+                    </tbody> */}
 
-                </table>
-            </div>
+                {/* </table> */}
+            {/* </div>  */}
 
             <div className="border-b-1 border-b-gray-400 pb-6">
                 <h2 className="text-xl lg:text-2xl font-bold text-zink mb-3">Night Charter</h2>
-                <ul className="list-disc list-inside space-y-1 text-sm md:text-[16px] text-black font-inter">
-                    <li>Duration: 8 hours from and to Chalong pier; shorter charters only on request</li>
-                    <li>
-                        Finish latest with sunset according to this website:{" "}
-                        <a
-                            href="https://www.timeanddate.com/sun/thailand/phuket"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className=" underline text-dark"
-                        >
-                            timeanddate.com/sun/thailand/phuket
-                        </a>
-                    </li>
-                    <li>Additional children between 3–12 years old charged 50% of the adult rate; below 3 years free</li>
-                </ul>
+                 {data?.overnightCharter ? (
+                    <div dangerouslySetInnerHTML={{ __html: data.overnightCharter }} />
+                ) : (
+                    <p className="text-gray-500">No Night charter information available.</p>
+                )}
             </div>
-
             {/* Destinations */}
-            <div className="border-b-1 border-b-gray-400 pb-6">
+            {/* <div className="border-b-1 border-b-gray-400 pb-6">
                 <h3 className="text-lg md:text-xl font-semibold text-zink mb-2">Destinations (choose one):</h3>
                 <ul className="list-disc list-inside space-y-1 text-black text-sm md:text-[16px] font-inter">
                     <li>Koh Racha Yai / Racha Noi (best to skip the crowd)</li>
@@ -95,7 +90,7 @@ const NightCharter = () => {
                     <li>Phi Phi Leh + Koh Haa + Maiton (10 hours charter +6000 THB)</li>
                     <li>All other itineraries and relocation ONLY on request and eventually surcharge!!!</li>
                 </ul>
-            </div>
+            </div> */}
         </section>
     )
 }
