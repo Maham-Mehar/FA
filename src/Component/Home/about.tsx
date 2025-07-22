@@ -17,7 +17,7 @@ const About = () => {
                     </p>
                 </div>
             </div>
-   <ContactBanner />
+            <ContactBanner />
         </div>
     )
 }

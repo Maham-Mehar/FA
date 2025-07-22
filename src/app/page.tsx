@@ -2,6 +2,7 @@
 
 import SetSail from "@/common/yarchtcharter";
 import About from "@/Component/Home/about";
+import Attractions from "@/Component/Home/destination";
 import ExploreThailand from "@/Component/Home/exploreThailand";
 import HeroSection from "@/Component/Home/hero";
 import PrivateYacht_Tour from "@/Component/Home/privateTour";
@@ -20,6 +21,7 @@ export default function Home() {
       <PrivateYacht_Tour />
       <Sailingyacht_Phuket />
       <ExploreThailand />
+      <Attractions />
     </Fragment>
   );
 }

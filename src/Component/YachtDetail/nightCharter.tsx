@@ -74,7 +74,7 @@ const NightCharter: React.FC<Props> = ({ data }) => {
                  {data?.overnightCharter ? (
                     <div dangerouslySetInnerHTML={{ __html: data.overnightCharter }} />
                 ) : (
-                    <p className="text-gray-500">No Night charter information available.</p>
+                    <p className="text-zink">No Night charter information available.</p>
                 )}
             </div>
             {/* Destinations */}

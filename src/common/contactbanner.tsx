@@ -3,7 +3,7 @@ import { MdOutlineMail } from "react-icons/md";
 
 const ContactBanner = () => {
   return (
-    <div className="relative bg-[url('/images/homeimg4.png')] bg-cover bg-start bg-no-repeat min-h-[50vh] flex items-center">
+    <div className="relative bg-[url('/images/homeimg4.png')] bg-cover bg-center bg-no-repeat min-h-[60vh] flex items-center">
       {/* Overlay (optional) */}
       <div className="absolute inset-0 z-0" />
 

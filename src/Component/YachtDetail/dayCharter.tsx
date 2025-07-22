@@ -15,7 +15,7 @@ const DayCharter: React.FC<Props> = ({ data }) => {
                 {data?.dayCharter ? (
                     <div dangerouslySetInnerHTML={{ __html: data.dayCharter }} />
                 ) : (
-                    <p className="text-gray-500">No day charter information available.</p>
+                    <p className="text-zink">No day charter information available.</p>
                 )}
             </div>
 
