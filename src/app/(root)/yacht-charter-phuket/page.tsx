@@ -6,7 +6,7 @@ import YachtMatchmaker from "@/Component/crewed_Charter/matchMark";
 import YachtAdventure from "@/Component/crewed_Charter/yachtAdventure";
 import { Fragment } from "react";
 
-export default function Home() {
+export default function crewed_Charter() {
   return (
     <Fragment>
       <HeroSection />

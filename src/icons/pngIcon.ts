@@ -4,6 +4,11 @@ var PngIcons = {
     // Logo
     logo: "/images/logo.png",
 
+    // Home Page images
+    img1: "/images/Homeimg1.png",
+    img2: "/images/HeroBatch.png",
+
+
     //Destination
     bg: "/images/hero.png",
     image1: "/images/image1.png",

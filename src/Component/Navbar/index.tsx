@@ -4,7 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navItems = [
-    { label: "Crewed Charter", href: "/" },
+    {label:"" ,href:"/"},
+    { label: "Crewed Charter", href: "/yacht-charter-phuket" },
     { label: "Bareboat Charter", href: "/bareboat-charter-thailand/" },
     { label: "Cabin Charter", href: "/best-of-phukets-islands-cabincharter/" },
     { label: "Destinations", href: "/magical-destinations-with-private-yacht-in-phuket/" },
@@ -26,7 +27,9 @@ const Drawer = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) =
             >
                 <div className="p-4">
                     <div className="flex justify-between items-center mb-6">
+                        <Link href="/">
                         <img src="/images/logo.png" alt="logo" className="w-[105px] h-[40px]" />
+                        </Link>
                         <button onClick={onClose} className="text-3xl text-gray-700 hover:text-red-500">
                             &times;
                         </button>
