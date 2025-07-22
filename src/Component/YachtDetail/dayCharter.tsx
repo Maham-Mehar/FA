@@ -10,7 +10,7 @@ const DayCharter: React.FC<Props> = ({ data }) => {
     return (
         <section className="bg-white rounded-lg space-y-6">
             {/* Day Charter Description */}
-            <div className="border-b-1 border-b-gray-400 pb-6">
+            <div className="border-b-1 border-b-gray-400 text-zink pb-6">
                 <h2 className="text-xl lg:text-2xl font-bold text-zink mb-3">Day Charter</h2>
                 {data?.dayCharter ? (
                     <div dangerouslySetInnerHTML={{ __html: data.dayCharter }} />

@@ -13,8 +13,8 @@ const CharterDetail: React.FC<Props> = ({ data }) => {
       {/* Tabs */}
 
       {/* Content */}
-      <div className="space-y-4">
-        <p className="text-xl font-bold text-zink font-sourceSansPro">Description</p>
+      <div className="space-y-4 text-zink">
+        <p className="text-xl lg:text-2xl font-bold text-zink font-sourceSansPro">Description</p>
         {data?.specifications ? (
           <div dangerouslySetInnerHTML={{ __html: data.specifications }} />
         ) : (

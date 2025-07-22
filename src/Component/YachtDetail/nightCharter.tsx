@@ -6,7 +6,7 @@ type Props = {
 
 const NightCharter: React.FC<Props> = ({ data }) => {
     return (
-        <section className="bg-white p-4 md:p-6 lg:p-8 rounded-lg  space-y-6">
+        <section className="bg-white rounded-lg  space-y-6">
             {/* Day Charter Description */}
             {/* Price Table */}
             {/* <div className="overflow-x-auto">
@@ -69,7 +69,7 @@ const NightCharter: React.FC<Props> = ({ data }) => {
                 {/* </table> */}
             {/* </div>  */}
 
-            <div className="border-b-1 border-b-gray-400 pb-6">
+            <div className="border-b-1 border-b-gray-400 pb-6 text-zink">
                 <h2 className="text-xl lg:text-2xl font-bold text-zink mb-3">Night Charter</h2>
                  {data?.overnightCharter ? (
                     <div dangerouslySetInnerHTML={{ __html: data.overnightCharter }} />
