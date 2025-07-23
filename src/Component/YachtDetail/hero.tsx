@@ -83,11 +83,11 @@ const HeroSection: React.FC<Hero> = ({ id }) => {
         <p className="sourceSansPro text-gray-400 text-[15px] font-normal mt-5">
           Crewed Charter Phuket /{" "}
           <span className="font-bold text-zink">
-            {data ? data.title : ""}
+            {data ? data.lengthOverall : ""}
           </span>
         </p>
         <p className="text-[33px] font-playfair font-extrabold text-zink">
-          {data ? data.title : ""}
+          {data ? data.lengthOverall : ""}
         </p>
 
         {/* Gallery + Tabs + Sticky Sidebar */}
