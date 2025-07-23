@@ -45,8 +45,8 @@ const YachtCards: React.FC<YachtCardsProps> = ({ columns = 3 }) => {
         columns === 1
             ? "grid-cols-1 md:grid-cols-2"
             : columns === 2
-                ? "grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
-                : "grid-cols-1 sm:grid-cols-2 md:grid-cols-3";
+                ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+                : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3";
     return (
         <div className="">
             {loading ? (
@@ -54,7 +54,7 @@ const YachtCards: React.FC<YachtCardsProps> = ({ columns = 3 }) => {
                     <div className="w-10 h-10 border-4 border-t-transparent border-[#2185D0] rounded-full animate-spin" />
                 </div>
             ) : (
-                <div className={`grid ${columnClass} gap-9`}>
+                <div className={`grid ${columnClass} gap-4 md:gap-6 lg:gap-7 xl:gap-9`}>
                     {data.map((boat, index) => (
                         <div
                             key={index}
@@ -70,28 +70,28 @@ const YachtCards: React.FC<YachtCardsProps> = ({ columns = 3 }) => {
                                     className="w-full h-64 object-cover"
                                 />
                             </div>
-                            <div className="mt-3 space-y-1 px-3">
-                                <p className="text-lg font-poppins text-red-500 font-semibold">
+                            <div className="mt-3 space-y-1 xl:space-y-2 px-3">
+                                <p className="text-xl font-poppins text-red-500 font-medium">
                                     from {boat.daytripPriceEuro}
                                 </p>
-                                <h3 className="text-[26px] font-playfair text-zinc-800">
+                                <h3 className="text-[36px] font-playfair font-bold text-zink">
                                     {boat.lengthOverall}
                                 </h3>
-                                <p className="text-lg font-sourceSanspro text-gray-600">
+                                <p className="text-xl font-sourceSanspro text-black">
                                     {boat.capacity}
                                 </p>
                             </div>
-                            <div className="mt-4 px-3 pt-3 flex justify-between border-t border-gray-300 text-gray-700 text-sm">
+                            <div className="mt-4 px-3 pt-3 flex justify-between border-t border-gray-300 text-gray-700  font-semibold text-xl">
                                 <div className="flex items-center space-x-1">
-                                    <img src="/images/icon1.png" alt="" className="w-5" />
+                                    <img src="/images/icon1.png" alt="" className="w-8" />
                                     <span>{boat.lengthRange.replace(/[<>]/g, "")} ft</span>
                                 </div>
                                 <div className="flex items-center space-x-1">
-                                    <img src="/images/icon2.png" alt="" className="w-5" />
+                                    <img src="/images/icon2.png" alt="" className="w-8" />
                                     <span>{boat.guests}</span>
                                 </div>
                                 <div className="flex items-center space-x-1">
-                                    <img src="/images/icon3.png" alt="" className="w-5" />
+                                    <img src="/images/icon3.png" alt="" className="w-8" />
                                     <span>{boat.cabins}</span>
                                 </div>
                             </div>

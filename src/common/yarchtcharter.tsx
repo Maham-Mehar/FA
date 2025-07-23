@@ -4,7 +4,6 @@ interface SetSailProps {
     bgImage: string;
 }
 const SetSail: React.FC<SetSailProps> = ({ bgImage }) => {
-
     return (
         <div>
             {/* HERO IMAGE SECTION */}

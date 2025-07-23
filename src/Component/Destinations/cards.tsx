@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 const Cards = () => {
   return (
-    <div className="bg-white xl:py-12 px-4 sm:px-4 xl:px-8">
+    <div className="bg-white px-4 sm:px-4 xl:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gx-0 md:gap-10 lg:gap-8">
           {CardData.map((item, index) => (

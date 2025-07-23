@@ -39,13 +39,13 @@ const YachtMatchmaker: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-4 lg:gap-8 xl:gap-10 max-w-7xl mx-auto xl:px-0 lg:px-4">
                 {/* Left column: Form */}
                 <div className="md:col-span-4">
-                    <div className="bg-white rounded-2xl shadow-lg p-3 lg:p-4 xl:p-6">
+                    {/* <div className="bg-white rounded-2xl shadow-lg p-3 lg:p-4 xl:p-6">
                         <h2 className=" text-xl lg:text-2xl font-extrabold text-zink mb-6 font-playfair">
                             Yacht Matchmaker
-                        </h2>
+                        </h2> */}
 
                         {/* Yacht Type */}
-                        <div className="mb-5">
+                        {/* <div className="mb-5">
                             <label className="block text-sm font-semibold mb-0 lg:mb-2 text-zinc-700">
                                 Select Yacht Type
                             </label>
@@ -55,10 +55,10 @@ const YachtMatchmaker: React.FC = () => {
                                 <option>Monohull</option>
                                 <option>Motor Yacht</option>
                             </select>
-                        </div>
+                        </div> */}
 
                         {/* Yacht Range */}
-                        <div className="mb-5">
+                        {/* <div className="mb-5">
                             <label className="block text-sm font-semibold mb-2 text-zinc-700">
                                 Select Yacht Range
                             </label>
@@ -67,10 +67,10 @@ const YachtMatchmaker: React.FC = () => {
                                 placeholder="Price"
                                 className="w-full border-b-2 border-b-[#42717C] px-3 py-2 outline-none"
                             />
-                        </div>
+                        </div> */}
 
                         {/* Trip Type */}
-                        <div className="mb-5">
+                        {/* <div className="mb-5">
                             <label className="block text-sm font-semibold mb-2 text-zinc-700">
                                 Select Trip Type
                             </label>
@@ -79,10 +79,10 @@ const YachtMatchmaker: React.FC = () => {
                                 <option>Day Charter</option>
                                 <option>Overnight Charter</option>
                             </select>
-                        </div>
+                        </div> */}
 
                         {/* Guests */}
-                        <div className="mb-4 pb-4 border-b border-gray-200">
+                        {/* <div className="mb-4 pb-4 border-b border-gray-200">
                             <label className="block text-sm font-semibold mb-2 text-zinc-700">
                                 Guests (1 - 150)
                             </label>
@@ -110,9 +110,9 @@ const YachtMatchmaker: React.FC = () => {
                                     +
                                 </button>
                             </div>
-                        </div>
+                        </div> */}
                         {/* length */}
-                        <div className="mb-4 pb-4 border-b border-gray-200">
+                        {/* <div className="mb-4 pb-4 border-b border-gray-200">
                             <label className="block text-sm font-semibold mb-2 text-zinc-700">
                                 Select Length Range
                             </label>
@@ -125,10 +125,10 @@ const YachtMatchmaker: React.FC = () => {
                                     value={length}
                                     onChange={handleLength}
                                     className="w-full accent-[#D6AB62]"
-                                />
+                                /> */}
 
                                 {/* Label + Dot Row */}
-                                <div className="flex justify-between w-full items-center text-center">
+                                {/* <div className="flex justify-between w-full items-center text-center">
                                     <div className="flex flex-col items-center">
                                         <span className="text-xs text-zinc-500">&lt; 40 ft</span>
                                         <span className="text-xs text-zinc-500">{getDot("left")}</span>
@@ -143,10 +143,10 @@ const YachtMatchmaker: React.FC = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
                         {/* Price Range */}
-                        <div>
+                        {/* <div>
                             <label className="block text-sm font-semibold mb-2 text-zinc-700">Price Range</label>
                             <div className="flex items-center gap-2">
                                 <span className="text-xs text-zinc-500">€0</span>
@@ -158,9 +158,9 @@ const YachtMatchmaker: React.FC = () => {
                                 />
                                 <span className="text-xs text-zinc-500">€12,700</span>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
-                </div>
+                {/* </div> */}
 
                 {/* Right column: Yacht cards */}
                 <div className="md:col-span-8">

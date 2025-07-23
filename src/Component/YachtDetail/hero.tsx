@@ -80,12 +80,6 @@ const HeroSection: React.FC<Hero> = ({ id }) => {
     <div>
       <div className="max-w-7xl mx-auto px-4 xl:px-0">
         {/* Breadcrumb */}
-        <p className="sourceSansPro text-gray-400 text-[15px] font-normal mt-5">
-          Crewed Charter Phuket /{" "}
-          <span className="font-bold text-zink">
-            {data ? data.lengthOverall : ""}
-          </span>
-        </p>
         <p className="text-[33px] font-playfair font-extrabold text-zink">
           {data ? data.lengthOverall : ""}
         </p>
@@ -101,7 +95,7 @@ const HeroSection: React.FC<Hero> = ({ id }) => {
               isScrolled ? "top-[8.4rem]" : "top-13"
             }`}
           >
-            <ContactDetail />
+            <ContactDetail data={data}/>
           </div>
         </div>
 

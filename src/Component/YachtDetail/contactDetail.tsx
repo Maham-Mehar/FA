@@ -1,5 +1,10 @@
 "use client";
 import React, { useRef, useState } from "react";
+import { Yacht } from "../YachtDetail/hero";
+
+type Props = {
+  data: Yacht | null;
+};
 
 const formFields = [
     { id: "name", label: "Your Name", type: "text", required: true },
@@ -10,7 +15,7 @@ const formFields = [
     { id: "returnDate", label: "Return Date", type: "date", required: true },
 ];
 
-const ContactDetail = () => {
+const ContactDetail: React.FC<Props> = ({ data }) => {
     const [formValues, setFormValues] = useState<Record<string, string>>({});
     const [errors, setErrors] = useState<Record<string, boolean>>({});
     const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
@@ -91,7 +96,7 @@ const ContactDetail = () => {
         <div className="bg-white sticky rounded-lg p-3 max-w-[500px] w-full border-2 border-zink">
             <div className="flex flex-col items-center justify-center text-center">
                 <p className="text-lg md:text-xl lg:text-[23px] xl:text-[24px] font-playfair text-[#034250] font-extrabold">
-                    Hot Chilli 38ft – Stealth Inquiry
+                    {data?.lengthOverall} – Stealth Inquiry
                 </p>
                 <p className="text-zink font-inter text-sm lg:text-[16px] mt-1">
                     Looking for a yacht charter?
