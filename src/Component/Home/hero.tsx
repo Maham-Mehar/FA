@@ -4,7 +4,7 @@ const HeroSection = () => {
     return (
         <div className="relative w-full ">
 
-            <section className="relative w-full bg-[#0061B1]/25 bg-[url('/images/homeimg1.png')] bg-cover bg-center bg-no-repeat overflow-hidden min-h-[45vh] md:min-h-[68vh] lg:min-h-[72vh] xl:min-h-[82vh] flex items-center justify-center">
+            <section className="relative w-full bg-[#0061B1]/25 bg-[url('/images/homeimg1.png')] bg-cover bg-center bg-no-repeat overflow-hidden min-h-[45vh] md:min-h-[75vh] lg:min-h-[72vh] xl:min-h-[82vh] flex items-center justify-center">
                 {/* Content on top */}
                 <div className=" absolute inset-0 bg-[#034250]/50 z-0">
                     <div className="max-w-7xl mx-auto">
