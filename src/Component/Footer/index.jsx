@@ -8,21 +8,22 @@ import {
 import { FaRegEnvelope } from "react-icons/fa";
 import { RiMap2Line } from "react-icons/ri";
 import { IoIosArrowForward } from "react-icons/io";
+import Link from "next/link";
 
 const quickLinks = [
-  "Crewed Yachts",
-  "Bareboat Yachts",
-  "Day Trip Yachts",
-  "Luxury Yachts",
-  "Overnight Itineraries",
+  { label: "Crewed Yachts", href: "/crewed-yachts" },
+  { label: "Bareboat Yachts", href: "/bareboat-yachts" },
+  { label: "Day Trip Yachts", href: "/day-trip-yachts" },
+  { label: "Luxury Yachts", href: "/luxury-yachts" },
+  { label: "Overnight Itineraries", href: "/overnight-itineraries" },
 ];
 
 const usefulLinks = [
-  "About Us",
-  "Mission Statement",
-  "FAQ",
-  "Privacy policy",
-  "Blog",
+  { label: "About Us", href: "/aboutus" },
+  { label: "Mission Statement", href: "/mission" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Blog", href: "/blog" },
 ];
 
 const iconClass = "text-[#D6AB61]";
@@ -32,12 +33,11 @@ const heading = "text-[22px] lg:text-[24px] xl:text-[28px] font-[600] mb-4";
 const Footer = () => {
   const renderLinks = (links) =>
     links.map((link, index) => (
-      <li
-        key={index}
-        className="flex items-center gap-2 text-[16px] font-normal"
-      >
+      <li key={index} className="flex items-center gap-2 text-[16px] font-normal">
         <IoIosArrowForward className={iconClass} />
-        {link}
+        <Link href={link.href}>
+          <p className="hover:text-[#D6AB61] transition">{link.label}</p>
+        </Link>
       </li>
     ));
 
@@ -65,30 +65,30 @@ const Footer = () => {
 
           <div className="flex gap-3 mt-6 flex-wrap">
             {[FaFacebookF, FaInstagram, FaWhatsapp, FaLine].map((Icon, idx) => (
-              <a
+              <p
                 key={idx}
                 href="#"
                 className="border border-white p-3 hover:bg-[#37ABC0] text-white rounded-full"
               >
                 <Icon className={iconClass} />
-              </a>
+              </p>
             ))}
           </div>
         </div>
 
-        {/* Column 2 */}
+        {/* Column 2: Quick Links */}
         <div className="lg:col-span-3 xl:col-span-2">
           <h3 className={heading}>Quick Links</h3>
           <ul className="space-y-3">{renderLinks(quickLinks)}</ul>
         </div>
 
-        {/* Column 3 */}
+        {/* Column 3: Useful Links */}
         <div className="lg:col-span-3 xl:col-span-2">
           <h3 className={heading}>Useful Links</h3>
           <ul className="space-y-3">{renderLinks(usefulLinks)}</ul>
         </div>
 
-        {/* Column 4 */}
+        {/* Column 4: Subscribe */}
         <div className="lg:col-span-3 xl:col-span-4">
           <h3 className={heading}>Subscribe</h3>
           <p className="text-[16px] font-normal mb-4">
@@ -120,14 +120,16 @@ const Footer = () => {
       <div className="bg-[#333333] text-[14px] sm:text-[16px] text-center textclass py-4">
         <p>© 2025 Copyright Faraway Yachting Co. Ltd.</p>
         <div className="flex justify-center flex-wrap gap-1 mt-2">
-          {["Impressum", "|", "Sitemap"].map((item, index) => (
-            <a
-              key={index}
-              href="#"
-              className="underline text-white hover:text-[#D6AB61] mx-1"
-            >
-              {item}
-            </a>
+          {[
+            { label: "Impressum", href: "/impressum" },
+            { label: "|", href: "#" },
+            { label: "Sitemap", href: "/sitemap" },
+          ].map((item, index) => (
+            <Link key={index} href={item.href}>
+              <p className="underline text-white hover:text-[#D6AB61] mx-1">
+                {item.label}
+              </p>
+            </Link>
           ))}
         </div>
       </div>

@@ -48,7 +48,7 @@ const YachtCards: React.FC<YachtCardsProps> = ({ columns = 3 }) => {
                 ? "grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
                 : "grid-cols-1 sm:grid-cols-2 md:grid-cols-3";
     return (
-        <div>
+        <div className="">
             {loading ? (
                 <div className="flex items-center justify-center min-h-[40rem]">
                     <div className="w-10 h-10 border-4 border-t-transparent border-[#2185D0] rounded-full animate-spin" />

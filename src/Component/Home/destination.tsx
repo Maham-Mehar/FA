@@ -1,116 +1,55 @@
-"use client";
-import Image from "next/image";
-import attractionsData, { Attraction } from "@/data/homeCard";
-import { LuSailboat } from "react-icons/lu";
-import { IoWarningOutline } from "react-icons/io5";
-
-const headingText = "Explore Thailand";
-
-const Attractions: React.FC = () => {
-  const items = attractionsData["phi-phi-island"].items;
-
-  if (!items || items.length === 0) {
-    return (
-      <section className="py-16 px-4">
-        <h2 className="text-center text-2xl text-gray-600">{headingText}</h2>
-      </section>
-    );
-  }
+const Destinations_Section = () => {
+  const data = [
+    {
+      label: "Private yacht in Private yacht in phuket",
+      Description:
+        "At Faraway Yachting Co. Ltd., we understand that your holiday is a special time, and we want to make it as unique and unforgettable as possible. That’s why we offer a wide range of private yacht charters in Phuket, tailored to your individual needs and interests. Our private yacht charters are the perfect way to explore the stunning islands and coastline of Phuket. With our experienced and knowledgeable crew, you can be sure that you’re in good hands every step of the way."
+    },
+    {
+      label: "Bareboat charter phuket",
+      Description:
+        "Set sail for adventure with a bareboat charter in Phuket! Experience the freedom of exploring the Andaman Sea at your own pace, choosing your own itinerary and anchoring wherever you please. With its stunning islands, crystal-clear waters and vibrant marine life, Phuket is the ideal destination for a bareboat charter. Our bareboat fleet includes a variety of yachts and catamarans to choose from, all fully equipped and well-maintained.",
+    },
+    {
+      label: "Best Phuket Catamaran Charter",
+      Description:
+        "Embark on an unforgettable adventure with a Phuket catamaran charter! These luxurious yachts offer the perfect way to explore the Andaman Sea at your own pace, visiting stunning islands, secluded coves, and vibrant coral reefs. Our catamarans are fully equipped with everything you need for a comfortable and enjoyable stay, including spacious cabins, private bathrooms, and spacious sundecks. You can also enjoy a variety of water activities, such as snorkeling, diving and fishing. Get in touch toady !",
+    },
+    {
+      label: "Luxury yacht in Phuket",
+      Description:
+        "Imagine sailing through the crystal-clear waters of the Andaman Sea, surrounded by lush green islands and breathtaking scenery. On board your own luxury yacht, you’ll enjoy the ultimate in relaxation and comfort, with every detail taken care of by your experienced crew. No matter what you choose to do, a luxury yacht charter Phuket is an unforgettable experience. It’s the perfect way to celebrate a special occasion, or simply to indulge in the ultimate vacation.",
+    },
+    {
+      label: "Phuket Boat Rental: Your Gateway to Unforgettable Adventures",
+      Description:
+        "Phuket is a boater’s paradise, with its stunning coastline, secluded islands, and vibrant marine life. A boat rental is the perfect way to explore all that Phuket has to offer, at your own pace and on your own terms. With a boat rental, you can customize your itinerary to suit your interests, whether you’re looking for a relaxing getaway or an action-packed adventure. Visit popular tourist destinations like Phang Nga Bay and Phi Phi Islands, or discover hidden gems off the beaten path. Book your Phuket boat rental today with us and start planning your unforgettable maritime adventure!",
+    },
+    {
+      label: "Phuket Yachting: A Luxurious and Unforgettable Experience",
+      Description:
+        "Phuket, a jewel in the Andaman Sea, is a renowned yachting destination. With its stunning scenery, abundant marine life, and luxurious amenities, Phuket offers an unforgettable experience for boat lovers. From secluded coves to bustling marinas, there’s something for everyone to discover on a Phuket yachting charter. Explore hidden coves and beaches, visit idyllic islands, and experience the vibrant marine life. Indulge in luxury and relaxation on a Phuket yachting charter. Enjoy spacious cabins, gourmet meals, and attentive service provided by your experienced crew. Spend your days exploring the island’s hidden gems and your nights unwinding on deck under the stars. Plan your trip with us now !",
+    },
+  ];
 
   return (
-    <section className="py-16 px-4 md:px-6 lg:px-8 bg-white text-zink">
-      <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-zinc-800 md:mb-11 lg:mb-13 xl:mb-16 uppercase tracking-wide">
-        {headingText}
-      </h2>
-
-      <div className="space-y-8 md:space-y-12 lg:space-y-16 xl:space-y-20 max-w-7xl mx-auto">
-        {items.map((item, index) => (
-          <div
-            key={item.id}
-            className="grid grid-cols-1 md:grid-cols-2 items-center gap-6"
-          >
-            {index % 2 === 0 ? (
-              <>
-                {/* Image Left */}
-                <div className="flex justify-center md:justify-start">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    width={470}
-                    height={300}
-                    className="w-[320px] md:w-[320px] lg:w-[420px] xl:w-[470px] h-auto border-4 border-[#D6AB62] rounded-tl-3xl rounded-br-3xl"
-                  />
-                </div>
-                {/* Text Right */}
-                <AttractionContent item={item} />
-              </>
-            ) : (
-              <>
-                {/* Text Left */}
-                <AttractionContent item={item} />
-                {/* Image Right */}
-                <div className="flex justify-center md:justify-end">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    width={470}
-                    height={300}
-                    className="w-[320px] md:w-[320px] lg:w-[420px] xl:w-[470px] h-auto border-4 border-[#D6AB62] rounded-tl-3xl rounded-br-3xl"
-                  />
-                </div>
-              </>
-            )}
+    <div className="max-w-7xl mx-auto px-4 xl:px-0 py-12">
+      {/* Outer grid container with 2 columns and spacing */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-14">
+        {data.map((item, index) => (
+          <div key={index} className="max-w-xl">
+            <h3 className="text-[28px] md:text-[32px] font-semibold text-zink font-playfair mb-3">
+              {item.label}
+            </h3>
+            <img src="/images/rframe4.png" alt="" className="w-[150px] my-3" />
+            <p className="text-base md:text-lg font-inter text-zink leading-relaxed">
+              {item.Description}
+            </p>
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 
-const AttractionContent = ({ item }: { item: Attraction }) => (
-  <div className="space-y-5">
-    <div className="relative">
-      <span className="-mt-14 font-inter text-gray-100 absolute left-0 top-0 z-0">
-        <img src="/images/homeicon.png" alt="" className="h-33"/>
-      </span>
-      <div className="flex items-center ms-11">
-        <div className="w-14 border-b-4 border-mustard z-10" />
-        <p className="text-mustard font-semibold text-base lg:text-lg xl:text-xl font-inter uppercase ms-3 z-10">
-          {item.label}
-        </p>
-      </div>
-      <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-[38px] xl:text-[46px] font-semibold font-sourceSanspro text-zink ms-11 z-10">
-        {item.title}
-      </h3>
-      <p className="text-zink text-sm sm:text-base font-normal z-10 ms-11">
-        {item.description.join(" ")}
-      </p>
-    </div>
-
-    <div className="flex gap-2 flex-col ms-11">
-      <div className="flex items-center">
-        <span className="w-8 h-8 bg-mustard rounded-full flex items-center justify-center me-2">
-          <LuSailboat className="text-white" size={20} />
-        </span>
-        <p className="font-semibold text-xl font-sourceSanspro text-zink">
-          {item.heading}
-        </p>
-      </div>
-      <ul className="list-disc pl-4 text-base text-zink font-semibold font-sourceSanspro space-y-1">
-        {item.highlights.map((point, i) => (
-          <li key={i}>{point}</li>
-        ))}
-      </ul>
-    </div>
-
-    <div className="flex items-start gap-2 ms-11">
-      <IoWarningOutline className="text-zink mt-1" size={24} />
-      <p className="text-base text-zink font-inter font-semibold">
-        <span className="font-bold text-mustard me-2">Tip:</span>
-        {item.tip}
-      </p>
-    </div>
-  </div>
-);
-
-export default Attractions;
+export default Destinations_Section;

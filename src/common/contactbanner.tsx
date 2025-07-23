@@ -3,7 +3,7 @@ import { MdOutlineMail } from "react-icons/md";
 
 const ContactBanner = () => {
   return (
-    <div className="relative bg-[url('/images/homeimg4.png')] bg-cover bg-center bg-no-repeat min-h-[60vh] flex items-center">
+    <div className="relative bg-gray-100 flex items-center max-w-7xl mx-auto">
       {/* Overlay (optional) */}
       <div className="absolute inset-0 z-0" />
 
@@ -12,7 +12,7 @@ const ContactBanner = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-10 max-w-4xl mx-auto py-10">
           {/* Left Text */}
           <div className="text-white text-center md:text-left">
-            <p className="text-2xl font-semibold leading-relaxed text-zink">
+            <p className="text-3xl font-semibold leading-relaxed text-zink">
               Contact us now to<br />
               book your private yacht<br />
               charter in Phuket!

@@ -9,6 +9,11 @@ var PngIcons = {
     img2: "/images/HeroBatch.png",
 
 
+    // about page
+
+    aboutimg3: "/images/aboutimg3.png",
+    aboutimg4: "/images/aboutimg4.png",
+
     //Destination
     bg: "/images/hero.png",
     image1: "/images/image1.png",

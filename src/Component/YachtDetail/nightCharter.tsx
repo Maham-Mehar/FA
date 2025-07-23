@@ -70,7 +70,7 @@ const NightCharter: React.FC<Props> = ({ data }) => {
             {/* </div>  */}
 
             <div className="border-b-1 border-b-gray-400 pb-6 text-zink">
-                <h2 className="text-xl lg:text-2xl font-bold text-zink mb-3">Night Charter</h2>
+                <h2 className="text-xl lg:text-2xl font-bold text-zink mb-3 font-sourceSansPro">Night Charter</h2>
                  {data?.overnightCharter ? (
                     <div dangerouslySetInnerHTML={{ __html: data.overnightCharter }} />
                 ) : (
