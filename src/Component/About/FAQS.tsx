@@ -15,10 +15,10 @@ const AboutSection_FAQs = () => {
   };
 
   return (
-    <section className="bg-white py-12 px-4 xl:px-0">
+    <section className="bg-white pb-12 px-4 xl:px-0">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
-        <div className="mb-12 flex justify-center flex-col items-center">
+        <div className="mb-8 lg:mb-10 xl:mb-12 flex justify-center flex-col items-center">
           <h2 className="text-[24px] md:text-[32px] lg:text-[36px] xl:text-[40px] font-playfair text-zink font-semibold mb-1">
             FAQs
           </h2>
@@ -32,7 +32,7 @@ const AboutSection_FAQs = () => {
         {/* Accordion */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 xl:gap-8">
           {[firstColumn, secondColumn].map((column, columnIndex) => (
-            <div className="space-y-6" key={columnIndex}>
+            <div className="space-y-3 lg:space-y-4 xl:space-y-6" key={columnIndex}>
               {column.map((item, index) => {
                 const actualIndex = columnIndex === 0 ? index * 2 : index * 2 + 1;
                 const isOpen = activeId === actualIndex;
@@ -46,9 +46,9 @@ const AboutSection_FAQs = () => {
                     <button
                       type="button"
                       onClick={() => toggleItem(actualIndex)}
-                      className="flex justify-between items-center w-full p-4 cursor-pointer text-left"
+                      className="flex justify-between items-center w-full py-2 lg:py-3 xl:py-4 px-2 lg:px-3 xlpx-4 cursor-pointer text-left"
                     >
-                      <p className="font-bold text-lg lg:text-xl text-zink font-sourceSanspro max-w-lg">
+                      <p className="font-bold text-base lg:text-xl text-zink font-sourceSanspro max-w-lg">
                         {item.place}
                       </p>
                       <span className="text-2xl font-bold text-gray-400">

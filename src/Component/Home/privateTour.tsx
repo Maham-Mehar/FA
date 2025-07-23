@@ -8,8 +8,8 @@ const PrivateYacht_Tour = () => {
             />
 
             <div className="max-w-7xl mx-auto">
-                <div className="flex justify-center max-w-5xl mx-auto mt-6">
-                    <div className="relative w-full h-[320px] md:h-[410px] lg:h-[430px] xl:h-[450px] overflow-hidden shadow-lg ">
+                <div className="flex justify-center max-w-5xl mx-auto mt-8">
+                    <div className="relative w-full h-[320px] md:h-[400px] lg:h-[420px] xl:h-[450px] overflow-hidden shadow-lg ">
                         <iframe
                             className="w-full h-full"
                             src="https://www.youtube.com/embed/6g9jfeUr_oE?start=1"
