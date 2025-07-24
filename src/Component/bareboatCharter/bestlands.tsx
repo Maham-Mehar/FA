@@ -4,7 +4,7 @@ import PngIcons from "@/icons/pngIcon";
 const bestLandsData = [
   {
     id: "1",
-    title: "Private Yacht in Phuket",
+    title: "Private yacht inphuket",
     subtitle: "– Your Private Yacht, Your Dream Escape",
     image: PngIcons.crewedimg3,
     description: [
@@ -24,8 +24,8 @@ const bestLandsData = [
   },
 ];
 
-const  BestLands_Section= () => {
+const  BestLand = () => {
   return <BestLands data={bestLandsData} />;
 };
 
-export default BestLands_Section;
+export default BestLand;

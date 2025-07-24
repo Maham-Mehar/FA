@@ -13,6 +13,8 @@ var PngIcons = {
 
     aboutimg3: "/images/aboutimg3.png",
     aboutimg4: "/images/aboutimg4.png",
+    boatimg2: "/images/boatimg2.png",
+        boatimg3: "/images/boatimg3.png",
 
     //Destination
     bg: "/images/hero.png",
