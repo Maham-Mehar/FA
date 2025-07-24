@@ -15,8 +15,8 @@ const AboutSection_FAQs = () => {
   };
 
   return (
-    <section className="bg-white pb-12 px-4 xl:px-0">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-white">
+      <div className="max-w-7xl mx-auto px-4 xl:px-0">
         {/* Heading */}
         <div className="mb-8 lg:mb-10 xl:mb-12 flex justify-center flex-col items-center">
           <h2 className="text-[24px] md:text-[32px] lg:text-[36px] xl:text-[40px] font-playfair text-zink font-semibold mb-1">

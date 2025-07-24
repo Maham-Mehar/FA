@@ -1,0 +1,1981 @@
+{
+	"info": {
+		"_postman_id": "a7295ab6-6726-43ee-a25b-fbdec56b1633",
+		"name": "liquid-DMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46390851",
+		"_collection_link": "https://jahanzaib-2096562.postman.co/workspace/Jahanzaib's-Workspace~7a071132-a784-46c5-83fe-0ac2c43525ee/collection/46390851-a7295ab6-6726-43ee-a25b-fbdec56b1633?action=share&source=collection_link&creator=46390851"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullname\": \"jahanzaib\",\r\n    \"email\":\"jahanzaib9599@gmail.com\" ,\r\n    \"password\": \"Ja6f@y\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/auth/register",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "health",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/auth/health",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullname\": \"jahanzaib\",\r\n    \"email\":\"jahanzaib9599@gmail.com\" ,\r\n    \"password\": \"Ja6f@y\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/auth/login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forget Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"jahanzaib9599@gmail.com\" ,\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/auth/forget-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"auth",
+								"forget-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VerifyOTP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n  \"email\": \"jahanzaib9599@gmail.com\",\r\n  \"otp\":\"1842\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/auth/verify-otp",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"verify-otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"newPassword\": \"NewPass123!\",\r\n  \"confirmPassword\": \"NewPass123!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/auth/reset-password",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ResendOTP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\":\"jahanzaib9599@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/auth/resend-otp",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"resend-otp"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vendor",
+			"item": [
+				{
+					"name": "addVendor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"category\": \"Company - COM\",\r\n  \"name\": \"jahanzaib\",\r\n  \"street\": \"456 Market Street\",\r\n  \"zip\": \"10001\",\r\n  \"city\": \"New York\",\r\n  \"state\": \"Alabama\",\r\n  \"primaryContactNumber\": \"555-123-4567\",\r\n  \"alternativeContactNumber\": \"\",\r\n  \"contactPerson\": \"Emily Watson\",\r\n  \"email\": \"vendor102@gmail.com\",\r\n  \"accountNumber\": \"ACC-998877\",\r\n  \"taxIdOrSSN\": \"78-9876543\",\r\n  \"note\": \"Preferred vendor for electrical components.\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/vendor/add-vendor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"vendor",
+								"add-vendor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "showVendors",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"category\": \"Company - COM\",\r\n  \"name\": \"jahanzaib\",\r\n  \"street\": \"456 Market Street\",\r\n  \"zip\": \"10001\",\r\n  \"city\": \"New York\",\r\n  \"state\": \"Alabama\",\r\n  \"phone\": \"555-123-4567\",\r\n  \"otherPhone\": \"555-987-6543\",\r\n  \"contactPerson\": \"Emily Watson\",\r\n  \"email\": \"vendor29@gmail.com\",\r\n  \"accountNumber\": \"ACC-998877\",\r\n  \"taxIdOrSSN\": \"78-9876543\",\r\n  \"paymentTerms\": \"Net 45\",\r\n  \"note\": \"Preferred vendor for electrical components.\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/vendor/vendors?page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"vendor",
+								"vendors"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VendorById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphaGFuemFpYjk1OTlAZ21haWwuY29tIiwiaWF0IjoxNzUxNjE1MTM1LCJleHAiOjE3NTIyMTk5MzV9.SLM7X7DC9VXAP_n-aJCU93RX6oc-IdvLjKUnueH0kL0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/vendor?id=68669da63fb5878fbcaae855",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"vendor"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "68669da63fb5878fbcaae855"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editVendor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphaGFuemFpYjk1OTlAZ21haWwuY29tIiwiaWF0IjoxNzUxNjE1MTM1LCJleHAiOjE3NTIyMTk5MzV9.SLM7X7DC9VXAP_n-aJCU93RX6oc-IdvLjKUnueH0kL0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"category\": \"Company - COM\",\r\n  \"name\": \"jahanzaib\",\r\n  \"street\": \"456 Market Street\",\r\n  \"zip\": \"12345\",\r\n  \"city\": \"New York\",\r\n  \"state\": \"Alabama\",\r\n  \"primaryContactNumber\": \"555-123-4567\",\r\n  \"alternativeContactNumber\": \"\",\r\n  \"contactPerson\": \"Emily Watson\",\r\n  \"email\": \"\",\r\n  \"accountNumber\": \"ACC-998877\",\r\n  \"taxIdOrSSN\": \"78-9876543\",\r\n  \"note\": \"Preferred vendor for electrical components.\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/vendor/edit-vendor?id=68669da63fb5878fbcaae855",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"vendor",
+								"edit-vendor"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "68669da63fb5878fbcaae855"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteVendor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphaGFuemFpYjk1OTlAZ21haWwuY29tIiwiaWF0IjoxNzUxNjE1MTM1LCJleHAiOjE3NTIyMTk5MzV9.SLM7X7DC9VXAP_n-aJCU93RX6oc-IdvLjKUnueH0kL0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/vendor/delete-vendor?id=68669da63fb5878fbcaae855",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"vendor",
+								"delete-vendor"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "68669da63fb5878fbcaae855"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphaGFuemFpYjk1OTlAZ21haWwuY29tIiwiaWF0IjoxNzUyMjQwMTg3LCJleHAiOjE3NTI4NDQ5ODd9.ItXrQ-TKWn66FyW2JC5timg7LZ5J_ba8f5imL4Q763I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/vendor/vendors-by-category?category=Auction - AU",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"vendor",
+								"vendors-by-category"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "Auction - AU"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vehicle",
+			"item": [
+				{
+					"name": "addVehicle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphaGFuemFpYjk1OTlAZ21haWwuY29tIiwiaWF0IjoxNzUxNjE1MTM1LCJleHAiOjE3NTIyMTk5MzV9.SLM7X7DC9VXAP_n-aJCU93RX6oc-IdvLjKUnueH0kL0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "featuredImage",
+									"type": "file",
+									"src": "postman-cloud:///1f0354f0-cbdf-46f0-bd8d-9770ae21e0e4"
+								},
+								{
+									"key": "otherImages",
+									"type": "file",
+									"src": [
+										"postman-cloud:///1f0354f0-cbdf-46f0-bd8d-9770ae21e0e4",
+										"postman-cloud:///1efc08e2-eb33-4440-b74a-ce24eeb118b2"
+									]
+								},
+								{
+									"key": "basicDetails[vehicleTitle]",
+									"value": "2022 Toyota Camry SE",
+									"type": "text"
+								},
+								{
+									"key": "basicDetails[vin]",
+									"value": "1HGCM82633A004352",
+									"type": "text"
+								},
+								{
+									"key": "basicDetails[make]",
+									"value": "Toyota",
+									"type": "text"
+								},
+								{
+									"key": "basicDetails[model]",
+									"value": "Camry",
+									"type": "text"
+								},
+								{
+									"key": "basicDetails[style]",
+									"value": "Sedan",
+									"type": "text"
+								},
+								{
+									"key": "basicDetails[bodyType]",
+									"value": "Compact",
+									"type": "text"
+								},
+								{
+									"key": "basicDetails[manufacturingYear]",
+									"value": "2022",
+									"type": "text"
+								},
+								{
+									"key": "basicDetails[vehicleType]",
+									"value": "Gasoline",
+									"type": "text"
+								},
+								{
+									"key": "basicDetails[condition]",
+									"value": "Used",
+									"type": "text"
+								},
+								{
+									"key": "basicDetails[certified]",
+									"value": "Yes",
+									"type": "text"
+								},
+								{
+									"key": "specifications[transmission]",
+									"value": "Automatic",
+									"type": "text"
+								},
+								{
+									"key": "specifications[tranSpeed]",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "specifications[drivetrain]",
+									"value": "FWD",
+									"type": "text"
+								},
+								{
+									"key": "specifications[engineCylinders]",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "specifications[engineSize]",
+									"value": "2.5L",
+									"type": "text"
+								},
+								{
+									"key": "specifications[fuelType]",
+									"value": "Petrol",
+									"type": "text"
+								},
+								{
+									"key": "specifications[mpgCombined]",
+									"value": "32",
+									"type": "text"
+								},
+								{
+									"key": "specifications[mpgCity]",
+									"value": "28",
+									"type": "text"
+								},
+								{
+									"key": "specifications[mpgHighway]",
+									"value": "39",
+									"type": "text"
+								},
+								{
+									"key": "specifications[towCapacity]",
+									"value": "1000 lbs",
+									"type": "text"
+								},
+								{
+									"key": "specifications[passengers]",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "specifications[weight]",
+									"value": "3300 lbs",
+									"type": "text"
+								},
+								{
+									"key": "specifications[mileage]",
+									"value": "24000",
+									"type": "text"
+								},
+								{
+									"key": "specifications[mileageIs]",
+									"value": "actual",
+									"type": "text"
+								},
+								{
+									"key": "exteriorInterior[exteriorColor]",
+									"value": "Blue",
+									"type": "text"
+								},
+								{
+									"key": "exteriorInterior[exteriorColor2]",
+									"value": "Black",
+									"type": "text"
+								},
+								{
+									"key": "exteriorInterior[colorDescription]",
+									"value": "Deep Sea Blue with Black accents",
+									"type": "text"
+								},
+								{
+									"key": "exteriorInterior[interiorColor]",
+									"value": "Gray",
+									"type": "text"
+								},
+								{
+									"key": "exteriorInterior[tag]",
+									"value": "C22-456",
+									"type": "text"
+								},
+								{
+									"key": "exteriorInterior[decal]",
+									"value": "None",
+									"type": "text"
+								},
+								{
+									"key": "exteriorInterior[gpsSerial]",
+									"value": "GPS123456789",
+									"type": "text"
+								},
+								{
+									"key": "titleRegistration[titleApplication]",
+									"value": "In Progress",
+									"type": "text"
+								},
+								{
+									"key": "titleRegistration[titleIn]",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "titleRegistration[stateTitleIn]",
+									"value": "California",
+									"type": "text"
+								},
+								{
+									"key": "titleRegistration[title]",
+									"value": "Clean",
+									"type": "text"
+								},
+								{
+									"key": "titleRegistration[titleDate]",
+									"value": "2024-05-01",
+									"type": "text"
+								},
+								{
+									"key": "titleRegistration[county]",
+									"value": "Orange",
+									"type": "text"
+								},
+								{
+									"key": "inspection[inspected]",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "inspection[inspectionNumber]",
+									"value": "INSP-4567",
+									"type": "text"
+								},
+								{
+									"key": "inspection[inspectionDate]",
+									"value": "2024-06-01",
+									"type": "text"
+								},
+								{
+									"key": "inspection[inspectedBy]",
+									"value": "Inspector Joe",
+									"type": "text"
+								},
+								{
+									"key": "inspection[warranty]",
+									"value": "6 months dealer warranty",
+									"type": "text"
+								},
+								{
+									"key": "inspection[deviceHasStarterInterrupt]",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "keySecurity[ignitionKeyCode]",
+									"value": "IGN123",
+									"type": "text"
+								},
+								{
+									"key": "keySecurity[doorKeyCode]",
+									"value": "DR456",
+									"type": "text"
+								},
+								{
+									"key": "keySecurity[valetKeyCode]",
+									"value": "VAL789",
+									"type": "text"
+								},
+								{
+									"key": "features",
+									"value": "Bluetooth",
+									"type": "text"
+								},
+								{
+									"key": "features",
+									"value": "Backup Camera",
+									"type": "text"
+								},
+								{
+									"key": "features",
+									"value": "Heated Seats",
+									"type": "text"
+								},
+								{
+									"key": "features",
+									"value": "Sunroof",
+									"type": "text"
+								},
+								{
+									"key": "vendorInfo[category]",
+									"value": "Dealer - DL",
+									"type": "text"
+								},
+								{
+									"key": "vendorInfo[name]",
+									"value": "QuickAuto Deals",
+									"type": "text"
+								},
+								{
+									"key": "vendorInfo[street]",
+									"value": "123 Main Street",
+									"type": "text"
+								},
+								{
+									"key": "vendorInfo[zip]",
+									"value": "90210",
+									"type": "text"
+								},
+								{
+									"key": "vendorInfo[city]",
+									"value": "Los Angeles",
+									"type": "text"
+								},
+								{
+									"key": "vendorInfo[state]",
+									"value": "California",
+									"type": "text"
+								},
+								{
+									"key": "vendorInfo[contactNumber]",
+									"value": "+1-555-123456",
+									"type": "text"
+								},
+								{
+									"key": "vendorInfo[contactPerson]",
+									"value": "Sarah Dealer",
+									"type": "text"
+								},
+								{
+									"key": "vendorInfo[alternateContactNumber]",
+									"value": "+1-555-654321",
+									"type": "text"
+								},
+								{
+									"key": "vendorInfo[email]",
+									"value": "dealer@example.com",
+									"type": "text"
+								},
+								{
+									"key": "vendorInfo[accountNumber]",
+									"value": "ACC-123456",
+									"type": "text"
+								},
+								{
+									"key": "vendorInfo[taxIdOrSSN]",
+									"value": "TAX-789456",
+									"type": "text"
+								},
+								{
+									"key": "vendorInfo[notes]",
+									"value": "Preferred vendor",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/vehicle/add-vehicle",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"vehicle",
+								"add-vehicle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addVehicleCost",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphaGFuemFpYjk1OTlAZ21haWwuY29tIiwiaWF0IjoxNzUxNjE1MTM1LCJleHAiOjE3NTIyMTk5MzV9.SLM7X7DC9VXAP_n-aJCU93RX6oc-IdvLjKUnueH0kL0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"costDetails\": {\r\n    \"purchaseDate\": \"2024-01-15T00:00:00.000Z\",\r\n    \"originalCost\": 2250,\r\n    \"buyersFee\": 450,\r\n    \"transportationFee\": 300,\r\n    \"lotFee\": 50,\r\n    \"addedCosts\": [\r\n      {\r\n        \"title\": \"New Tires\",\r\n        \"cost\": 80,\r\n        \"date\": \"2024-01-20\",\r\n        \"description\": \"Set of 4 all-season tires.\"\r\n      },\r\n       {\r\n        \"title\": \"New Tires\",\r\n        \"cost\": 800,\r\n        \"date\": \"2024-01-20\",\r\n        \"description\": \"Set of 4 all-season tires.\"\r\n      },\r\n      {\r\n        \"title\": \"New Tires\",\r\n        \"cost\": 800,\r\n        \"date\": \"2024-01-20\",\r\n        \"description\": \"Set of 4 all-season tires.\"\r\n      }\r\n       \r\n      \r\n    ]\r\n  },\r\n  \"floorPlanDetails\": {\r\n    \"isFloorPlanned\":false,\r\n    \"dateOpened\":\"\"\r\n  },\r\n  \"Curtailments\": {\r\n    \"lengthFloorPlan\": 90,\r\n    \"daysUntil1stCurtailment\": 30,\r\n    \"lengthFloorPlan2\": 0,\r\n    \"daysUntil2ndCurtailment\": 0\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/vehicle/Cost?id=686e456439d0e63b2257d111",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"vehicle",
+								"Cost"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "686e456439d0e63b2257d111"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addVehicleSales",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphaGFuemFpYjk1OTlAZ21haWwuY29tIiwiaWF0IjoxNzUxNjE1MTM1LCJleHAiOjE3NTIyMTk5MzV9.SLM7X7DC9VXAP_n-aJCU93RX6oc-IdvLjKUnueH0kL0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Price\": {\r\n        \"Retail\": 25500,\r\n        \"Interest\": 4.99,\r\n        \"Wholesale\": 22000,\r\n        \"Other\": 250\r\n    },\r\n    \"Values\": {\r\n        \"MarketValue\": 24800,\r\n        \"MSRP\": 27000\r\n    },\r\n    \"Payment\": {\r\n        \"Down\": 5000,\r\n        \"Weekly\": 155,\r\n        \"Monthly\": 620\r\n    },\r\n    \"Dates\": {\r\n        \"Arrival\": \"2024-07-15T00:00:00.000Z\",\r\n        \"ReadytoSell\": \"2024-07-18T00:00:00.000Z\"\r\n    },\r\n    \"WindowSheetOptions\": {\r\n        \"price\": true,\r\n        \"DownPayment\": true,\r\n        \"Features\": true,\r\n        \"SalesComments\": true\r\n    },\r\n    \"SalesComments\": \"This vehicle is in pristine condition and comes with a full service history. A must-see!\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/vehicle/Sales?id=685d95e4e040e352470f8999",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"vehicle",
+								"Sales"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "685d95e4e040e352470f8999"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addVehiclePreviousOwner",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5vbWFuc2hhYmJpcjEwQGdtYWlsLmNvbSIsImlhdCI6MTc1MjQ4MzI5NCwiZXhwIjoxNzUzMDg4MDk0fQ.y0U2VzUAVE1EJTRCs1oWeYp0O_YOBPfAblWdWo9EUPg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "PreviousOwnerDetail[OwnerName]",
+									"value": "John Smith",
+									"type": "text"
+								},
+								{
+									"key": "PreviousOwnerDetail[OwnershipType]",
+									"value": "Individual",
+									"type": "text"
+								},
+								{
+									"key": "PreviousOwnerDetail[ContactNumber]",
+									"value": "555-987-6543",
+									"type": "text"
+								},
+								{
+									"key": "PreviousOwnerDetail[Email]",
+									"value": "john.smith.prev@example.com",
+									"type": "text"
+								},
+								{
+									"key": "PreviousOwnerDetail[Address]",
+									"value": "456 Old Mill Road",
+									"type": "text"
+								},
+								{
+									"key": "PreviousOwnerDetail[StateofRegistration]",
+									"value": "Texas",
+									"type": "text"
+								},
+								{
+									"key": "PreviousOwnerDetail[OwnershipStartDate]",
+									"value": "2019-03-10",
+									"type": "text"
+								},
+								{
+									"key": "PreviousOwnerDetail[OwnershipEndDate]",
+									"value": "2024-01-22",
+									"type": "text"
+								},
+								{
+									"key": "PreviousOwnerDetail[PrincipleUseofVehicle]",
+									"value": "Daily Driver",
+									"type": "text"
+								},
+								{
+									"key": "PreviousOwnerDetail[Notes]",
+									"value": "Previous owner was a non-smoker.",
+									"type": "text"
+								},
+								{
+									"key": "values[MarketValue]",
+									"value": "18000",
+									"type": "text"
+								},
+								{
+									"key": "values[MSRP]",
+									"value": "29500",
+									"type": "text"
+								},
+								{
+									"key": "transferDocument",
+									"type": "file",
+									"src": [
+										"postman-cloud:///1f05b307-4a87-4400-97ae-5136308754cc",
+										"postman-cloud:///1f05d6b2-72fe-4720-97e2-4ec4550bec18"
+									]
+								},
+								{
+									"key": "transferDocument",
+									"type": "file",
+									"src": "postman-cloud:///1f05b306-a629-49d0-81e6-6f0a7b932326"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/vehicle/previous-owner?id=68752419777afc6431ddb6f3",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"vehicle",
+								"previous-owner"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "68752419777afc6431ddb6f3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addVehicleNotes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphaGFuemFpYjk1OTlAZ21haWwuY29tIiwiaWF0IjoxNzUxNjE1MTM1LCJleHAiOjE3NTIyMTk5MzV9.SLM7X7DC9VXAP_n-aJCU93RX6oc-IdvLjKUnueH0kL0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "OtherNotes[NoteCategory]",
+									"value": "Buyer Inquiry",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/vehicle/Notes?id=685d95e4e040e352470f8999",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"vehicle",
+								"Notes"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "685d95e4e040e352470f8999"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "markvehicleAsCompleted",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphaGFuemFpYjk1OTlAZ21haWwuY29tIiwiaWF0IjoxNzUxNjE1MTM1LCJleHAiOjE3NTIyMTk5MzV9.SLM7X7DC9VXAP_n-aJCU93RX6oc-IdvLjKUnueH0kL0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/vehicle/complete?id=68625bf8a553fb1a6cf6002f",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"vehicle",
+								"complete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "68625bf8a553fb1a6cf6002f"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editVehicle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphaGFuemFpYjk1OTlAZ21haWwuY29tIiwiaWF0IjoxNzUxNjE1MTM1LCJleHAiOjE3NTIyMTk5MzV9.SLM7X7DC9VXAP_n-aJCU93RX6oc-IdvLjKUnueH0kL0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "basicDetails[vehicleTitle]",
+									"value": "Toyota c5",
+									"type": "text"
+								},
+								{
+									"key": "basicDetails[vin]",
+									"value": "1NXBR32E04Z123456",
+									"type": "text"
+								},
+								{
+									"key": "basicDetails[make]",
+									"value": "Toyota",
+									"type": "text"
+								},
+								{
+									"key": "basicDetails[model]",
+									"value": "Corolla",
+									"type": "text"
+								},
+								{
+									"key": "basicDetails[style]",
+									"value": "Sedan",
+									"type": "text"
+								},
+								{
+									"key": "basicDetails[bodyType]",
+									"value": "4DR",
+									"type": "text"
+								},
+								{
+									"key": "basicDetails[manufacturingYear]",
+									"value": "2023",
+									"type": "text"
+								},
+								{
+									"key": "basicDetails[vehicleType]",
+									"value": "Car",
+									"type": "text"
+								},
+								{
+									"key": "basicDetails[condition]",
+									"value": "New",
+									"type": "text"
+								},
+								{
+									"key": "basicDetails[certified]",
+									"value": "Yes",
+									"type": "text"
+								},
+								{
+									"key": "specifications[transmission]",
+									"value": "Automatic",
+									"type": "text"
+								},
+								{
+									"key": "specifications[tranSpeed]",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "specifications[drivetrain]",
+									"value": "FWD",
+									"type": "text"
+								},
+								{
+									"key": "specifications[engineCylinders]",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "specifications[engineSize]",
+									"value": "1.8L",
+									"type": "text"
+								},
+								{
+									"key": "specifications[fuelType]",
+									"value": "Gas",
+									"type": "text"
+								},
+								{
+									"key": "specifications[mpgCombined]",
+									"value": "35",
+									"type": "text"
+								},
+								{
+									"key": "specifications[mpgCity]",
+									"value": "30",
+									"type": "text"
+								},
+								{
+									"key": "specifications[mpgHighway]",
+									"value": "40",
+									"type": "text"
+								},
+								{
+									"key": "specifications[towCapacity]",
+									"value": "1,500 lbs",
+									"type": "text"
+								},
+								{
+									"key": "specifications[passengers]",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "specifications[weight]",
+									"value": "2,800 lbs",
+									"type": "text"
+								},
+								{
+									"key": "specifications[mileage]",
+									"value": "1,000",
+									"type": "text"
+								},
+								{
+									"key": "specifications[mileageIs]",
+									"value": "Actual",
+									"type": "text"
+								},
+								{
+									"key": "exteriorInterior[exteriorColor]",
+									"value": "Silver",
+									"type": "text"
+								},
+								{
+									"key": "exteriorInterior[exteriorColor2]",
+									"value": "Black",
+									"type": "text"
+								},
+								{
+									"key": "exteriorInterior[colorDescription]",
+									"value": "Metallic Silver with black trim",
+									"type": "text"
+								},
+								{
+									"key": "exteriorInterior[interiorColor]",
+									"value": "Black",
+									"type": "text"
+								},
+								{
+									"key": "exteriorInterior[tag]",
+									"value": "X22-789",
+									"type": "text"
+								},
+								{
+									"key": "exteriorInterior[decal]",
+									"value": "None",
+									"type": "text"
+								},
+								{
+									"key": "exteriorInterior[gpsSerial]",
+									"value": "GPS987654321",
+									"type": "text"
+								},
+								{
+									"key": "titleRegistration[titleApplication]",
+									"value": "Submitted",
+									"type": "text"
+								},
+								{
+									"key": "titleRegistration[titleIn]",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "titleRegistration[stateTitleIn]",
+									"value": "California",
+									"type": "text"
+								},
+								{
+									"key": "titleRegistration[title]",
+									"value": "Clean",
+									"type": "text"
+								},
+								{
+									"key": "titleRegistration[titleDate]",
+									"value": "2024-06-01",
+									"type": "text"
+								},
+								{
+									"key": "titleRegistration[country]",
+									"value": "USA(United States of America)",
+									"type": "text"
+								},
+								{
+									"key": "inspection[inspected]",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "inspection[inspectionNumber]",
+									"value": "INSPECT-1234",
+									"type": "text"
+								},
+								{
+									"key": "inspection[inspectionDate]",
+									"value": "2024-06-10",
+									"type": "text"
+								},
+								{
+									"key": "inspection[inspectedBy]",
+									"value": "Certified Inspector",
+									"type": "text"
+								},
+								{
+									"key": "inspection[warranty]",
+									"value": "6 months/6,000 miles",
+									"type": "text"
+								},
+								{
+									"key": "inspection[deviceHasStarterInterrupt]",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "keySecurity[ignitionKeyCode]",
+									"value": "KEY123",
+									"type": "text"
+								},
+								{
+									"key": "keySecurity[doorKeyCode]",
+									"value": "DOOR456",
+									"type": "text"
+								},
+								{
+									"key": "keySecurity[valetKeyCode]",
+									"value": "VAL123",
+									"type": "text"
+								},
+								{
+									"key": "features",
+									"value": "Bluetooth",
+									"type": "text"
+								},
+								{
+									"key": "features",
+									"value": "Backup Camera",
+									"type": "text"
+								},
+								{
+									"key": "features",
+									"value": "Remote Start",
+									"type": "text"
+								},
+								{
+									"key": "vendorInfo[isExistingVendor]",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "vendorInfo[category]",
+									"value": "Auction - AU",
+									"type": "text"
+								},
+								{
+									"key": "vendorInfo[name]",
+									"value": "TopGear Motors",
+									"type": "text"
+								},
+								{
+									"key": "vendorInfo[street]",
+									"value": "456 Auto Lane",
+									"type": "text"
+								},
+								{
+									"key": "vendorInfo[zip]",
+									"value": "94101",
+									"type": "text"
+								},
+								{
+									"key": "vendorInfo[city]",
+									"value": "San Francisco",
+									"type": "text"
+								},
+								{
+									"key": "vendorInfo[state]",
+									"value": "California",
+									"type": "text"
+								},
+								{
+									"key": "vendorInfo[primaryContactNumber]",
+									"value": "+1-555-789123",
+									"type": "text"
+								},
+								{
+									"key": "vendorInfo[contactPerson]",
+									"value": "Emily Auto",
+									"type": "text"
+								},
+								{
+									"key": "vendorInfo[alternativeContactNumber]",
+									"value": "+1-555-321987",
+									"type": "text"
+								},
+								{
+									"key": "vendorInfo[email]",
+									"value": "topgear13@example.com",
+									"type": "text"
+								},
+								{
+									"key": "vendorInfo[accountNumber]",
+									"value": "ACC-DL-1234",
+									"type": "text"
+								},
+								{
+									"key": "vendorInfo[notes]",
+									"value": "Handles high-end inventory",
+									"type": "text"
+								},
+								{
+									"key": "vendorInfo[taxIdOrSSN]",
+									"value": "TAX-123456",
+									"type": "text"
+								},
+								{
+									"key": "featuredImage",
+									"type": "file",
+									"src": "postman-cloud:///1f0354f0-cbdf-46f0-bd8d-9770ae21e0e4"
+								},
+								{
+									"key": "otherImages",
+									"type": "file",
+									"src": [
+										"postman-cloud:///1f0354f0-cbdf-46f0-bd8d-9770ae21e0e4",
+										"postman-cloud:///1efc08e2-eb33-4440-b74a-ce24eeb118b2"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/vehicle/edit?id=68625bf8a553fb1a6cf6002f",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"vehicle",
+								"edit"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "68625bf8a553fb1a6cf6002f"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "showVehicles",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"category\": \"Company - COM\",\r\n  \"name\": \"jahanzaib\",\r\n  \"street\": \"456 Market Street\",\r\n  \"zip\": \"10001\",\r\n  \"city\": \"New York\",\r\n  \"state\": \"Alabama\",\r\n  \"phone\": \"555-123-4567\",\r\n  \"otherPhone\": \"555-987-6543\",\r\n  \"contactPerson\": \"Emily Watson\",\r\n  \"email\": \"vendor29@gmail.com\",\r\n  \"accountNumber\": \"ACC-998877\",\r\n  \"taxIdOrSSN\": \"78-9876543\",\r\n  \"paymentTerms\": \"Net 45\",\r\n  \"note\": \"Preferred vendor for electrical components.\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/vehicle/vehicles?page=1&limit=10",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"vehicle",
+								"vehicles"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VehiclebyId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"category\": \"Company - COM\",\r\n  \"name\": \"jahanzaib\",\r\n  \"street\": \"456 Market Street\",\r\n  \"zip\": \"10001\",\r\n  \"city\": \"New York\",\r\n  \"state\": \"Alabama\",\r\n  \"phone\": \"555-123-4567\",\r\n  \"otherPhone\": \"555-987-6543\",\r\n  \"contactPerson\": \"Emily Watson\",\r\n  \"email\": \"vendor29@gmail.com\",\r\n  \"accountNumber\": \"ACC-998877\",\r\n  \"taxIdOrSSN\": \"78-9876543\",\r\n  \"paymentTerms\": \"Net 45\",\r\n  \"note\": \"Preferred vendor for electrical components.\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/vehicle/vehicles?page=1&limit=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"vehicle",
+								"vehicles"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphaGFuemFpYjk1OTlAZ21haWwuY29tIiwiaWF0IjoxNzUxNjE1MTM1LCJleHAiOjE3NTIyMTk5MzV9.SLM7X7DC9VXAP_n-aJCU93RX6oc-IdvLjKUnueH0kL0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/vehicle/deletebyId?id=68628fb72015e5b2c955efda",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"vehicle",
+								"deletebyId"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "68628fb72015e5b2c955efda"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FloorCompany",
+			"item": [
+				{
+					"name": "AddFloor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphaGFuemFpYjk1OTlAZ21haWwuY29tIiwiaWF0IjoxNzUxNjE1MTM1LCJleHAiOjE3NTIyMTk5MzV9.SLM7X7DC9VXAP_n-aJCU93RX6oc-IdvLjKUnueH0kL0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CompanyDetails\": {\r\n        \"companyName\": \"Acm2\",\r\n        \"street\": \"123 Main St\",\r\n        \"city\": \"New York\",\r\n        \"state\": \"NY\",\r\n        \"zip\": \"10001\"\r\n    },\r\n    \"Rate\": {\r\n        \"apr\": 5.5,\r\n        \"interestCalculationDays\": 30\r\n    },\r\n    \"Fees\": {\r\n        \"type\": \"Plus for each Curtailment\",\r\n        \"adminFee\": 100,\r\n        \"setUpFee\": 50,\r\n        \"additionalFee\": 25\r\n    },\r\n    \"term\": {\r\n        \"lengthInDays\": 365,\r\n        \"daysUntilFirstCurtailment\": 90,\r\n        \"percentPrincipalReduction\": 10,\r\n        \"interestAndFeesWithEachCurtailment\": true\r\n    },\r\n    \"additionalNotes\": \"Sample floor plan for testing\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/floorPlan/add-floor",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"floorPlan",
+								"add-floor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FloorbyID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphaGFuemFpYjk1OTlAZ21haWwuY29tIiwiaWF0IjoxNzUxNjE1MTM1LCJleHAiOjE3NTIyMTk5MzV9.SLM7X7DC9VXAP_n-aJCU93RX6oc-IdvLjKUnueH0kL0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/floorPlan?id=68678f89c4cec098964d721a",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"floorPlan"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "68678f89c4cec098964d721a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditFloor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CompanyDetails\": {\r\n        \"companyName\": \"Acm2\",\r\n        \"street\": \"123 Main St\",\r\n        \"city\": \"New York\",\r\n        \"state\": \"NY\",\r\n        \"zip\": \"10001\"\r\n    },\r\n    \"Rate\": {\r\n        \"apr\": 5.5,\r\n        \"interestCalculationDays\": 30\r\n    },\r\n    \"Fees\": {\r\n        \"type\": \"Plus for each Curtailment\",\r\n        \"adminFee\": 100,\r\n        \"setUpFee\": 50,\r\n        \"additionalFee\": 25\r\n    },\r\n    \"term\": {\r\n        \"lengthInDays\": 365,\r\n        \"daysUntilFirstCurtailment\": 90,\r\n        \"percentPrincipalReduction\": 10,\r\n        \"interestAndFeesWithEachCurtailment\": true\r\n    },\r\n    \"additionalNotes\": \"Sample floor plan for testing\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/floorPlan/edit-floor?id=68678f89c4cec098964d721a",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"floorPlan",
+								"edit-floor"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "68678f89c4cec098964d721a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ShowAllFloor",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphaGFuemFpYjk1OTlAZ21haWwuY29tIiwiaWF0IjoxNzUxNjE1MTM1LCJleHAiOjE3NTIyMTk5MzV9.SLM7X7DC9VXAP_n-aJCU93RX6oc-IdvLjKUnueH0kL0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CompanyDetails\": {\r\n        \"companyName\": \"Acm2\",\r\n        \"street\": \"123 Main St\",\r\n        \"city\": \"New York\",\r\n        \"state\": \"NY\",\r\n        \"zip\": \"10001\"\r\n    },\r\n    \"Rate\": {\r\n        \"apr\": 5.5,\r\n        \"interestCalculationDays\": 30\r\n    },\r\n    \"Fees\": {\r\n        \"type\": \"Plus for each Curtailment\",\r\n        \"adminFee\": 100,\r\n        \"setUpFee\": 50,\r\n        \"additionalFee\": 25\r\n    },\r\n    \"term\": {\r\n        \"lengthInDays\": 365,\r\n        \"daysUntilFirstCurtailment\": 90,\r\n        \"percentPrincipalReduction\": 10,\r\n        \"interestAndFeesWithEachCurtailment\": true\r\n    },\r\n    \"additionalNotes\": \"Sample floor plan for testing\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/floorPlan/floors",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"floorPlan",
+								"floors"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Addcustomer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphaGFuemFpYjk1OTlAZ21haWwuY29tIiwiaWF0IjoxNzUxNjE1MTM1LCJleHAiOjE3NTIyMTk5MzV9.SLM7X7DC9VXAP_n-aJCU93RX6oc-IdvLjKUnueH0kL0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"CustomerInformation\": {\r\n    \"firstName\": \"Joh\",\r\n    \"middleName\": \"A\",                  \r\n    \"lastName\": \"Doe\",\r\n    \"Street\": \"123 Main St\",\r\n    \"City\": \"Springfield\",\r\n    \"State\": \"Illinois\",\r\n    \"ZipCode\": \"62704\",\r\n    \"Country\": \"USA\",\r\n    \"primaryContactNumber\": \"+1-555-123-4567\",\r\n    \"SecondaryContactNumber\": \"+1-555-765-4321\",  \r\n    \"email\": \"joe.gol@example.com\",\r\n    \"DateOfBirth\": \"1985-06-15\",        \r\n    \"Gender\": \"Male\",                   \r\n    \"SSN\": \"123-45-6789\",               \r\n    \"DriverLicense\": \"D1234567\",        \r\n    \"LicenseExpiration\": \"2027-12-31\",  \r\n    \"SpouseName\": \"Jane Doe\",           \r\n    \"vehicleUse\": \"Personal\",           \r\n    \"isHomeOwner\": true,\r\n    \"hearAboutUs\": \"Facebook\"           \r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/customer/add-customer",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"customer",
+								"add-customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditCustomer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphaGFuemFpYjk1OTlAZ21haWwuY29tIiwiaWF0IjoxNzUxNjE1MTM1LCJleHAiOjE3NTIyMTk5MzV9.SLM7X7DC9VXAP_n-aJCU93RX6oc-IdvLjKUnueH0kL0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"CustomerInformation\": {\r\n    \"firstName\": \"Joh\",\r\n    \"middleName\": \"A\",                  \r\n    \"lastName\": \"Doe\",\r\n    \"Street\": \"123 Main St\",\r\n    \"City\": \"Springfield\",\r\n    \"State\": \"Illinois\",\r\n    \"ZipCode\": \"62704\",\r\n    \"Country\": \"USA\",\r\n    \"primaryContactNumber\": \"+1-555-123-4567\",\r\n    \"SecondaryContactNumber\": \"+1-555-765-4321\",  \r\n    \"email\": \"joe.goldbe@example.com\",\r\n    \"DateOfBirth\": \"1985-06-15\",        \r\n    \"Gender\": \"Male\",                   \r\n    \"SSN\": \"123-45-6789\",               \r\n    \"DriverLicense\": \"D1234567\",        \r\n    \"LicenseExpiration\": \"2027-12-31\",  \r\n    \"SpouseName\": \"Jane Doe\",           \r\n    \"vehicleUse\": \"Personal\",           \r\n    \"isHomeOwner\": true,\r\n    \"hearAboutUs\": \"Facebook\"           \r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/customer/edit-customer?id=686b7ecf9232192c3306475b",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"customer",
+								"edit-customer"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "686b7ecf9232192c3306475b"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetcustomerById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphaGFuemFpYjk1OTlAZ21haWwuY29tIiwiaWF0IjoxNzUxNjE1MTM1LCJleHAiOjE3NTIyMTk5MzV9.SLM7X7DC9VXAP_n-aJCU93RX6oc-IdvLjKUnueH0kL0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/floorPlan?id=68678f89c4cec098964d721a",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"floorPlan"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "68678f89c4cec098964d721a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllcustomers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphaGFuemFpYjk1OTlAZ21haWwuY29tIiwiaWF0IjoxNzUxNjE1MTM1LCJleHAiOjE3NTIyMTk5MzV9.SLM7X7DC9VXAP_n-aJCU93RX6oc-IdvLjKUnueH0kL0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/customer/customers",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"customer",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditFloor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CompanyDetails\": {\r\n        \"companyName\": \"Acm2\",\r\n        \"street\": \"123 Main St\",\r\n        \"city\": \"New York\",\r\n        \"state\": \"NY\",\r\n        \"zip\": \"10001\"\r\n    },\r\n    \"Rate\": {\r\n        \"apr\": 5.5,\r\n        \"interestCalculationDays\": 30\r\n    },\r\n    \"Fees\": {\r\n        \"type\": \"Plus for each Curtailment\",\r\n        \"adminFee\": 100,\r\n        \"setUpFee\": 50,\r\n        \"additionalFee\": 25\r\n    },\r\n    \"term\": {\r\n        \"lengthInDays\": 365,\r\n        \"daysUntilFirstCurtailment\": 90,\r\n        \"percentPrincipalReduction\": 10,\r\n        \"interestAndFeesWithEachCurtailment\": true\r\n    },\r\n    \"additionalNotes\": \"Sample floor plan for testing\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/floorPlan/edit-floor?id=68678f89c4cec098964d721a",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"floorPlan",
+								"edit-floor"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "68678f89c4cec098964d721a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ShowAllFloor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CompanyDetails\": {\r\n        \"companyName\": \"Acm2\",\r\n        \"street\": \"123 Main St\",\r\n        \"city\": \"New York\",\r\n        \"state\": \"NY\",\r\n        \"zip\": \"10001\"\r\n    },\r\n    \"Rate\": {\r\n        \"apr\": 5.5,\r\n        \"interestCalculationDays\": 30\r\n    },\r\n    \"Fees\": {\r\n        \"type\": \"Plus for each Curtailment\",\r\n        \"adminFee\": 100,\r\n        \"setUpFee\": 50,\r\n        \"additionalFee\": 25\r\n    },\r\n    \"term\": {\r\n        \"lengthInDays\": 365,\r\n        \"daysUntilFirstCurtailment\": 90,\r\n        \"percentPrincipalReduction\": 10,\r\n        \"interestAndFeesWithEachCurtailment\": true\r\n    },\r\n    \"additionalNotes\": \"Sample floor plan for testing\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/floorPlan/edit-floor?id=68678f89c4cec098964d721a",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"floorPlan",
+								"edit-floor"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "68678f89c4cec098964d721a"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

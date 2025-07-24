@@ -1,7 +1,7 @@
 const HeroSection = () => {
   return (
     <section className="relative w-full bg-[url('/images/charterimg.png')] bg-cover bg-center bg-no-repeat overflow-hidden min-h-[45vh] md:min-h-[80vh] lg:min-h-[72vh] xl:min-h-[82vh] flex items-center justify-center">
-      
+
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-[#034250]/50 z-0" />
 
@@ -26,3 +26,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+

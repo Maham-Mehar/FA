@@ -15,9 +15,9 @@ const HeroSection = () => {
                     <img
                         src={PngIcons.rframe2}
                         alt="Divider"
-                        className="w-[450px] mx-auto my-2"
+                        className="w-[320px] md:w-[380px] lg:w-[420px] xl:w-[450px] mx-auto my-1 md:my-2"
                     />
-                    <p className="text-bas text-white md:text-xl lg:text-[22px] font-normal font-sourceSanspro text-center mt-2 md:max-w-xl lg:max-w-2xl xl:max-w-5xl">
+                    <p className="text-base text-white md:text-xl lg:text-[22px] font-normal font-sourceSanspro text-center mt-2 md:max-w-xl lg:max-w-2xl xl:max-w-5xl">
                         <span className="text-red-600">Home </span> – About Us
                     </p>
                 </div>

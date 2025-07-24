@@ -26,10 +26,11 @@ export interface Yacht {
   daytripPriceEuro: string;
   lengthRange: string;
   galleryImages: string[];
+  videoLink: string;
   guests: string;
   dayCharter: string;
-  overnightCharter:string;
-  specifications:string;
+  overnightCharter: string;
+  specifications: string;
 }
 
 const HeroSection: React.FC<Hero> = ({ id }) => {
@@ -44,11 +45,11 @@ const HeroSection: React.FC<Hero> = ({ id }) => {
         const response = await axios.get(
           `https://faraway.thedevapp.online/yacht?id=${id}`
         );
-        setData(response.data.data); 
+        setData(response.data.data);
         setError(null);
       } catch (err: any) {
         setError(err?.response?.data?.message || "Failed to fetch");
-        setData(null); 
+        setData(null);
       } finally {
         setLoading(false);
       }
@@ -80,7 +81,7 @@ const HeroSection: React.FC<Hero> = ({ id }) => {
     <div>
       <div className="max-w-7xl mx-auto px-4 xl:px-0">
         {/* Breadcrumb */}
-        <p className="text-[33px] font-playfair font-extrabold text-zink">
+        <p className="text-[28px] md:text-[32px] lg:text-[36px] xl:text-[40px] font-playfair font-extrabold text-zink mt-3">
           {data ? data.lengthOverall : ""}
         </p>
 
@@ -91,11 +92,10 @@ const HeroSection: React.FC<Hero> = ({ id }) => {
             <TabSection data={data} />
           </div>
           <div
-            className={`w-full md:w-[30%] self-start sticky transition-all duration-300 ${
-              isScrolled ? "top-[8.4rem]" : "top-13"
-            }`}
+            className={`w-full md:w-[30%] self-start sticky transition-all duration-300 ${isScrolled ? "top-[8.4rem]" : "top-13"
+              }`}
           >
-            <ContactDetail data={data}/>
+            <ContactDetail data={data} />
           </div>
         </div>
 
