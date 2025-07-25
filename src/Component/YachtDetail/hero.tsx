@@ -101,7 +101,7 @@ const HeroSection: React.FC<Hero> = ({ id }) => {
 
         {/* Video & Adventure */}
         <div className="mt-6">
-          <VideoSection />
+          <VideoSection data={data} />
         </div>
       </div>
       <YachtAdventure />
