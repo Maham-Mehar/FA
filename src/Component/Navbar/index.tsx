@@ -84,7 +84,7 @@ const Navbar = () => {
                 </Link>
 
                 {/* Desktop Nav */}
-                <nav className="hidden md:flex items-center space-x-6 text-[#333]">
+                <nav className="hidden md:flex items-center space-x-4 lg:space-x-5 xl:space-x-6 text-[#333]">
                     {navItems.map(({ label, href }) => {
                         const isActive =
                             (href === "/" && pathname === "/") ||
