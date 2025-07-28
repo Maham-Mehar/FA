@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 
 const Adventure = () => {
   const pathname = usePathname();
-
+// selection of the url 
   const BgImage =
     pathname === "/bareboat-charter-thailand"
       ? "/images/boatimg3.png"

@@ -1,4 +1,5 @@
 const Destinations_Section = () => {
+//  Array Data
   const data = [
     {
       label: "Private yacht in Private yacht in phuket",

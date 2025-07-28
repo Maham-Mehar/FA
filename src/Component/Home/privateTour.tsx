@@ -6,7 +6,7 @@ const PrivateYacht_Tour = () => {
                 heading="Private Yacht tour with local experts"
                 description="Experience the best of Phuket’s stunning coastline and hidden gems on a private yacht tour with local experts. With a dedicated crew and captain at your disposal, you can customize your itinerary to explore the islands, beaches and coves that interest you most around the Phuket."
             />
-
+            {/* Video Section */}
             <div className="max-w-7xl mx-auto">
                 <div className="flex justify-center max-w-5xl mx-auto mt-6">
                     <div className="relative w-full h-[320px] md:h-[410px] lg:h-[440px] xl:h-[450px] overflow-hidden shadow-lg ">

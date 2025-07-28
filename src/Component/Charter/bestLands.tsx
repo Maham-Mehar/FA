@@ -1,6 +1,6 @@
 import BestLands from "@/common/bestLands";
 import PngIcons from "@/icons/pngIcon";
-
+// Best Places Data
 const bestLandsData = [
   {
     id: "1",
@@ -25,6 +25,7 @@ const bestLandsData = [
 ];
           
 const  BestLands_Section= () => {
+  // Fetch the Design Section from common File 
   return <BestLands data={bestLandsData} />;          
 };
 

@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 
 const HeroSection = () => {
   const pathname = usePathname();
-
+  //  url based Seletion
   const heading =
     pathname === "/bareboat-charter-thailand"
       ? "Bareboat Charter Thailand"
