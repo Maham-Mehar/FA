@@ -53,11 +53,11 @@ const ContactSection = () => {
         "peer w-full border-b-2 py-[14px] px-1 placeholder-transparent focus:outline-none";
     const labelStyle = `
   absolute left-1 top-[14px] text-[16px] transition-all duration-200
-  peer-placeholder-shown:top-[14px] peer-placeholder-shown:text-[16px] peer-placeholder-shown:text-zinc-400
+  peer-placeholder-shown:top-[14px] peer-placeholder-shown:text-[16px] text-zink
   peer-focus:top-[-10px] peer-focus:text-[14px]
   peer-valid:top-[-10px] peer-valid:text-[14px]
   peer-empty:top-[14px] peer-empty:text-[16px] peer-empty:text-zinc-400
-  bg-white px-1
+  bg-white px-1 text-zink
 `;
 
 
@@ -97,7 +97,7 @@ const ContactSection = () => {
                         </h2>
                         <form
                             onSubmit={handleSubmit}
-                            className="grid grid-cols-1 md:grid-cols-2 gap-6 text-[18px] font-inter"
+                            className="grid grid-cols-1 md:grid-cols-2 gap-6 text-[18px] font-inter text-zink"
                         >
                             {formFields.map((field, index) => {
                                 const hasError = errors[field.id];
@@ -117,7 +117,7 @@ const ContactSection = () => {
                                             required={field.required}
                                             className={`${inputFieldBase} ${hasError
                                                 ? "border-red-500 focus:border-red-500"
-                                                : "border-[#81A1A8] focus:border-[#034250]"
+                                                : "border-[#81A1A8] focus:border-[#034250] text-zink"
                                                 } ${field.type === "date" ? "peer-empty" : ""}`}
                                         />
 
@@ -154,11 +154,24 @@ const ContactSection = () => {
                                         if (e.key === "Enter" && !e.shiftKey) e.preventDefault();
                                     }}
                                     required
-                                    className="peer w-full border-b-2 border-[#81A1A8] focus:border-[#034250] focus:outline-none py-[14px] px-1 placeholder-transparent resize-none h-[80px]"
-                                ></textarea>
-                                <label htmlFor="message" className={labelStyle}>
+                                    className={`peer w-full text-zink border-b-2 
+      ${errors.message ? "border-red-500 focus:border-red-500" : "border-[#81A1A8] focus:border-[#034250]"} 
+      focus:outline-none py-[14px] px-1 placeholder-transparent resize-none h-[80px]`}
+                                />
+
+                                <label
+                                    htmlFor="message"
+                                    className={`absolute left-1 top-2.5 text-sm transition-all duration-200 
+      peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 
+      peer-focus:top-0.5 peer-focus:text-sm 
+      ${errors.message ? "text-red-500 peer-focus:text-red-500" : "text-zinc-400 peer-focus:text-[#034250]"}`}
+                                >
                                     Locations you want to visit or any questions?
                                 </label>
+
+                                {errors.message && (
+                                    <p className="text-red-500 text-sm mt-1">This field is required.</p>
+                                )}
                             </div>
 
                             {/* Submit Button */}

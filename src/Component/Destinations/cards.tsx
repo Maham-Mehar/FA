@@ -6,7 +6,7 @@ const Cards = () => {
   return (
     <div className="bg-white px-4 sm:px-4 xl:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gx-0 gap-5 md:gap-8 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gx-0 gap-5 md:gap-6 lg:gap-6 xl:gap-8 px-4">
           {CardData.map((item, index) => (
             <div
               key={index}
@@ -19,7 +19,7 @@ const Cards = () => {
                   alt="card"
                   width={400}
                   height={300}
-                  className="object-cover w-full h-[270px] sm:h-[300px] md:h-[270px] lg:h-[280px] xl:h-[360px] rounded-tl-3xl rounded-br-3xl"
+                  className="object-cover w-full h-[270px] sm:h-[300px] md:h-[270px] lg:h-[280px] xl:h-[330px] rounded-tl-3xl rounded-br-3xl"
                 />
                 <div className="absolute bottom-0 bg-opacity-40 w-full text-white px-4 py-2">
                   <p className="text-foreground font-playfair text-xl sm:text-2xl lg:text-[32px] xl:text-[36px] font-extrabold transition-all duration-300">
@@ -29,7 +29,7 @@ const Cards = () => {
               </div>
 
               {/* TEXT & BUTTON */}
-              <div className="px-0 xl:px-4 py-4 flex flex-col justify-between min-h-[150px] md:min-h-[180px] lg:min-h-[200px]">
+              <div className="px-4 xl:px-4 py-4 flex flex-col justify-between min-h-[150px] md:min-h-[180px] lg:min-h-[200px]">
                 <p className=" text-[17px] font-sourceSansPro lg:text-[17px] xl:text-[20px] text-black">{item.description}</p>
                 <div className="flex justify-between items-center sm:items-center mt-4 gap-4">
                   <Link href={`/cardDetail/${item.id}`}>

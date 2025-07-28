@@ -34,7 +34,7 @@ const Destinations_Section = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 xl:px-0 my-6 md:py-3 lg:py-10 xl:py-12">
+    <div className="max-w-7xl mx-auto px-4 xl:px-4 my-6 md:py-3 lg:py-10 xl:py-12">
       {/* Outer grid container with 2 columns and spacing */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 md:gap-x-8 lg:gap-x-10 xl:gap-x-12 gap-y-8 md:gap-y-10 lg:gap-y-12 xl:gap-y-14">
         {data.map((item, index) => (
