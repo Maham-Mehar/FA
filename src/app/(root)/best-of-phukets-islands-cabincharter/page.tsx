@@ -14,13 +14,13 @@ import SealifeFAQ from "@/Component/cabinCharter/curiousSealife"
 import FunMoments from "@/Component/cabinCharter/moments"
 import ContactUs from "@/Component/cabinCharter/contactUs"
 import ComparisonChart from "@/Component/cabinCharter/moments2Remember"
-const CabinCharter = () => {
+const CabinCharter = () => {            
     return (
         <Fragment>
             <HeroSection />
             <About />
-            {/* <SeaSide_Sixdays /> */}
-            <SeaEscape />
+            {/* <SeaSide_Sixdays /> */}   
+            <SeaEscape />     
             <Thailand_BestLands />
             <Sailing_Itinerary />
             <SailingDetails />

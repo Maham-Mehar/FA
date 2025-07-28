@@ -1,22 +1,19 @@
-import BoatCards from "@/Component/bareboatCharter/about"
-import Adventure from "@/Component/bareboatCharter/adventure"
-import BestLand from "@/Component/bareboatCharter/bestlands"
-import HeroSection from "@/Component/bareboatCharter/hero"
-import YachtAdventure from "@/Component/bareboatCharter/luxuryAdventure"
 
+import Adventure from "@/Component/Charter/adventure";
+import BestLands from "@/Component/Charter/bestLands";
+import HeroSection from "@/Component/Charter/hero";
+import YachtMatchmaker from "@/Component/Charter/matchMark";
+import YachtAdventure from "@/Component/Charter/yachtAdventure";
+import { Fragment } from "react";
 
-
-import { Fragment } from "react"
-
-const About = () => {
-    return (
-        <Fragment>
-            <HeroSection />
-            <BoatCards />
-            <Adventure />
-            <BestLand />
-            <YachtAdventure />
-        </Fragment>
-    )
+export default function bareBoat_Charter() {
+  return (
+    <Fragment>
+      <HeroSection />
+      <YachtMatchmaker />
+      <Adventure />
+      <BestLands />
+      <YachtAdventure />
+    </Fragment>
+  );
 }
-export default About

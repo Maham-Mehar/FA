@@ -32,7 +32,7 @@ const HeroContent: React.FC<HeroSectionProps> = ({
             <img
               src={dividerImage}
               alt="Divider"
-              className="w-[500px] flex justify-center text-center mx-auto"
+              className="w-[150px] md:w-[300px] lg:w-[450px] xl:w-[500px] flex justify-center text-center mx-auto"
             />
           )}
           <p className="text-[18px] md:text-[22px] font-normal font-sourceSanspro text-center mt-2 md:max-w-2xl lg:max-w-4xl xl:max-w-7xl">

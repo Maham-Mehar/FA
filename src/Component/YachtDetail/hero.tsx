@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Gallery from "@/Component/YachtDetail/gallery";
 import VideoSection from "./videoSection";
-import YachtAdventure from "../crewed_Charter/yachtAdventure";
+import YachtAdventure from "../Charter/yachtAdventure";
 import TabSection from "./tabSection";
 import ContactDetail from "./contactDetail";
 

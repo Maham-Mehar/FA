@@ -12,7 +12,7 @@ const YachtMatchmaker: React.FC = () => {
         } else {
             setGuests(1);
         }
-    };
+    };     
 
     const increment = () => {
         setGuests(prev => Math.min(150, prev + 1));

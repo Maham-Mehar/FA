@@ -1,36 +1,54 @@
 import { FiPhone } from "react-icons/fi";
+
 interface SetSailProps {
     id?: string;
     bgImage: string;
+    bgColor?: string;
+    overlayOpacity?: number;
 }
-const SetSail: React.FC<SetSailProps> = ({ bgImage }) => {
-    return (
-        <div>
-            {/* HERO IMAGE SECTION */}
-            <div
-                className="my-14 min-h-[47vh] sm:min-h-[54vh] md:min-h-[63vh] lg:min-h-[70vh] flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8"
-                style={{
-                    backgroundImage: `url(${bgImage})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat",
-                }}>
-                <div>
-                            <div className="text-center flex flex-col justify-center items-center">
-                    <p className="font-semibold text-lg font-inter text-white pb-2">Set Sail With Us</p>
-                    <p className="text-white font-extrabold font-inter font-playfair text-[21px] md:[32px] lg:text-[32px] uppercase max-w-2xl md:leading-relaxed lg:leading-tight">
-                        Set Sail for Luxury and Adventure with Far Away Yacht Charters
-                    </p>
 
-                    {/* DESCRIPTION PARAGRAPH */}
-                    <p className="text-center font-inter text-white font-inter text-base sm:text-lg md:text-xl lg:text-2xl font-medium md:max-w-[59rem] mx-auto px-0 lg:px-8 py-6 md:py-7 lg:py-9 sm:py-12 lg:leading-tight">
-                        Luxury, adventure, and unforgettable views—all aboard your private yacht. Discover hidden coves, island gems, and the beauty of Phuket.
-                    </p>
-                    <button className=" text-base md:text-xl font-bold font-poppins bg-mustard px-5 py-3 text-white rounded-lg flex items-center"><span className="me-2"><FiPhone /></span> Contact Us Now</button>
-                </div>
+const SetSail: React.FC<SetSailProps> = ({
+    bgImage,
+    bgColor = "#034250",
+    overlayOpacity = 0.6,
+}) => {
+    const overlayRGBA = `rgba(${parseInt(bgColor.slice(1, 3), 16)}, ${parseInt(
+        bgColor.slice(3, 5),
+        16
+    )}, ${parseInt(bgColor.slice(5, 7), 16)}, ${overlayOpacity})`;
+
+    return (
+        <section className="relative my-14 overflow-hidden min-h-[47vh] sm:min-h-[54vh] md:min-h-[60vh] lg:min-h-[70vh] flex items-center justify-center">
+            {/* Background Image */}
+            <img
+                src={bgImage}
+                alt="Set Sail"
+                className="absolute inset-0 w-full h-full object-cover z-0"
+            />
+
+            {/* Overlay */}
+            <div
+                className="absolute inset-0 z-10"
+                style={{ backgroundColor: overlayRGBA }}
+            />
+
+            {/* Content */}
+            <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-screen-xl">
+                <p className="text-white text-lg font-semibold mb-3 lg:mb-5 font-inter">
+                    Set Sail With Us
+                </p>
+                <h2 className="text-white uppercase font-extrabold text-[22px] md:text-[28px] lg:text-[32px] font-playfair max-w-2xl mx-auto leading-tight">
+                    Set Sail for Luxury and Adventure with Far Away Yacht Charters
+                </h2>
+                <p className="text-white text-base md:text-lg lg:text-xl font-normal font-inter max-w-3xl px-4 py-3 lg:py-5 leading-relaxed lg:leading-tight">
+                    Luxury, adventure, and unforgettable views—all aboard your private yacht. Discover hidden coves, island gems, and the beauty of Phuket.
+                </p>
+                <button className="bg-mustard cursor-pointer text-white text-base md:text-xl font-bold font-poppins px-5 py-3 rounded-lg flex items-center mx-auto mt-4 lg:mt-6 hover:bg-[#034250]">
+                    <FiPhone className="mr-2" />
+                    Contact Us Now
+                </button>
             </div>
-            </div>
-        </div>
+        </section>
     );
 };
 

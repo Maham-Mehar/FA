@@ -10,7 +10,7 @@ const HeadingContent = ({ heading, description }: HeadingContentProps) => {
                 {heading}
             </p>
 
-            <img src="/images/rframe.png" alt="" className="w-[350px] md:w-[400px] lg:w-[450px] xl:w-[500px] my-3 mx-auto" />
+            <img src="/images/rframe.png" alt="" className="w-[150px] md:w-[300px] lg:w-[450px] xl:w-[500px] my-3 mx-auto" />
             <p className="text-center font-inter px-4 text-base text-zink md:text-[19px] max-w-sm md:max-w-3xl xl:max-w-4xl mx-auto">
                 {description}
             </p>

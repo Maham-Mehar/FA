@@ -7,7 +7,7 @@ import { IoLogoTwitter } from "react-icons/io";
 const Header = () => {
     return (
         <div className="bg-[#034250] hidden md:block">
-            <div className="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto text-white text-sm px-4 xl:px-0 py-4">
+            <div className="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto text-white text-sm px-4 xl:px-3 py-4">
                 <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 lg:gap-6">
                     <p className="flex items-center text-sm gap-2">
                         <FaPhoneAlt /> +66 61 2345623

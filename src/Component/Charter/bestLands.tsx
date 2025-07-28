@@ -23,9 +23,9 @@ const bestLandsData = [
     ],
   },
 ];
-
+          
 const  BestLands_Section= () => {
-  return <BestLands data={bestLandsData} />;
+  return <BestLands data={bestLandsData} />;          
 };
 
 export default BestLands_Section;

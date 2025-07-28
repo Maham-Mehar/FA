@@ -8,7 +8,7 @@ interface AboutProps {
 }
 
 const About: React.FC<AboutProps> = ({ id }) => {
-  const normalizedId = id.toLowerCase(); // normalize for safety
+  const normalizedId = id.toLowerCase();
   const data: AboutData | undefined = aboutPages[normalizedId];
 
   if (!data) {
@@ -18,7 +18,7 @@ const About: React.FC<AboutProps> = ({ id }) => {
   const {
     preTitle,
     title,
-    subtitle,
+    subtitle,            
     description,
     buttonText,
     heroImage,

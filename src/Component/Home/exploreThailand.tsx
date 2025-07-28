@@ -8,10 +8,14 @@ const ExploreThailand = () => {
                 heading="Explore Thailand with a private Yacht"
                 description="Explore Thailand’s remote islands with a private yacht, enjoy exclusive dining onboard and unwind with sunset yoga on white sandy beaches. Swim in sparkling waters and create lasting memories. Book your private yacht in Phuket." />
             <Cards />
-            <div className="flex justify-center items-center">
-                <button className="bg-zink font-poppins text-white font-semibold mt-8 lg:mt-2 xl:mt-0 text-base px-5 py-3 rounded-lg hover:bg-[#D6AB61]">View More Destinations</button>
+            <div className="flex justify-center items-cente mt-5 md:mt-7 lg:mt-9">
+                <button className="bg-zink font-poppins cursor-pointer text-white font-semibold mt-8 lg:mt-2 xl:mt-0 text-base px-5 py-3 rounded-lg hover:bg-[#D6AB61]">View More Destinations</button>
             </div>
-            <SetSail bgImage="/images/homeimg6.png" />
+            <SetSail
+                bgImage="/images/homeimg6.png"
+                bgColor="#034250"   
+                overlayOpacity={0.5} 
+            />
         </div>
     )
 }
