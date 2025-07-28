@@ -40,7 +40,7 @@ const BestLands: React.FC<Props> = ({ data }) => {
           {data.map((isle, idx) => (
             <div
               key={isle.id}
-              className={`overflow-hidden p-0 xl:p-6 ${
+              className={`overflow-hidden p-4 xl:p-6 ${
                 idx === 1 ? "mt-0 md:mt-30 lg:mt-36 xl:mt-40" : ""
               }`}
             >
