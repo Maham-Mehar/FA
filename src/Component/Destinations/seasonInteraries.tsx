@@ -56,7 +56,7 @@ const ItinerarySection = () => {
   return (
     <section className="bg-white py-12 px-4 lg:px-5 xl:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-6 lg:gap-10 xl:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-6 lg:gap-10 xl:gap-16 px-0 xl:px-4">
           {/* High Season */}
           <div className="text-center lg:text-left">
             <h2 className="text-[19px] md:text-[23px] lg:text-[25px] xl:text-[28px] font-playfair text-zink font-bold mb-1">
