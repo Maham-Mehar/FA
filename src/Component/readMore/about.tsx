@@ -32,10 +32,10 @@ const About: React.FC<AboutProps> = ({ id }) => {
       </div>
 
       <div className="relative max-w-7xl mx-auto w-full px-4 xl:px-4 py-5 md:py-0 z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 ">
           {/* Text Section */}
-          <div className="space-y-2 lg:space-y-4 xl:space-y-5 text-center md:text-left">
-            <p className="font-sourceSanspro text-[16px] lg:text-[18px] xl:text-[20px] mt-8 xl:mt-0 text-gray-500 uppercase">
+          <div className="space-y-2 lg:space-y-4 xl:space-y-4 text-center md:text-left">
+            <p className="font-sourceSanspro text-[16px] lg:text-[18px] xl:text-[20px] pt-8 xl:pt-4 text-gray-500 uppercase">
               {preTitle}
             </p>
             <h2 className="text-[24x]  md:text-[27px] lg:text-[33px] xl:text-[40px] font-playfair text-zink uppercase leading-tight">
@@ -56,11 +56,11 @@ const About: React.FC<AboutProps> = ({ id }) => {
           </div>
 
           {/* Image Section */}
-          <div className="w-full flex justify-end">
+          <div className="w-full flex justify-end item-start">
             <img
               src={heroImage}
               alt={title}
-              className="hidden md:block w-full sm:max-w-xs md:max-w-sm lg:max-w-md xl:max-w-xl h-auto object-contain"
+              className="hidden md:block w-full sm:max-w-xs md:max-w-xs lg:max-w-md xl:max-w-lg h-auto object-cover lg:object-contain"
             />
           </div>
         </div>
