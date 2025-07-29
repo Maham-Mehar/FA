@@ -91,7 +91,7 @@ const Sailing_Itinerary = () => {
         <div className=" py-12 ">
 
             <section className="bg-white px-4 lg:px-5 xl:px-8">
-                <div className="max-w-7xl mx-auto">
+                <div className="max-w-[78.2rem] mx-auto">
        {/* Fetch Heading  */}
                     <div className="mb-12">
                         <HeadingContent
@@ -119,7 +119,7 @@ const Sailing_Itinerary = () => {
                 </div>
             </section>
 
-            <section className="max-w-7xl mx-auto px-4 lg:px-5 xl:px-0 mt-10">
+            <section className="max-w-[78.2rem] mx-auto px-4 lg:px-5 xl:px-0 mt-10">
                 <div className="flex justify-center">
                     <div className="relative w-full h-[400px] md:h-[450px] lg:h-[490px] xl:h-[520px] overflow-hidden shadow-lg">
                         <iframe

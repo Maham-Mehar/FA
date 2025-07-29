@@ -30,22 +30,6 @@ const Thailand_BestLands = () => {
 
     return (
         <section className="py-16 my-6 px-4 bg-white relative overflow-hidden">
-            {/* <div className="text-center max-w-4xl px-4 sm:px-6 lg:px-8 mx-auto mb-12 sm:mb-16">
-                <h2 className="text-[24px] sm:text-[32px] md:text-[36px] lg:text-[40px] font-playfair text-zink font-semibold leading-snug">
-                    Visit The Best Islands Of Thailand
-                </h2>
-
-                <img
-                    src="/images/rframe.png"
-                    alt=""
-                    className="w-[250px] sm:w-[350px] md:w-[450px] lg:w-[500px] mt-2 mx-auto"
-                />
-
-                <p className="text-zink font-sourceSanspro mt-2 text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] font-normal leading-relaxed">
-                 A simple word with a big promise — "Koh" means island, and your journey is filled with the best of them
-                </p>
-            </div> */}
-
             <div className="mx-auto mb-12 sm:mb-16">
                 <HeadingContent
                     heading="Visit The Best Islands Of Thailand"
@@ -88,8 +72,8 @@ const Thailand_BestLands = () => {
             </div>
 
             {/* Text Box - Centered with max-width */}
-            <div className="flex justify-center mt-12">
-                <div className="max-w-7xl w-full bg-[#E6ECED33] flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 px-4 md:px-6 py-0 xl:py-6 border-l-[7px] border-l-[#034250]">
+            <div className="flex justify-center mt-12 ">
+                <div className="max-w-[78.2rem] w-full bg-[#E6ECED33] flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 px-4 md:px-6 py-0 xl:py-6 border-l-[7px] border-l-[#034250]">
                     <div className="flex-1 text-center md:text-left py-3">
                         <p className="text-zink font-sourceSanspro font-semibold text-[16px] md:text-[18px] lg:text-[20px] mb-2">
                             <span className="font-semibold text-mustard">Info:</span> Island time runs on nature's clock!

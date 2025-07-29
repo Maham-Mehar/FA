@@ -27,7 +27,7 @@ const features = [
 
 const SeaEscape = () => {
     return (
-        <div className="relative">
+        <div className="relative xl:px-4">
             <div className="absolute bg-[#FCFCFC] top-0 left-0 z-10 w-[100px] sm:w-[150px] md:w-[180px] lg:w-[220px] xl:w-[250px] ">
                 <img src={PngIcons.line3} alt="" className="w-auto h-auto" />
             </div>
