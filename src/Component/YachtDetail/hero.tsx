@@ -82,7 +82,7 @@ const HeroSection: React.FC<Hero> = ({ id }) => {
       <div className="max-w-[78.2rem] mx-auto px-4 xl:px-0">
         {/* Breadcrumb */}
         <p className="text-[28px] md:text-[32px] lg:text-[36px] xl:text-[40px] font-playfair font-extrabold text-zink mt-3">
-          {data ? data.lengthOverall : ""}
+          {data ? data.title : ""}
         </p>
 
         {/* Gallery + Tabs + Sticky Sidebar */}

@@ -66,12 +66,7 @@ const TabSection: React.FC<Props> = ({ data }) => {
         ))}
       </div>
       {/* 
- lengthOverall: string;
-    boatType: string;
-    cabins: string;
-    bathrooms: string;
-    passengerDayTrip: string;
-    passengerOvernight: string; */}
+
 
       {/* Tabs */}
       <div className="flex flex-wrap gap-2 sm:gap-4 md:gap-5 lg:gap-7 overflow-x-auto mt-6">

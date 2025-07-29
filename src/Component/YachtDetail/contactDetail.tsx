@@ -96,7 +96,7 @@ const ContactDetail: React.FC<Props> = ({ data }) => {
         <div className="bg-white sticky rounded-lg p-3 max-w-[500px] w-full border-2 border-zink">
             <div className="flex flex-col items-center justify-center text-center">
                 <p className="text-lg md:text-xl lg:text-[25px] xl:text-[28px] font-playfair text-[#034250] font-extrabold">
-                    {data?.lengthOverall} 
+                    {data?.title} 
                 </p>
                 <p className="text-zink font-inter text-sm lg:text-[16px] mt-1">
                     Looking for a yacht charter?

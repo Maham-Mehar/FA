@@ -10,6 +10,7 @@ interface Yacht {
     primaryImage: string;
     daytripPriceEuro: string;
     lengthRange: string;
+    title: string;
     guests: string;
     cabins: string;
     lengthOverall: string;
@@ -84,7 +85,7 @@ const YachtCards: React.FC<YachtCardsProps> = ({ columns = 3 }) => {
                             from {boat.daytripPriceEuro}
                         </p>
                         <h3 className="text-[36px] font-bold font-playfair text-zink">
-                            {boat.lengthOverall}
+                            {boat.title}
                         </h3>
                         <p className="text-xl text-black font-normal font-sourceSanspro">{boat.capacity}</p>
                     </div>
