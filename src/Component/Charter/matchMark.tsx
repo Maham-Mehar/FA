@@ -38,7 +38,7 @@ const YachtMatchmaker: React.FC = () => {
         <div className="py-12 bg-gray-50 px-4 xl:px-0">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-4 lg:gap-8 xl:gap-10 max-w-7xl mx-auto xl:px-0 lg:px-4">
                 {/* Left column: Form */}
-                <div className="md:col-span-4">
+                {/* <div className="md:col-span-4"> */}
                     {/* <div className="bg-white rounded-2xl shadow-lg p-3 lg:p-4 xl:p-6">
                         <h2 className=" text-xl lg:text-2xl font-extrabold text-zink mb-6 font-playfair">
                             Yacht Matchmaker
@@ -159,12 +159,12 @@ const YachtMatchmaker: React.FC = () => {
                                 <span className="text-xs text-zinc-500">€12,700</span>
                             </div>
                         </div> */}
-                    </div>
+                    {/* </div> */}
                 {/* </div> */}
 
                 {/* Right column: Yacht cards */}
-                <div className="md:col-span-8">
-                        <YachtCards columns={1} />
+                <div className="md:col-span-12">
+                        <YachtCards columns={2} />
                 </div>
             </div>
         </div>
