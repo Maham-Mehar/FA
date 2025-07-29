@@ -45,7 +45,7 @@ const SeaEscape = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 py-3 gap-7 lg:gap-5 xl:gap-10 max-w-7xl mb-7 mx-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 py-3 gap-7 lg:gap-5 xl:gap-10 max-w-7xl mb-7 mx-auto px-4">
                     {features.map(({ icon: Icon, title, desc }) => (
                         <div key={title} className="text-center space-y-3 px-2 mt-5 lg:mt-0">
                             <div className="flex justify-center">

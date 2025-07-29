@@ -62,7 +62,7 @@ const Price_Details = () => {
 
     return (
         <section className="bg-[#E6ECED1A] py-12 px-4 lg:px-4 xl:px-8">
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-[78.2rem] mx-auto">
                 {/* Heading */}
                 <div className="mb-12 ">
                     <HeadingContent

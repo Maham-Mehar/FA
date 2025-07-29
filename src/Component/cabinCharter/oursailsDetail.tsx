@@ -71,7 +71,7 @@ const SailingDetails = () => {
 
   return (
     <section className="bg-white py-16 px-4 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[78.2rem] mx-auto">
         {/* Title */}
         <div className="text-center mb-10">
           <HeadingContent

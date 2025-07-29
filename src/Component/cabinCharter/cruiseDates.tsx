@@ -8,7 +8,7 @@ const CruiseDates = () => {
 
     return (
         <section className="bg-white py-16 px-4 xl:px-0">
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-[78.2rem] mx-auto">
                 {/* Heading */}
                 <div className="text-center mb-10">
                     <h2 className="text-[28px] md:text-[32px] lg:text-[36px] xl:text-[40px] font-playfair text-zink font-semibold">

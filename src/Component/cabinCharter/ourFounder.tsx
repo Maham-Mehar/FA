@@ -3,7 +3,7 @@ import React from "react";
 export default function FounderNote() {
     return (
         <section className="bg-white py-16 px-4 xl:px-0">
-            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+            <div className="max-w-[78.2rem] mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
                 {/* Left: Text */}
                 <div className="flex-1 max-w-2xl text-center md:text-left">
                     <div className="flex items-center justify-center text-center gap-2 mb-2 xl:mb-4">

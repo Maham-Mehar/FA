@@ -25,7 +25,7 @@ const Moments2Remember: React.FC = () => {
 
 
       {/* Collage */}
-      <div className="max-w-7xl mx-auto flex flex-col gap-2 md:gap-2 lg:gap-3 xl:gap-4 items-center mt-8">
+      <div className="max-w-[78.2rem] mx-auto flex flex-col gap-2 md:gap-2 lg:gap-3 xl:gap-4 items-center mt-8">
         {/* Row 1 */}
         <div className="flex flex-row gap-1 md:gap-2 lg:gap-4">
           <div className="">

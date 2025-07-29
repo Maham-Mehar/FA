@@ -41,7 +41,7 @@ const testimonials: Testimonial[] = [
     image1: PngIcons.quote,
     image2: PngIcons.star,
     image3: PngIcons.profile3,
-    desp: "Lifetime memories!!! We spent 6 days and 5 nights on the Mozart with our friends and had the privilege of experiencing this unforgettable sailing trip in the Andaman Sea with Flo and Oil. Starting with the welcome, everything was great. We drove to the most beautiful beaches. Everything without stress and we were always a little ahead of many tourists",
+    desp: "Lifetime   memories!!! We spent 6 days and 5 nights on the Mozart with our friends and had the privilege of experiencing this unforgettable sailing trip in the Andaman Sea with Flo and Oil. Starting with the welcome, everything was great. We drove to the most beautiful beaches. Everything without stress and we were always a little ahead of many tourists",
     author: "Ulrike Zahn",
   },
   {

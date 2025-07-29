@@ -43,7 +43,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#004D5C] text-white pt-10">
-      <div className="px-4 sm:px-6 lg:px-8 xl:px-0 lg:max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 py-8 mb-14">
+      <div className="px-4 sm:px-6 lg:px-8 xl:px-0 lg:max-w-[78.2rem] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 py-8 mb-14">
         {/* Column 1 */}
         <div className="lg:col-span-3 xl:col-span-4">
           <h3 className={heading}>Faraway Yachting Co. Ltd.</h3>

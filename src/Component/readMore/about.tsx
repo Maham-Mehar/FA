@@ -31,20 +31,20 @@ const About: React.FC<AboutProps> = ({ id }) => {
         <img src={line1} alt="decorative line" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto w-full px-4 xl:px-0 py-5 md:py-0 z-10">
+      <div className="relative max-w-7xl mx-auto w-full px-4 xl:px-4 py-5 md:py-0 z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Text Section */}
-          <div className="space-y-5 text-center md:text-left">
-            <p className="font-sourceSanspro text-[16px] lg:text-[18px] xl:text-[20px] text-gray-500 uppercase">
+          <div className="space-y-2 lg:space-y-4 xl:space-y-5 text-center md:text-left">
+            <p className="font-sourceSanspro text-[16px] lg:text-[18px] xl:text-[20px] mt-8 xl:mt-0 text-gray-500 uppercase">
               {preTitle}
             </p>
-            <h2 className="text-[30px] sm:text-[36px] md:text-[30px] lg:text-[36px] xl:text-[40px] font-playfair text-zink uppercase leading-tight">
+            <h2 className="text-[24x]  md:text-[27px] lg:text-[33px] xl:text-[40px] font-playfair text-zink uppercase leading-tight">
               {title}
             </h2>
-            <p className="font-semibold font-sourceSanspro text-[18px] sm:text-[19px] lg:text-[24px] text-mustard uppercase">
+            <p className="font-semibold font-sourceSanspro text-[16px] lg:text-[20px] xl:text-[24px] text-mustard uppercase">
               {subtitle}
             </p>
-            <p className="text-sm sm:text-[15px] lg:text-lg font-inter text-zink max-w-xl">
+            <p className="text-sm md:text-base lg:text-lg font-inter text-zink max-w-xl">
               {description}
             </p>
             <div className="flex justify-center md:justify-start">

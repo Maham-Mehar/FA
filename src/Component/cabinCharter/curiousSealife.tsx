@@ -16,7 +16,7 @@ const SealifeFAQ = () => {
 
   return (
     <section className="bg-white py-12 px-4 lg:px-5 xl:px-8">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[78.2rem] mx-auto">
         {/* Heading */}
         <div className="mb-12 flex justify-center flex-col items-center">
           <h2 className="text-[24px] md:text-[32px] lg:text-[36px] xl:text-[40px] font-playfair text-zink font-semibold mb-1">

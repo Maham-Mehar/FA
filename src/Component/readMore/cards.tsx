@@ -24,7 +24,7 @@ const Attractions: React.FC<AttractionsProps> = ({ id }) => {
         {headingText}
       </h2>
 
-      <div className="space-y-5 md:space-y-12 lg:space-y-16 xl:space-y-20 max-w-7xl mx-auto">
+      <div className="space-y-5 md:space-y-12 lg:space-y-16 xl:space-y-20 px-4 max-w-7xl mx-auto">
         {attractions.map((item, index) => (
           <div
             key={item.id}
