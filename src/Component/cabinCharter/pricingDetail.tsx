@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { priceDetail, ItineraryItem } from "@/data/priceDetail";
 import { IconType } from "react-icons";
+import HeadingContent from "@/common/heading";
 
 const Price_Details = () => {
     const [activeId, setActiveId] = useState<string | null>(null);
@@ -63,14 +64,10 @@ const Price_Details = () => {
         <section className="bg-[#E6ECED1A] py-12 px-4 lg:px-4 xl:px-8">
             <div className="max-w-7xl mx-auto">
                 {/* Heading */}
-                <div className="mb-12 flex justify-center flex-col items-center">
-                    <h2 className="text-[24px] md:text-[36px] lg:text-[40px] font-playfair text-zink font-semibold mb-1">
-                        Sailing Itinerary
-                    </h2>
-                    <img src="/images/rframe.png" alt="" className="w-[500px] my-3 mx-auto" />
-                    <p className="text-zink text-[16px] text-[19px] lg:text-[24px] font-normal font-sourceSanspro text-center">
-                        A seamless route through the Andaman’s most iconic and secret escapes
-                    </p>
+                <div className="mb-12 ">
+                    <HeadingContent
+                        heading="Sailing Itinerary"
+                        description="A seamless route through the Andaman’s most iconic and secret escapes" />
                 </div>
 
                 {/* Itinerary Columns */}

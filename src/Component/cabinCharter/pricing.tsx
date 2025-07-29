@@ -1,6 +1,7 @@
 "use client";
 import { LuAnchor } from "react-icons/lu";
 import { GoCheckCircle } from "react-icons/go";
+import HeadingContent from "@/common/heading";
 
 const pricingOptions = [
   {
@@ -55,14 +56,9 @@ const PricingSection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-[40px] font-playfair text-zink font-semibold mb-2">
-            Pricing
-          </h2>
-          <img src="/images/rframe.png" alt="" className="w-[500px] flex justify-center text-center my-3 mx-auto" />
-
-          <p className="text-zink font-normal font-sourceSansPro text-base md:text-[24px]">
-            Premium island-hopping experiences at crystal-clear prices
-          </p>
+          <HeadingContent
+            heading="Pricing"
+            description="Premium island-hopping experiences at crystal-clear prices!" />
         </div>
 
         {/* Pricing Cards */}

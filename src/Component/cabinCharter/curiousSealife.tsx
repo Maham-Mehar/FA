@@ -50,7 +50,7 @@ const SealifeFAQ = () => {
                       onClick={() => toggleItem(acutalIndex)}
                       className="flex justify-between items-center w-full p-4 cursor-pointer text-left"
                     >
-                      <p className="font-bold text-lg lg:text-xl text-zink font-sourceSanspro max-w-lg">
+                      <p className="font-bold text-base lg:text-xl text-zink font-sourceSanspro max-w-lg h-14">
                         {item.place}
                       </p>
                       <span className="text-2xl font-bold text-gray-400">

@@ -1,4 +1,5 @@
 "use client";
+import HeadingContent from "@/common/heading";
 import PngIcons from "@/icons/pngIcon";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -73,14 +74,9 @@ const SailingDetails = () => {
       <div className="max-w-7xl mx-auto">
         {/* Title */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-playfair text-zink font-semibold">
-            Details of Our Sailing Catamaran
-          </h2>
-          <img src="/images/rframe.png" alt="" className="w-[500px] flex justify-center text-center my-3 mx-auto" />
-
-          <p className="text-[#70818A] font-sourceSanspro mt-2 text-base md:text-lg">
-            Discover the features that make our catamaran the ultimate escape vessel
-          </p>
+          <HeadingContent
+            heading="Details of Our Sailing Catamaran"
+            description="Discover the features that make our catamaran the ultimate escape vessel" />
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-10 items-center justify-center lg:justify-start lg:items-start">
           {/* Left: Image Slider (5 of 12 columns) */}
@@ -98,8 +94,8 @@ const SailingDetails = () => {
                 <div
                   key={i}
                   className={`w-[80px] h-[80px] cursor-pointer overflow-hidden rounded-md border transition-all duration-300 ${i === currentIndex
-                      ? "border-zink blur-0"
-                      : "border-gray-300 blur-[1px] hover:blur-0"
+                    ? "border-zink blur-0"
+                    : "border-gray-300 blur-[1px] hover:blur-0"
                     }`}
                   onClick={() => handleThumbnailClick(i)}
                 >
@@ -126,9 +122,9 @@ const SailingDetails = () => {
                 >
                   <div className="flex flex-col items-center justify-center gap-1 text-[#9BA6B2]">
                     <img src={feature.image} alt={feature.title} />
-                    <p className="text-[20px] font-bold font-sourceSansPro text-zink">{feature.title}</p>
+                    <p className="text-lg lg:text-[20px] font-bold font-sourceSansPro text-zink">{feature.title}</p>
                   </div>
-                  <p className="text-zink text-[20px] font-medium font-sourceSansPro">{feature.value}</p>
+                  <p className="text-zink text-lg lg:text-[20px] font-medium font-sourceSansPro">{feature.value}</p>
                 </div>
               ))}
             </div>
@@ -151,18 +147,18 @@ const SailingDetails = () => {
               </table>
             </div>
 
-               <div className="block md:hidden">
-                {catamaranDetails.map((item, idx) => (
-                  <div key={idx} className="bg-white">
-                    <p className="font-bold text-[24px] font-sourceSansPro text-zink align-top sm:w-auto md:px-4 md:py-3 md:text-[20px] md:block md:w-auto">
-                      <span className="">{item.label}:</span>
-                    </p>
-                    <p className="text-zink font-normal pt-1 pb-3 font-sourceSansPro text-[20px] leading-relaxed sm:block sm:w-auto md:text-[16px] md:py-3 md:block md:w-auto">
-                      <span className="">{item.description}</span>
-                    </p>
-                  </div>
-                ))}
-              </div>
+            <div className="block md:hidden">
+              {catamaranDetails.map((item, idx) => (
+                <div key={idx} className="bg-white">
+                  <p className="font-bold text-[24px] font-sourceSansPro text-zink align-top sm:w-auto md:px-4 md:py-3 md:text-[20px] md:block md:w-auto">
+                    <span className="">{item.label}:</span>
+                  </p>
+                  <p className="text-zink font-normal pt-1 pb-3 font-sourceSansPro text-[20px] leading-relaxed sm:block sm:w-auto md:text-[16px] md:py-3 md:block md:w-auto">
+                    <span className="">{item.description}</span>
+                  </p>
+                </div>
+              ))}
+            </div>
 
           </div>
         </div>

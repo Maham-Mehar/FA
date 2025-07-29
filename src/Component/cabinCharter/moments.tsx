@@ -6,6 +6,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import PngIcons from "@/icons/pngIcon";
+import HeadingContent from "@/common/heading";
 
 // Type for testimonials
 interface Testimonial {
@@ -75,10 +76,12 @@ const FunMoments: React.FC = () => {
 
   return (
     <div className="max-w-7xl mx-auto pb-6 md:pb-8 lg:pb-12">
-      <p className="mt-[50px] px-4 font-poppins text-zink font-extrabold text-[24px] md:text-[29px] lg:text-[32px] xl:text-[36px] text-center text-green" style={{ boxShadow: "#00000040" }}>
-        Moments That Made Waves</p>
-      <img src="/images/rframe.png" alt="" className="w-[350px]  md:w-[400px] lg:w-[450px] xl:w-[500px] my-3 mx-auto" />
-      <p className="text-center px-4 text-base text-zink md:text-xl lg:text-xl xl:text-2xl max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl mx-auto">From sunset dinners to secret lagoons — hear what made it unforgettable</p>
+      <div>
+        <HeadingContent
+          heading="Moments That Made Waves"
+          description="From sunset dinners to secret lagoons — hear what made it unforgettable"
+        />
+      </div>
       <Slider {...settings}>
         {testimonials.map((item, index) => (
           <div
@@ -91,13 +94,13 @@ const FunMoments: React.FC = () => {
               <div className="flex flex-col w-full">
                 {/* Top row: two icons justified at the ends */}
                 <div className="hidden md:block">
-                <div className="flex justify-between mb-2 w-full ">
-                  <img src={item.image2} alt="" className="h-6 w-auto mt-6 ms-6" />
-                  <img src={item.image1} alt="" className="h-15 lg:h-20 w-auto " />
+                  <div className="flex justify-between mb-2 w-full ">
+                    <img src={item.image2} alt="" className="h-6 w-auto mt-6 ms-6" />
+                    <img src={item.image1} alt="" className="h-15 lg:h-20 w-auto " />
+                  </div>
                 </div>
-</div>
                 {/* Description immediately below */}
-                <p className="pt-4 md:pt-0 text-sm md:text-lg lg:text-[19px] font-normal leading-[26px] text-zink font-inter px-2 md:px-3 lg:px-6 italic">
+                <p className="pt-4 md:pt-0 text-sm md:text-base lg:text-[19px] font-normal leading-[26px] text-zink font-inter px-2 md:px-3 lg:px-6 italic">
                   {item.desp}
                 </p>
               </div>

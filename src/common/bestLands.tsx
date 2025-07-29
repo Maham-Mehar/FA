@@ -36,11 +36,11 @@ const BestLands: React.FC<Props> = ({ data }) => {
 
       {/* Cards */}
       <div className="relative mt-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-17 lg:gap-25 xl:gap-30 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 lg:gap-25 xl:gap-30 max-w-6xl mx-auto">
           {data.map((isle, idx) => (
             <div
               key={isle.id}
-              className={`overflow-hidden p-6 xl:p-6 ${
+              className={`overflow-hidden p-0 xl:p-6 ${
                 idx === 1 ? "mt-0 md:mt-30 lg:mt-36 xl:mt-40" : ""
               }`}
             >

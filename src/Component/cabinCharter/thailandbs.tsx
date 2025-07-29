@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import PngIcons from "@/icons/pngIcon";
+import HeadingContent from "@/common/heading";
 
 const islands = [
     { title: "Koh Maithon", image: PngIcons.thPlace_1 },
@@ -29,7 +30,7 @@ const Thailand_BestLands = () => {
 
     return (
         <section className="py-16 my-6 px-4 bg-white relative overflow-hidden">
-            <div className="text-center max-w-4xl px-4 sm:px-6 lg:px-8 mx-auto mb-12 sm:mb-16">
+            {/* <div className="text-center max-w-4xl px-4 sm:px-6 lg:px-8 mx-auto mb-12 sm:mb-16">
                 <h2 className="text-[24px] sm:text-[32px] md:text-[36px] lg:text-[40px] font-playfair text-zink font-semibold leading-snug">
                     Visit The Best Islands Of Thailand
                 </h2>
@@ -41,11 +42,15 @@ const Thailand_BestLands = () => {
                 />
 
                 <p className="text-zink font-sourceSanspro mt-2 text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] font-normal leading-relaxed">
-                    A simple word with a big promise — "Koh" means island, and your journey is filled with the best of them
+                 A simple word with a big promise — "Koh" means island, and your journey is filled with the best of them
                 </p>
+            </div> */}
+
+            <div className="mx-auto mb-12 sm:mb-16">
+                <HeadingContent
+                    heading="Visit The Best Islands Of Thailand"
+                    description='A simple word with a big promise — "Koh" means island, and your journey is filled with the best of them' />
             </div>
-
-
             <div className="w-full relative">
                 {/* Top Ellipse - Single overlay for all images */}
                 <img
@@ -65,7 +70,7 @@ const Thailand_BestLands = () => {
                                         alt={island.title}
                                         className="w-full h-[300px] md:h-[350px] lg:h-[350px] xl:h-[440px] object-cover rounded-lg"
                                     />
-                                    <div className="absolute bottom-20 left-5 text-white text-[36px] font-playfair font-extrabold drop-shadow-lg">
+                                    <div className="absolute bottom-11 md:bottom-13 lg:bottom-17 xl:bottom-20 left-5 text-white text-[25px] md:text-[28px] lg:text-[32px] xl:text-[36px] font-playfair font-extrabold drop-shadow-lg">
                                         {island.title}
                                     </div>
                                 </div>
@@ -84,8 +89,8 @@ const Thailand_BestLands = () => {
 
             {/* Text Box - Centered with max-width */}
             <div className="flex justify-center mt-12">
-                <div className="max-w-7xl w-full bg-[#E6ECED33] flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 px-4 md:px-6 py-6 border-l-[7px] border-l-[#034250]">
-                    <div className="flex-1 text-center md:text-left">
+                <div className="max-w-7xl w-full bg-[#E6ECED33] flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 px-4 md:px-6 py-0 xl:py-6 border-l-[7px] border-l-[#034250]">
+                    <div className="flex-1 text-center md:text-left py-3">
                         <p className="text-zink font-sourceSanspro font-semibold text-[16px] md:text-[18px] lg:text-[20px] mb-2">
                             <span className="font-semibold text-mustard">Info:</span> Island time runs on nature's clock!
                         </p>
@@ -93,7 +98,7 @@ const Thailand_BestLands = () => {
                             Our schedule may shift with the wind, waves, and weather—so while departure and return times are set, daily timings may ebb and flow.
                         </p>
                     </div>
-                    <div className="flex-shrink-0 w-[150px] sm:w-[180px] md:w-[200px]">
+                    <div className="flex-shrink-0 w-[150px] sm:w-[180px] md:w-[200px] ">
                         <img src="/images/slideText.png" alt="" />
                     </div>
                 </div>

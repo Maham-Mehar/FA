@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { highSeason, ItineraryItem } from "@/data/sailingData";
+import HeadingContent from "@/common/heading";
 
 const Sailing_Itinerary = () => {
     const [activeId, setActiveId] = useState<string | null>(null);
@@ -91,15 +92,12 @@ const Sailing_Itinerary = () => {
 
             <section className="bg-white px-4 lg:px-5 xl:px-8">
                 <div className="max-w-7xl mx-auto">
-                    {/* Heading */}
-                    <div className="mb-12 flex justify-center flex-col items-center">
-                        <h2 className="text-[24px] sm:text-[40px] font-playfair text-zink font-semibold mb-1">Sailing Itinerary   </h2>
-                        <img src="/images/rframe.png" alt="" className="w-[500px] flex justify-center text-center my-3 mx-auto" />
-
-                        <p className="text-zink text-[16px] sm:text-[24px] font-normal font-sourceSanspro">
-                            A seamless route through the Andaman’s most iconic and secret escapes</p>
+       {/* Fetch Heading  */}
+                    <div className="mb-12">
+                        <HeadingContent
+                            heading="Visit The Best Islands Of Thailand"
+                            description='A simple word with a big promise — "Koh" means island, and your journey is filled with the best of them' />
                     </div>
-
                     {/* Two Columns */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                         {/* Left Column */}
