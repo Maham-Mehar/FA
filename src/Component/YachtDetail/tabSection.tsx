@@ -15,7 +15,7 @@ type Props = {
 
 const TabSection: React.FC<Props> = ({ data }) => {
   const features = [
-    { title: "Length", value: data?.lengthOverall, icon: RxRulerSquare },
+    { title: "Length", value: `${data?.length} ft`, icon: RxRulerSquare },
     { title: "Type", value: data?.boatType, icon: LuSailboat },
     { title: "Cabins", value: data?.cabins, icon: LuDoorOpen },
     { title: "Bathrooms", value: data?.bathrooms, icon: LuToilet },
@@ -38,7 +38,7 @@ const TabSection: React.FC<Props> = ({ data }) => {
       case "Day Charter":
         return <DayCharter data={data} />;
       case "Overnight Charter":
-        return <NightCharter data={data}/>;
+        return <NightCharter data={data} />;
       default:
         return null;
     }

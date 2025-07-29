@@ -12,7 +12,9 @@ interface Yacht {
     lengthRange: string;
     title: string;
     guests: string;
-    cabins: string;
+    length:string;
+    passengerDayTrip: string;
+    passengerOvernight:string;
     lengthOverall: string;
     type: string;
 }
@@ -82,7 +84,7 @@ const YachtCards: React.FC<YachtCardsProps> = ({ columns = 3 }) => {
                     </div>
                     <div className="mt-3 space-y-1 xl:space-y-2 px-3">
                         <p className="text-base md:text-xl text-red-500 font-medium font-poppins">
-                            from {boat.daytripPriceEuro}
+                            from {boat.daytripPriceEuro} EUR
                         </p>
                         <h3 className="text-[36px] font-bold font-playfair text-zink">
                             {boat.title}
@@ -91,9 +93,9 @@ const YachtCards: React.FC<YachtCardsProps> = ({ columns = 3 }) => {
                     </div>
                     <div className="mt-4 px-3 pt-3 flex justify-between border-t border-gray-300 text-gray-700 font-semibold text-base md:text-xl">
                         {[
-                            { icon: "/images/icon1.png", value: `${boat.lengthRange.replace(/[<>]/g, "")} ft` },
-                            { icon: "/images/icon2.png", value: boat.guests },
-                            { icon: "/images/icon3.png", value: boat.cabins },
+                            { icon: "/images/icon1.png", value: `${boat.length.replace(/[<>]/g, "")} ft` },
+                            { icon: "/images/icon2.png", value: boat.passengerDayTrip },
+                            { icon: "/images/icon3.png", value: boat.passengerOvernight },
                         ].map(({ icon, value }, i) => (
                             <div key={i} className="flex items-center space-x-1">
                                 <img src={icon} alt="" className="w-8" />

@@ -16,6 +16,7 @@ export interface Yacht {
   _id: string;
   lengthOverall: string;
   boatType: string;
+  length: string;
   cabins: string;
   bathrooms: string;
   passengerDayTrip: string;
@@ -28,9 +29,9 @@ export interface Yacht {
   galleryImages: string[];
   videoLink: string;
   guests: string;
+  aboutThisBoat: string;
   dayCharter: string;
   overnightCharter: string;
-  specifications: string;
 }
 
 const HeroSection: React.FC<Hero> = ({ id }) => {

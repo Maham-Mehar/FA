@@ -15,8 +15,8 @@ const CharterDetail: React.FC<Props> = ({ data }) => {
       {/* Content */}
       <div className="space-y-4 text-zink">
         <p className="text-xl lg:text-2xl font-bold text-zink font-sourceSansPro">Description</p>
-        {data?.specifications ? (
-          <div dangerouslySetInnerHTML={{ __html: data.specifications }} />
+        {data?.aboutThisBoat ? (
+          <div dangerouslySetInnerHTML={{ __html: data.aboutThisBoat }} />
         ) : (
           <p className="text-zink">No Night charter information available.</p>
         )}
