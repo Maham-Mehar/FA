@@ -34,7 +34,7 @@ const SetSail: React.FC<SetSailProps> = ({
 
             {/* Content */}
             <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-screen-xl">
-                <p className="text-white text-lg font-semibold mb-3 lg:mb-5 font-inter">
+                <p className="text-white text-base md:text-lg font-semibold mb-4 lg:mb-5 font-inter">
                     Set Sail With Us
                 </p>
                 <h2 className="text-white uppercase font-extrabold text-[20px] md:text-[28px] lg:text-[32px] font-playfair max-w-2xl mx-auto leading-tight">
@@ -43,7 +43,7 @@ const SetSail: React.FC<SetSailProps> = ({
                 <p className="text-white text-base md:text-lg lg:text-xl font-normal font-inter max-w-3xl px-4 py-3 lg:py-5 leading-relaxed lg:leading-tight">
                     Luxury, adventure, and unforgettable views—all aboard your private yacht. Discover hidden coves, island gems, and the beauty of Phuket.
                 </p>
-                <button className="bg-mustard cursor-pointer text-white text-base md:text-xl font-bold font-poppins px-5 py-2 md:py-3 rounded-lg flex items-center mx-auto mt-4 lg:mt-6 hover:bg-[#034250]">
+                <button className="bg-mustard cursor-pointer text-white text-base md:text-xl font-bold font-poppins px-5 py-2 md:py-3 rounded-lg flex items-center mx-auto mt-5 lg:mt-6 hover:bg-[#034250]">
                     <FiPhone className="mr-2" />
                     Contact Us Now
                 </button>

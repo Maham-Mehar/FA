@@ -70,7 +70,7 @@ const SailingDetails = () => {
   };
 
   return (
-    <section className="bg-white py-16 px-4 md:px-0 lg:px-8">
+    <section className="bg-white py-10 lg:py-12 xl:py-14 px-4 md:px-0 lg:px-8">
       <div className="max-w-[78.2rem] mx-auto">
         {/* Title */}
         <div className="text-center mb-10">

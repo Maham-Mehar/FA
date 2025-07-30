@@ -1,7 +1,7 @@
 import { FaPhoneAlt, FaWhatsapp, FaLine } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
 
-const buttonClass = "flex items-center gap-2 lg:px-6 px-2 md:px-4 py-3 bg-zink text-white rounded-lg shadow hover:bg-[#D6AB62] font-medium transition";
+const buttonClass = "flex items-center gap-2 lg:px-6 px-3 md:px-4 py-3 bg-zink text-white rounded-lg shadow hover:bg-[#D6AB62] font-medium transition";
 const ContactBanner = () => {
   return (
     <div className="mx-4">

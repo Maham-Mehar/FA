@@ -7,7 +7,7 @@ const CruiseDates = () => {
     const data = cruiseDates.find((c) => c.id === activeTab);
 
     return (
-        <section className="bg-white py-16 px-4 xl:px-0">
+        <section className="bg-white pt-4 pb-13 lg:pb-16 px-4 xl:px-0">
             <div className="max-w-[78.2rem] mx-auto">
                 {/* Heading */}
                 <div className="text-center mb-10">

@@ -52,7 +52,7 @@ const pricingOptions = [
 
 const PricingSection = () => {
   return (
-    <section className="bg-[#E6ECED1A] py-10 px-14 md:px-16 lg:px-4 xl:px-0">
+    <section className="bg-[#E6ECED1A] py-5 md:py-8 px-14 md:px-16 lg:px-4 xl:px-0">
       <div className="max-w-[78.2rem] mx-auto">
         {/* Heading */}
         <div className="text-center mb-12">

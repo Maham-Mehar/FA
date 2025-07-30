@@ -29,7 +29,7 @@ const Thailand_BestLands = () => {
     };
 
     return (
-        <section className="py-16 px-4 bg-white relative overflow-hidden">
+        <section className="py-8 md:py-10 lg:py-13 xl:py-16 px-4 bg-white relative overflow-hidden">
             <div className="mx-auto mb-12 sm:mb-16">
                 <HeadingContent
                     heading="Visit The Best Islands Of Thailand"
