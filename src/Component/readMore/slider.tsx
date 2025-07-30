@@ -2,6 +2,7 @@
 import Slider, { CustomArrowProps } from "react-slick";
 import { yachts, Yacht } from "@/data/sliderData2";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import YachtCards from "@/common/yachtCards";
 
 const PrevArrow = ({ onClick }: CustomArrowProps) => (
   <button
@@ -23,7 +24,7 @@ const NextArrow = ({ onClick }: CustomArrowProps) => (
 
 const YachtCard = ({ boat }: { boat: Yacht }) => (
   <div className="">
-    <div className="bg-white mb-3 py-5 rounded-xl me-7 transition">
+    {/* <div className="bg-white mb-3 py-5 rounded-xl me-7 transition">
       <div className="overflow-hidden">
         <img
           src={boat.image}
@@ -51,7 +52,8 @@ const YachtCard = ({ boat }: { boat: Yacht }) => (
           <img src="/images/icon3.png" alt="" /> <span>{boat.cabins}</span>
         </div>
       </div>
-    </div>
+    </div> */}
+    <YachtCards columns={1} />
   </div>
 );
 

@@ -28,17 +28,17 @@ const About: React.FC<AboutProps> = ({ id }) => {
   return (
     <div className="relative">
       <div className="absolute top-0 left-0 z-0">
-        <img src={line1} alt="decorative line" />
+        <img src={line1} alt="decorative line h-15" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto w-full px-4 xl:px-4 py-5 md:py-0 z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 ">
+      <div className="relative max-w-7xl mx-auto w-full px-4 xl:px-4 md:py-0 z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Text Section */}
-          <div className="space-y-2 lg:space-y-4 xl:space-y-4 text-center md:text-left">
-            <p className="font-sourceSanspro text-[16px] lg:text-[18px] xl:text-[20px] pt-8 xl:pt-4 text-gray-500 uppercase">
+          <div className="space-y-2 lg:space-y-4 xl:space-y-3 text-center md:text-left">
+            <p className="font-sourceSanspro text-[16px] lg:text-[18px] xl:text-[20px] pt-6 md:pt-10 xl:pt-12 text-gray-500 uppercase">
               {preTitle}
             </p>
-            <h2 className="text-[24x]  md:text-[27px] lg:text-[33px] xl:text-[40px] font-playfair text-zink uppercase leading-tight">
+            <h2 className="text-[28x] md:text-[27px] lg:text-[33px] xl:text-[40px] font-playfair text-zink uppercase leading-tight">
               {title}
             </h2>
             <p className="font-semibold font-sourceSanspro text-[16px] lg:text-[20px] xl:text-[24px] text-mustard uppercase">
@@ -48,7 +48,7 @@ const About: React.FC<AboutProps> = ({ id }) => {
               {description}
             </p>
             <div className="flex justify-center md:justify-start">
-              <button className="text-sm sm:text-base md:text-lg font-poppins bg-mustard px-3 py-2 lg:px-5 lg:py-3 text-white rounded-lg mt-4 lg:mt-6 flex items-center gap-2 hover:bg-opacity-90 transition">
+              <button className="text-sm sm:text-base md:text-lg font-poppins bg-mustard px-3 py-2 lg:px-5 lg:py-3 text-white rounded-lg mt-4 xl:mt-6 flex items-center gap-2 hover:bg-opacity-90 transition">
                 <FiPhone />
                 {buttonText}
               </button>
@@ -56,12 +56,14 @@ const About: React.FC<AboutProps> = ({ id }) => {
           </div>
 
           {/* Image Section */}
+        <div className="hidden md:block">
           <div className="w-full flex justify-end item-start">
             <img
               src={heroImage}
               alt={title}
-              className="hidden md:block w-full sm:max-w-xs md:max-w-xs lg:max-w-md xl:max-w-lg h-auto object-cover lg:object-contain"
+              className="hidden md:block w-full sm:max-w-xs md:max-w-sm md:h-[370px] lg:h-[450px] xl:h-[480px] lg:max-w-md object-cover"
             />
+          </div>
           </div>
         </div>
       </div>

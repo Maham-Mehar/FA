@@ -15,7 +15,6 @@ const backgroundMap: Record<string, string> = {
 };
 
 const StartAdventure: React.FC<StartAdventureProps> = ({ id }) => {
-  // ✅ Only show component if id is one of the first 3 pages
   const allowedIds = ["phi-phi-island", "phang-nga-bay", "racha-islands"];
   if (!allowedIds.includes(id)) return null;
 

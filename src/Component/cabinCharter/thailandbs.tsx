@@ -29,7 +29,7 @@ const Thailand_BestLands = () => {
     };
 
     return (
-        <section className="py-16 my-6 px-4 bg-white relative overflow-hidden">
+        <section className="py-16 px-4 bg-white relative overflow-hidden">
             <div className="mx-auto mb-12 sm:mb-16">
                 <HeadingContent
                     heading="Visit The Best Islands Of Thailand"
@@ -74,15 +74,15 @@ const Thailand_BestLands = () => {
             {/* Text Box - Centered with max-width */}
             <div className="flex justify-center mt-12 ">
                 <div className="max-w-[78.2rem] w-full bg-[#E6ECED33] flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 px-4 md:px-6 py-0 xl:py-6 border-l-[7px] border-l-[#034250]">
-                    <div className="flex-1 text-center md:text-left py-3">
+                    <div className="flex-1 text-left py-3">
                         <p className="text-zink font-sourceSanspro font-semibold text-[16px] md:text-[18px] lg:text-[20px] mb-2">
                             <span className="font-semibold text-mustard">Info:</span> Island time runs on nature's clock!
                         </p>
-                        <p className="text-zink font-sourceSanspro font-semibold text-base">
+                        <p className="text-zink font-sourceSanspro font-semibold text-base max-w-3xl">
                             Our schedule may shift with the wind, waves, and weather—so while departure and return times are set, daily timings may ebb and flow.
                         </p>
                     </div>
-                    <div className="flex-shrink-0 w-[150px] sm:w-[180px] md:w-[200px] ">
+                    <div className="flex-shrink-0 w-[150px] sm:w-[180px] md:w-[200px] hidden md:block ">
                         <img src="/images/slideText.png" alt="" />
                     </div>
                 </div>

@@ -37,12 +37,12 @@ const Price_Details = () => {
 
                 {/* Accordion Body */}
                 {isActive && (
-                    <div className="px-4 pb-6 space-y-3">
+                    <div className="px-4 pb-6 space-y-2">
                         {item.itinerary?.map((entry, idx) =>
                             entry.description.map((desc, i) => (
                                 <p
                                     key={`${idx}-${i}`}
-                                    className="ms-3 text-base lg:text-lg xl:text-xl text-[#333333] font-normal font-sourceSansPro leading-relaxed flex items-start gap-2"
+                                    className="ms-3 text-base lg:text-lg xl:text-xl text-[#333333] font-normal font-sourceSansPro leading-tight flex items-start gap-2"
                                 >
                                     <span className="text-black font-bold">•</span>
                                     {desc}

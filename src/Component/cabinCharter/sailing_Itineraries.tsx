@@ -88,11 +88,11 @@ const Sailing_Itinerary = () => {
     const rightColumn = highSeason.filter(item => item.id === "4" || item.id === "5" || item.id === "6");
     const fullWidthItem = highSeason.find(item => item.id === "7");
     return (
-        <div className=" py-12 ">
+        <div className="py-6">
 
             <section className="bg-white px-4 lg:px-5 xl:px-8">
                 <div className="max-w-[78.2rem] mx-auto">
-       {/* Fetch Heading  */}
+                    {/* Fetch Heading  */}
                     <div className="mb-12">
                         <HeadingContent
                             heading="Visit The Best Islands Of Thailand"
@@ -101,11 +101,11 @@ const Sailing_Itinerary = () => {
                     {/* Two Columns */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                         {/* Left Column */}
-                        <div className="space-y-4">
+                        <div className="space-y-3">
                             {leftColumn.map(item => renderItem(item))}
                         </div>
                         {/* Right Column */}
-                        <div className="space-y-4">
+                        <div className="space-y-3">
                             {rightColumn.map(item => renderItem(item))}
                         </div>
                     </div>

@@ -20,7 +20,7 @@ const JoinUs: React.FC<JoinUsProps> = ({
 
   return (
     <div
-      className="relative my-14 min-h-[47vh] sm:min-h-[54vh] md:min-h-[60vh] lg:min-h-[70vh] flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8"
+      className="relative min-h-[60vh] md:min-h-[60vh] lg:min-h-[70vh] flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8"
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundSize: "cover",

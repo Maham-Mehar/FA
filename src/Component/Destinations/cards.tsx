@@ -6,7 +6,7 @@ const Cards = () => {
   return (
     <div className="bg-white px-4 sm:px-4 xl:px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gx-0 gap-5 md:gap-6 lg:gap-6 xl:gap-8 px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gx-0 gap-3 md:gap-4 lg:gap-6 xl:gap-8 px-4">
           {CardData.map((item, index) => (
             <div
               key={index}

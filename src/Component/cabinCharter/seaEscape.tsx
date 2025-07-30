@@ -31,7 +31,7 @@ const SeaEscape = () => {
             <div className="absolute bg-[#FCFCFC] top-0 left-0 z-10 w-[100px] sm:w-[150px] md:w-[180px] lg:w-[220px] xl:w-[250px] ">
                 <img src={PngIcons.line3} alt="" className="w-auto h-auto" />
             </div>
-            <section className="relative py-14 px-4 xl:px-8 bg-[#FCFCFC]">
+            <section className="relative py-6 lg:py-8 px-4 xl:px-8 bg-[#FCFCFC]">
                 <div className="absolute bottom-0 right-0 z-0 ">
                     <img src={PngIcons.frame1} alt="" className="w-auto h-auto" />
                 </div>
