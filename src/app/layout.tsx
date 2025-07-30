@@ -58,7 +58,7 @@ export default function RootLayout({
           <Header />
           <Navbar />
         </div>
-        <main className="flex-1 relative pt-[8rem]">
+        <main className="flex-1 relative pt-[5rem] md:pt-[8rem]">
           {children}
         </main>
         <Licence />
