@@ -7,9 +7,5 @@ interface PageProps {
 }
 
 export default function YachtDetailPage({ params }: PageProps) {
-  return (
-    <div>
-      <HeroSection slug={params.slug} />
-    </div>
-  );
+  return <HeroSection slug={params.slug} />;
 }

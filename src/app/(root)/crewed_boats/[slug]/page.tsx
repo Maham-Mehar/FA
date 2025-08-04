@@ -6,10 +6,6 @@ interface PageProps {
   };
 }
 
-export default function YachtDetailPage({ params }: PageProps) {
-  return (
-    <div>
-      <HeroSection slug={params.slug} />
-    </div>
-  );
+export default function YachtDetail({ params }: PageProps) {
+  return <HeroSection slug={params.slug} />;
 }
