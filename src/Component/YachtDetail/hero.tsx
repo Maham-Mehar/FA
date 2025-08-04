@@ -11,27 +11,30 @@ import YachtAdventure from "../Charter/yachtAdventure";
 interface HeroProps {
   slug: string;
 }
+
 export interface Yacht {
   _id: string;
-  lengthOverall: string;
-  boatType: string;
-  length: string;
-  cabins: string;
-  bathrooms: string;
-  passengerDayTrip: string;
-  passengerOvernight: string;
-  capacity: string;
+  slug: string;
   title: string;
   primaryImage: string;
   daytripPriceEuro: string;
-  lengthRange: string;
+  length: string;
+  passengerDayTrip: string;
+  passengerOvernight: string;
   galleryImages: string[];
   videoLink: string;
-  guests: string;
   aboutThisBoat: string;
   dayCharter: string;
   overnightCharter: string;
-  slug: string;
+  lengthOverall: string;
+  boatType: string;
+  cabins: string;
+  bathrooms: string;
+  capacity: string;
+  guests: string;
+  lengthRange: string;
+  status: string;
+  type: string;
 }
 
 const slugify = (text: string | undefined | null): string => {
@@ -65,8 +68,7 @@ const HeroSection: React.FC<HeroProps> = ({ slug }) => {
         }
 
         setData(matched);
-        setError(null);
-      } catch (err: any) {
+      } catch {
         setError("Failed to load yacht data.");
       } finally {
         setLoading(false);
@@ -90,9 +92,7 @@ const HeroSection: React.FC<HeroProps> = ({ slug }) => {
 
   return (
     <div className="max-w-[78.2rem] mx-auto px-4 xl:px-0">
-      <p className="text-[32px] font-playfair font-bold text-zink mt-3">
-        {data.title}
-      </p>
+      <p className="text-[32px] font-playfair font-bold text-zink mt-3">{data.title}</p>
 
       <div className="flex flex-col md:flex-row gap-5 mt-6">
         <div className="w-full md:w-[70%]">
