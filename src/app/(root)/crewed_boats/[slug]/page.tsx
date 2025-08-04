@@ -1,10 +1,17 @@
-import { YachtDetailPageProps } from "../types";
+// src/app/(root)/bareboat/[slug]/page.tsx
+
 import HeroSection from "@/Component/YachtDetail/hero";
 
-export default function YachtDetail({ params }: YachtDetailPageProps) {
+interface PageProps {
+  params: Promise<{ slug: string }>;
+}
+
+export default async function YachtDetailPage({ params }: PageProps) {
+  const { slug } = await params;
+  
   return (
     <div>
-      <HeroSection slug={params.slug} />
+      <HeroSection slug={slug} />
     </div>
   );
 }

@@ -5,5 +5,5 @@ export interface YachtDetailPageParams {
 }
 
 export interface YachtDetailPageProps {
-  params: YachtDetailPageParams;
+  params: Promise<YachtDetailPageParams>;
 }
