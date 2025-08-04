@@ -12,7 +12,7 @@ export default function FounderNote() {
                             Why We Sail Differently
                         </p>
                     </div>
-                    <h2 className="text-3xl text-[28px] md:text-[28px] text-left lg:text-[36px] xl:text-[40px] font-playfair text-zink font-bold mb-3 md:mb-2 lg:mb-3 xl:mb-4">
+                    <h2 className="text-3xl text-[28px] md:text-[28px] text-center md:text-left lg:text-[36px] xl:text-[40px] font-playfair text-zink font-bold mb-3 md:mb-2 lg:mb-3 xl:mb-4">
                         A Note from Our Founder
                     </h2>
                     <p className="text-zink font-inter text-base lg:text-lg xl:text-xl font-normal md:text-lg mb-2 lg:mb-4 xl:mb-6">

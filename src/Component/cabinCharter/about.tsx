@@ -30,13 +30,13 @@ const About = () => {
                             <p className="text-[18px] sm:text-[20px] md:text-[20px] lg:text-[24px] font-sourceSanspro text-mustard uppercase font-semibold">
                                 Escape. Unwind. Explore
                             </p>
-                            <p className="text-center font-normal text-base sm:text-[15px] md:text-[16px] font-inter text-zink pt-3 sm:pt-4">
+                            <p className="text-center font-normal text-base md:text-[16px] font-inter text-zink pt-3 sm:pt-4">
                                 End your day in comfort with a delicious Thai dinner in your cozy cabin, watching the sunset paint the horizon. Drift to sleep under the stars, serenaded by the ocean breeze.
                             </p>
-                            <p className="text-center font-normal text-base sm:text-[15px] md:text-[16px] font-inter text-zink py-2 sm:py-3">
+                            <p className="text-center font-normal text-base  md:text-[16px] font-inter text-zink py-2 sm:py-3">
                                 A cabin charter in Thailand isn't just a getaway—it's a journey into serenity, beauty, and unforgettable memories.
                             </p>
-                            <p className="text-center font-normal text-base sm:text-[15px] md:text-[16px] font-inter text-zink pb-3 sm:pb-4">
+                            <p className="text-center font-normal text-base  md:text-[16px] font-inter text-zink pb-3 sm:pb-4">
                                 With Far Away Yachting, your dream adventure is just a booking away. From luxury yachts to expert crews, we craft tailored, stress-free escapes just for you.
                             </p>
                             <div className="flex justify-center">

@@ -1,8 +1,12 @@
 "use client";
 import { useState, useRef } from "react";
-import { formFields} from "@/data/contact";
+import { formFields } from "@/data/contact";
+import { RefObject } from "react";
 
-const ContactUs = () => {
+interface ContactUsProps {
+    sectionRef: RefObject<HTMLDivElement | null>; // <-- fixed
+}
+const ContactUs = ({ sectionRef }: ContactUsProps) => {
     const [formValues, setFormValues] = useState<Record<string, string>>({});
     const [errors, setErrors] = useState<Record<string, boolean>>({});
     const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
@@ -81,9 +85,9 @@ const ContactUs = () => {
     };
 
     return (
-        <div className="">
+        <div ref={sectionRef}>
             <section className="bg-white py-7 lg:py-9 xl:py-12 px-4 lg:px-6 ">
-                <div className="max-w-7xl mx-auto bg-white p-0 xl:py-6 ">
+                <div className="max-w-7xl mx-auto bg-white">
                     {/* Left Side - Form */}
                     <div className="col-span-12 lg:col-span-7">
                         <h2 className="text-[32px] sm:text-[36px] text-center font-playfair font-bold text-[#034250] mb-7">

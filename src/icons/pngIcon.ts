@@ -7,8 +7,7 @@ var PngIcons = {
     // Home Page images
     img1: "/images/Homeimg1.png",
     img2: "/images/HeroBatch.png",
-
-
+    batch1: "/images/batch1.png",
     // about page
 
     aboutimg3: "/images/aboutimg3.png",
@@ -27,7 +26,7 @@ var PngIcons = {
     image7: "/images/image7.png",
     image8: "/images/image8.png",
     image9: "/images/image9.png",
-
+    adventure: "/images/adventure.png",
 
     // Certificates
     Certificate1: "/images/certificate1.png",
@@ -164,6 +163,10 @@ var PngIcons = {
     thPlace_2: "/images/thPlace_2.png",
     thPlace_3: "/images/thPlace_3.png",
     thPlace_4: "/images/thPlace_4.png",
+    thPlace_5: "/images/thPlace_5.png",
+    thPlace_6: "/images/thPlace_6.png",
+    thPlace_7: "/images/thPlace_7.png",
+    thPlace_8: "/images/thPlace_8.png",
 
     MapImage: "/images/map2.png",
     sailImage: "/images/sailimage.png",

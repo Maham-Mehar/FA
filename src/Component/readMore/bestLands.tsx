@@ -47,38 +47,39 @@ const BestLands: React.FC<Props> = ({ id }) => {
 
       {/* Cards */}
       <div className="relative mt-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 lg:gap-25 xl:gap-30 max-w-6xl mx-auto">
-          {data.map((isle, idx) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-x-14 lg:gap-x-25 py-8 xl:gap-y-10 max-w-[69rem] mx-auto">
+          {data.map((island, idx) => (
             <div
-              key={isle.id}
+              key={`${island.id}-${idx}`}
               className={`overflow-hidden p-0 xl:p-6 ${idx === 1 ? "mt-0 md:mt-30 lg:mt-36 xl:mt-40" : ""
-                } ${idx === 2 ? "-mt-[190px]" : ""}`} >
+                } ${idx === 2 ? "-mt-[190px]" : ""}`}
+            >
               <div className="relative">
                 <img
-                  src={isle.image}
-                  alt={isle.title}
-                  className="w-full xl:w-[600px] h-[230px] md:h-[270px] lg:h-[330px] xl:h-[350px] object-cover rounded-lg"
+                  src={island.image}
+                  alt={island.title}
+                  className="w-full xl:w-[600px] h-[210px] md:h-[240px] lg:h-[270px] xl:h-[290px] object-cover rounded-lg"
                 />
                 <div className="absolute bottom-2 left-2 text-[28px] md:text-[28px] lg:text-[36px] xl:text-[36px] font-extrabold font-playfair text-white bg-opacity-50 px-3 py-1 rounded-lg">
-                  {isle.title}
+                  {island.title}
                 </div>
               </div>
               <div className="min-h-[170px] shadow-lg">
                 <div className="p-4 space-y-2 max-w-[30rem]">
                   <p className="font-sourceSanspro text-mustard text-lg md:text-[20px] lg:text-[22px] xl:text-[24px] font-bold">
-                    {isle.subtitle}
+                    {island.subtitle}
                   </p>
-                  {isle.description.map((line, i) => (
-                    <p
+                  {island.description.map((line, i) => (
+                    <p           
                       key={i}
                       className="text-zink font-normal font-inter text-base lg:text-[18px] leading-relaxed"
-                    >
+                    > 
                       {line}
                     </p>
                   ))}
                 </div>
               </div>
-            </div>
+            </div>           
           ))}
         </div>
       </div>

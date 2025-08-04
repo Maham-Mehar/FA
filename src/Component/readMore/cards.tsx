@@ -19,7 +19,7 @@ const Attractions: React.FC<AttractionsProps> = ({ id }) => {
   }
 
   return (
-    <section className="py-20 px-4  xl:px-8 bg-white text-zink">
+    <section className="py-10 md:py-15 lg:py-17 xl:py-20 px-4 xl:px-8 bg-white text-zink">
       <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl font-semibold text-zinc-800 text-zink md:mb-11 lg:mb-13 xl:mb-16 uppercase tracking-wide">
         {headingText}
       </h2>
@@ -46,17 +46,17 @@ const Attractions: React.FC<AttractionsProps> = ({ id }) => {
                 {/* Text Right */}
                 <div className="space-y-3 lg:space-y-4 xl:space-y-5">
                   <div className="relative mt-10 md:mt-0 ">
-                    <span className="text-[65px] md:text-[70px] lg:text-[95px] xl:text-[128px] pt-12 md:pt-12 lg:pt-8 xl:pt-0 font-semibold font-inter text-gray-100 absolute -top-23 left-0">
+                    <span className="text-[62px] md:text-[70px] lg:text-[95px] xl:text-[128px] pt-14 md:pt-12 lg:pt-8 xl:pt-0 font-semibold font-inter text-gray-100 absolute -top-23 left-0">
                       {item.id}
                     </span>
-                    <div className="flex items-center ms-11 ">
+                    <div className="flex items-center ms-11">
                       <p className="w-13 md:w-15 lg:w-18 xl:w-21 border-b-3 border-mustard z-10"></p>
-                      <p className="text-mustard font-semibold text-base lg:text-[18px] xl:text-[20px] font-inter uppercase relative z-10 ms-3">
+                      <p className="text-mustard font-semibold text-sm lg:text-lg xl:text-xl font-inter uppercase relative z-10 ms-3">
                         {item.label}
                       </p>
                     </div>
-                    <h3 className="text-[24px] sm:text-[28px] md:text-[28px] lg:text-[36px] xl:text-[46px] font-semibold font-sourceSanspro text-zink relative z-10 ms-11">
-                      {item.title} 
+                    <h3 className="text-[24px] md:text-[26px] lg:text-[36px] xl:text-[46px] font-semibold font-sourceSanspro text-zink relative z-10 ms-11">
+                      {item.title}
                     </h3>
                     <p className="text-zink text-sm sm:text-base font-normal relative z-10">
                       {item.description}
@@ -86,7 +86,7 @@ const Attractions: React.FC<AttractionsProps> = ({ id }) => {
                 {/* Text Left */}
                 <div className="space-y-3 lg:space-y-4 xl:space-y-5">
                   <div className="relative mt-8 md:mt-0 ">
-                    <span className="text-[65px] md:text-[70px] lg:text-[95px] xl:text-[128px] pt-12 md:pt-12 lg:pt-8 xl:pt-0 font-semibold font-inter text-gray-100 absolute -top-23 left-0">
+                    <span className="text-[62px] md:text-[70px] lg:text-[95px] xl:text-[128px] pt-14 md:pt-12 lg:pt-8 xl:pt-0 font-semibold font-inter text-gray-100 absolute -top-23 left-0">
                       {item.id}
                     </span>
                     <div className="flex items-center ms-11 ">
@@ -95,7 +95,7 @@ const Attractions: React.FC<AttractionsProps> = ({ id }) => {
                         {item.label}
                       </p>
                     </div>
-                    <h3 className="text-[24px] sm:text-[28px] md:text-[28px] lg:text-[36px] xl:text-[46px] font-semibold font-sourceSanspro text-zink relative z-10 ms-11">
+                    <h3 className="text-[24px] md:text-[26px] lg:text-[36px] xl:text-[46px] font-semibold font-sourceSanspro text-zink relative z-10 ms-11">
                       {item.title}
                     </h3>
                     <p className="text-zink text-sm sm:text-base font-normal relative z-10">

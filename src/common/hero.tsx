@@ -5,13 +5,16 @@ type HeroSectionProps = {
   subheading: string;
   backgroundImage: string;
   dividerImage?: string;
+  button?: string;
 };
 
 const HeroContent: React.FC<HeroSectionProps> = ({
   heading,
   subheading,
   backgroundImage,
-  dividerImage = PngIcons.rframe2, 
+  dividerImage = PngIcons.rframe2,
+  button,
+
 }) => {
   return (
     <section
@@ -38,6 +41,11 @@ const HeroContent: React.FC<HeroSectionProps> = ({
           <p className="text-[18px] md:text-[22px] font-normal font-sourceSanspro text-center mt-2 md:max-w-2xl lg:max-w-4xl xl:max-w-7xl">
             {subheading}
           </p>
+          {button && (
+            <button className="mt-4 bg-transparent border border-white px-3 py-2 text-white text-base font-medium hover:bg-[#D6AB61]">
+              Contact Us Now
+            </button>
+          )}
         </div>
       </div>
     </section>

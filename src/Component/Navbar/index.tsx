@@ -40,7 +40,8 @@ const Drawer = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) =
                         {navItems.map(({ label, href }) => {
                             const isActive =
                                 (href === "/" && pathname === "/") ||
-                                (href !== "/" && pathname.startsWith(href));
+                                (href !== "/" && pathname.startsWith(href)) ||
+                                (label === "Crewed Charter" && pathname.startsWith("/crewed_boats"));
                             return (
                                 <li key={href}>
                                     <Link

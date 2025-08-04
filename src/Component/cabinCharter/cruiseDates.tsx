@@ -1,13 +1,18 @@
 "use client";
 import { useState } from "react";
 import { cruiseDates } from "@/data/cruiseDates";
+import { RefObject } from "react";
 
-const CruiseDates = () => {
+interface CruiseDatesProps {
+    sectionRef: RefObject<HTMLDivElement | null>; // <-- fixed
+}
+
+const CruiseDates = ({ sectionRef }: CruiseDatesProps) => {
     const [activeTab, setActiveTab] = useState<"1" | "2">("1");
     const data = cruiseDates.find((c) => c.id === activeTab);
 
     return (
-        <section className="bg-white pt-4 pb-13 lg:pb-16 px-4 xl:px-0">
+        <section  ref={sectionRef} className="bg-white pt-4 pb-13 lg:pb-16 px-4 xl:px-0">
             <div className="max-w-[78.2rem] mx-auto">
                 {/* Heading */}
                 <div className="text-center mb-10">

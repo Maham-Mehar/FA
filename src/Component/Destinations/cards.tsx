@@ -32,7 +32,7 @@ const Cards = () => {
               <div className="px-4 xl:px-4 py-4 flex flex-col justify-between min-h-[150px] md:min-h-[180px] lg:min-h-[200px]">
                 <p className=" text-[17px] font-sourceSansPro lg:text-[17px] xl:text-[20px] text-black">{item.description}</p>
                 <div className="flex justify-between items-center sm:items-center mt-4 gap-4">
-                  <Link href={`/cardDetail/${item.id}`}>
+                  <Link href={`/${item.id}`}>
                     <p className="text-zink font-poppins text-[18px] sm:text-[21px] font-extrabold underline cursor-pointer hover:text-[#D6AB61]">
                       Read More
                     </p>

@@ -1,9 +1,13 @@
 const Banner = () => {
   return (
-    <div>
+    <div className="relative">
       {/* HERO IMAGE SECTION */}
-      <div className="bg-[url('/images/BANNER.png')] bg-cover bg-center bg-no-repeat min-h-[58vh] md:min-h-[58vh] lg:[48vh] xl:min-h-[60vh] flex items-center">
-        <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
+      <div className="bg-[url('/images/BANNER.png')] bg-cover bg-center bg-no-repeat min-h-[63vh] md:min-h-[58vh] lg:min-h-[48vh] xl:min-h-[60vh] flex items-center relative mb-3 md:mb-4 lg:mb-6 mt-9 md:mt-12 lg:mt-15">
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-[#034250]/47 z-0" />
+
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-4 md:gap-6 lg:gap-8 xl:gap-10 py-10">
             {/* LEFT SIDE - Heading & Subheading */}
             <div className="max-w-xl text-center lg:text-left">

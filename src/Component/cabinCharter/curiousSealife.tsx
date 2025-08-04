@@ -2,8 +2,13 @@
 
 import { useState } from "react";
 import { Sealife } from "@/data/saelife";
+import { RefObject } from "react";
 
-const SealifeFAQ = () => {
+interface SealifeFAQProps {
+    sectionRef: RefObject<HTMLDivElement | null>; 
+}
+
+const SealifeFAQ = ({ sectionRef }: SealifeFAQProps) => {
 
   const [activeId, setActiveId] = useState<number | null>(0);
   const faqArray = Sealife || [];
@@ -15,7 +20,7 @@ const SealifeFAQ = () => {
   };
 
   return (
-    <section className="bg-white py-12 px-4 lg:px-5 xl:px-8">
+    <section ref={sectionRef} className="bg-white py-8 md:py-10 lg:py-12 px-4 lg:px-5 xl:px-8">
       <div className="max-w-[78.2rem] mx-auto">
         {/* Heading */}
         <div className="mb-12 flex justify-center flex-col items-center">

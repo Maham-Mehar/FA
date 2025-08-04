@@ -1,5 +1,6 @@
 "use client";
 import { Yacht } from "../YachtDetail/hero";
+import DOMPurify from 'dompurify';
 
 type Props = {
   data: Yacht | null;
@@ -16,7 +17,7 @@ const CharterDetail: React.FC<Props> = ({ data }) => {
       <div className="space-y-4 text-zink">
         <p className="text-xl lg:text-2xl font-bold text-zink font-sourceSansPro">Description</p>
         {data?.aboutThisBoat ? (
-          <div dangerouslySetInnerHTML={{ __html: data.aboutThisBoat }} />
+          <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(data.aboutThisBoat) }} />
         ) : (
           <p className="text-zink">No Night charter information available.</p>
         )}

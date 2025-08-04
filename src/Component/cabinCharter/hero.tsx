@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <HeroContent
       heading="Cabin Charter Phuket A Luxurious Sailing Adventure"
-      subheading="Sail Phuket in Style – 6 Days of Island Luxury & Adventure Await!"
+      subheading="Set Sail on a Luxury yacht Phuket Adventure, Uncovering the Mystique of Phuket’s Island Paradise for 6 Days and 5 Nights"
       backgroundImage="/images/charterimg.png"
       dividerImage={PngIcons.rframe2}
     />

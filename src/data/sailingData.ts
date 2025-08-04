@@ -150,10 +150,5 @@ export const highSeason: ItineraryItem[] = [
             }
         ]
     },
-    {
-        id: "7",
-        days: "Day ",
-        place: "- Koh Racha Yai -> Chalong Pier, Phuket",
-        image: PngIcons.MapImage,
-    },
+
 ];

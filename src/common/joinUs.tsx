@@ -34,7 +34,7 @@ const JoinUs: React.FC<JoinUsProps> = ({
       />
 
       <div className="relative z-20 text-center">
-        <p className="text-white font-inter text-[24px] sm:text-[30px] lg:text-[33px] font-extrabold">
+        <p className="  text-white font-inter text-[24px] sm:text-[30px] lg:text-[33px] font-extrabold">
           WHAT ARE YOU WAITING FOR?
         </p>
         <p className="text-white font-sourceSansPro text-[15px] sm:text-[18px] md:text-[20px] lg:text-[23px] pt-5 sm:pt-6 max-w-4xl mx-auto font-medium leading-relaxed">

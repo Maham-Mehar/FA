@@ -2,8 +2,13 @@
 import { useState } from "react";
 import { highSeason, ItineraryItem } from "@/data/sailingData";
 import HeadingContent from "@/common/heading";
+import { RefObject } from "react";
 
-const Sailing_Itinerary = () => {
+interface SailingItineraryProps {
+    sectionRef: RefObject<HTMLDivElement | null>; // <-- fixed
+}
+
+const Sailing_Itinerary = ({ sectionRef }: SailingItineraryProps) => {
     const [activeId, setActiveId] = useState<string | null>(null);
 
     const toggleItem = (id: string) => {
@@ -86,10 +91,8 @@ const Sailing_Itinerary = () => {
     // Divide items manually
     const leftColumn = highSeason.filter(item => item.id === "1" || item.id === "2" || item.id === "3");
     const rightColumn = highSeason.filter(item => item.id === "4" || item.id === "5" || item.id === "6");
-    const fullWidthItem = highSeason.find(item => item.id === "7");
     return (
-        <div className="py-6">
-
+        <div ref={sectionRef} className="py-6">
             <section className="bg-white px-4 lg:px-5 xl:px-8">
                 <div className="max-w-[78.2rem] mx-auto">
                     {/* Fetch Heading  */}
@@ -109,13 +112,6 @@ const Sailing_Itinerary = () => {
                             {rightColumn.map(item => renderItem(item))}
                         </div>
                     </div>
-
-                    {/* Full-width Last Item (Image) */}
-                    {fullWidthItem && (
-                        <div className="mt-6">
-                            {renderItem(fullWidthItem)}
-                        </div>
-                    )}
                 </div>
             </section>
 

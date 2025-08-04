@@ -10,6 +10,11 @@ const islands = [
     { title: "Koh Phi Phi", image: PngIcons.thPlace_2 },
     { title: "Phi Phi Viewpoint", image: PngIcons.thPlace_3 },
     { title: "Koh Muk", image: PngIcons.thPlace_4 },
+    { title: "Koh Lanta", image: PngIcons.thPlace_5 },
+    { title: "Rok Nok", image: PngIcons.thPlace_6},
+    { title: "Koh Racha", image: PngIcons.thPlace_7 },
+    { title: "Emerald Cave", image: PngIcons.thPlace_8},
+
 ];
 
 const Thailand_BestLands = () => {

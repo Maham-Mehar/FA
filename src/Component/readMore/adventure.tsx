@@ -1,7 +1,7 @@
 "use client";
 
 import JoinUs from "@/common/joinUs";
-import PngIcons from "@/icons/pngIcon";
+import PngIcons from "@/icons/pngIcon";1
 
 interface StartAdventureProps {
   id: string;
@@ -21,6 +21,6 @@ const StartAdventure: React.FC<StartAdventureProps> = ({ id }) => {
   const bg = backgroundMap[id] || "/images/bg-4.png";
 
   return <JoinUs id={id} bgImage={bg} />;
-};
+};``
 
 export default StartAdventure;
