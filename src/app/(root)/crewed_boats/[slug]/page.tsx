@@ -1,11 +1,10 @@
+import { YachtDetailPageProps } from "../types";
 import HeroSection from "@/Component/YachtDetail/hero";
 
-interface PageProps {
-  params: {
-    slug: string;
-  };
-}
-
-export default function YachtDetail({ params }: PageProps) {
-  return <HeroSection slug={params.slug} />;
+export default function YachtDetail({ params }: YachtDetailPageProps) {
+  return (
+    <div>
+      <HeroSection slug={params.slug} />
+    </div>
+  );
 }
