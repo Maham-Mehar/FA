@@ -1,7 +1,15 @@
 import HeroSection from "@/Component/YachtDetail/hero";
 
-// ✅ Must NOT include "use client" here
+interface PageProps {
+  params: {
+    slug: string;
+  };
+}
 
-export default function YachtDetailPage({ params }: { params: { slug: string } }) {
-  return <HeroSection slug={params.slug} />;
+export default function YachtDetailPage({ params }: PageProps) {
+  return (
+    <div>
+      <HeroSection slug={params.slug} />
+    </div>
+  );
 }
