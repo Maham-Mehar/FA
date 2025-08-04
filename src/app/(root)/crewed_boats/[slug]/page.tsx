@@ -1,6 +1,12 @@
-import HeroSection from "@/Component/YachtDetail/hero";
+import HeroSection from '@/Component/YachtDetail/hero';
 
-const YachtDetail = ({ params }: { params: { slug: string } }) => {
+interface PageProps {
+  params: {
+    slug: string;
+  };
+}
+
+const YachtDetail= ({ params }: PageProps) => {
   return (
     <div>
       <HeroSection slug={params.slug} />
