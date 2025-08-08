@@ -1,5 +1,3 @@
-// src/app/(root)/bareboat/[slug]/page.tsx
-
 import HeroSection from "@/Component/YachtDetail/hero";
 
 interface PageProps {

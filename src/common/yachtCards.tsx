@@ -25,7 +25,7 @@ interface YachtCardsProps {
   columns?: number;
 }
 
-// ✅ Safe Slugify Function
+
 const slugify = (text: string | undefined | null): string => {
   if (!text) return "";
   return text
@@ -116,9 +116,7 @@ const YachtCards: React.FC<YachtCardsProps> = ({ columns = 3 }) => {
             onClick={() => {
               const base = boat.type === "bareboat" ? "bareboat" : "crewed_boats";
               const slug = slugify(boat.slug);
-              console.log("slug:", slug);
               const fullPath = `/${base}/${slug}`;
-              console.log("Navigating to:", fullPath); 
               if (slug) {
                 router.push(fullPath);
               }
