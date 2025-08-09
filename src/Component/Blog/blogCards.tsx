@@ -28,6 +28,14 @@ const slugify = (text: string | undefined | null): string => {
         .trim();
 };
 
+const limitWords = (text: string, wordLimit: number): string => {
+    if (!text) return "";
+    const words = text.split(" ");
+    return words.length > wordLimit 
+        ? words.slice(0, wordLimit).join(" ") + "..."
+        : text;
+};
+
 const BlogCards: React.FC<BlogProps> = ({ slug }) => {
     const router = useRouter();
     const [data, setData] = useState<BlogData[]>([]);
@@ -104,10 +112,10 @@ const BlogCards: React.FC<BlogProps> = ({ slug }) => {
                                     />
                                 </div>
                                 <div className="px-4 pt-4">
-                                    <h3 className="text-[25px] md:text-[27px] lg:text-[29px] xl:text-[32px] font-semibold font-playfair text-zink mb-2">
-                                        {blog.title}
+                                    <h3 className="text-[25px] md:text-[27px] lg:text-[28px] font-semibold font-playfair text-zink mb-2">
+                                        {limitWords(blog.title, 4)}
                                     </h3>
-                                    <p className="text-lg text-black font-normal font-sourceSanspro">
+                                    <p className="text-base md:text-lg text-black font-normal font-sourceSanspro">
                                         {blog.shortDescription}
                                     </p>
                                 </div>
